@@ -1,0 +1,7 @@
+# ninja log v5
+2	210	6829033700000000	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/project0/Debug/BrowseInfo/Source/project0.xcl	2a065e976180ccde
+42	243	6829033700000000	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/project0/Debug/BrowseInfo/Source/startup_ewarm.xcl	33c6bd6631cad20d
+221	336	6829033706904356	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/project0/Debug/BrowseInfo/Source/project0.pbi	c126c97ed382cf19
+252	363	6829033707173628	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/project0/Debug/BrowseInfo/Source/startup_ewarm.pbi	b6041b5e0ba8b173
+369	420	6829033707722172	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/project0/Debug/BrowseInfo/project0.pbd	d06507210384f920
+427	1228	6829033715397620	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/project0/Debug/BrowseInfo/project0.pbw	3d9772a64302c4bd

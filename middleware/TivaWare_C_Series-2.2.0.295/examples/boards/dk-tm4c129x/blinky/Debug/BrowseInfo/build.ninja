@@ -1,0 +1,51 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\XclFileGenerator.exe" $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\XclFileGenerator.exe" $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\SourceIndexer.exe" $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\SourceIndexer.exe" $flags
+
+rule MAKEBROWSE
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\makeBrowseData.exe" $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\makeBrowseData.exe" $flags
+
+rule PDBLINK
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\PbdLink.exe" $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\PbdLink.exe" $flags
+
+
+
+#Build steps
+build R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\blinky.xcl : COMPILER_XCL 
+  xclcommand = -source_file R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\blinky.c -xcl_file R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\blinky.xcl -macro_file R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\blinky.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\blinky.c -D ewarm -D PART_TM4C129XNCZAD -D TARGET_IS_TM4C129_RA0 --diag_suppress Pa050 -o R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\ewarm\Obj\Source --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\..\..\..\..\ -Ohz --use_c++_inline --predef_macros R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\blinky.tmp
+  rspfile_name = R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\blinky.xcl.rsp
+
+build R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\startup_ewarm.xcl : COMPILER_XCL 
+  xclcommand = -source_file R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\startup_ewarm.c -xcl_file R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\startup_ewarm.xcl -macro_file R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\startup_ewarm.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\startup_ewarm.c -D ewarm -D PART_TM4C129XNCZAD -D TARGET_IS_TM4C129_RA0 --diag_suppress Pa050 -o R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\ewarm\Obj\Source --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\..\..\..\..\ -Ohz --use_c++_inline --predef_macros R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\startup_ewarm.tmp
+  rspfile_name = R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\startup_ewarm.xcl.rsp
+
+build R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\blinky.pbi : INDEXER R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\blinky.xcl |  $
+R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\blinky.c
+  flags = -out=R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\blinky.pbi -f R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\blinky.xcl
+
+build R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\startup_ewarm.pbi : INDEXER R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\startup_ewarm.xcl |  $
+R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\startup_ewarm.c
+  flags = -out=R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\startup_ewarm.pbi -f R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\startup_ewarm.xcl
+
+build R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\blinky.pbw : MAKEBROWSE R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\blinky.pbd
+  flags = R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\blinky.pbd -output R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\blinky.pbw
+
+build R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\blinky.pbd : PDBLINK R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\blinky.pbi |  $
+R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\startup_ewarm.pbi
+  flags = -M R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\blinky.pbd R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\blinky.pbi R$:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\examples\boards\dk-tm4c129x\blinky\Debug\BrowseInfo\Source\startup_ewarm.pbi
+

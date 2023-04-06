@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "systemcontrol_interface.h": "c",
+        "testhal.h": "c",
+        "kos.h": "c",
+        "stdbool.h": "c",
+        "pinmap.h": "c",
+        "sysctl.h": "c",
+        "pin_map.h": "c",
+        "cstdio": "c",
+        "interrupt.h": "c",
+        "uart_interface.h": "c",
+        "cstdarg": "c"
+    }
+}

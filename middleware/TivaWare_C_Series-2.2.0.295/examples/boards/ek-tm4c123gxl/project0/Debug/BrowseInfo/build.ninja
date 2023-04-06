@@ -1,0 +1,51 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\XclFileGenerator.exe" $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\XclFileGenerator.exe" $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\SourceIndexer.exe" $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\SourceIndexer.exe" $flags
+
+rule MAKEBROWSE
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\makeBrowseData.exe" $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\makeBrowseData.exe" $flags
+
+rule PDBLINK
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\PbdLink.exe" $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\PbdLink.exe" $flags
+
+
+
+#Build steps
+build C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\project0.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\project0.c -xcl_file C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\project0.xcl -macro_file C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\project0.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\project0.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 --diag_suppress Pa050 -o C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\ewarm\Obj\Source --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\..\ -I C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\..\..\..\..\ -Ohz --use_c++_inline --predef_macros C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\project0.tmp
+  rspfile_name = C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\project0.xcl.rsp
+
+build C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\startup_ewarm.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\startup_ewarm.c -xcl_file C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\startup_ewarm.xcl -macro_file C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\startup_ewarm.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\startup_ewarm.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 --diag_suppress Pa050 -o C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\ewarm\Obj\Source --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\..\ -I C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\..\..\..\..\ -Ohz --use_c++_inline --predef_macros C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\startup_ewarm.tmp
+  rspfile_name = C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\startup_ewarm.xcl.rsp
+
+build C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\project0.pbi : INDEXER C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\project0.xcl |  $
+C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\project0.c
+  flags = -out=C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\project0.pbi -f C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\project0.xcl
+
+build C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\startup_ewarm.pbi : INDEXER C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\startup_ewarm.xcl |  $
+C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\startup_ewarm.c
+  flags = -out=C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\startup_ewarm.pbi -f C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\startup_ewarm.xcl
+
+build C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\project0.pbw : MAKEBROWSE C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\project0.pbd
+  flags = C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\project0.pbd -output C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\project0.pbw
+
+build C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\project0.pbd : PDBLINK C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\project0.pbi |  $
+C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\startup_ewarm.pbi
+  flags = -M C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\project0.pbd C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\project0.pbi C$:\Users\kquackenbush\Desktop\Tiva_C_Series_Launchpad\project0\TivaWare_C_Series-2.2.0.295\examples\boards\ek-tm4c123gxl\project0\Debug\BrowseInfo\Source\startup_ewarm.pbi
+
