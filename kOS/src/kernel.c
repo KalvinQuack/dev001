@@ -2,7 +2,7 @@
     This is the development main for LOR Mobile Controls Project Phoenix
     THIS IS NOT FOR PRODUCTION USE
 
-    Version: V.01
+    Version: V.03
 */
 #ifndef __KERNEL_C__
 #define __KERNEL_C__
@@ -13,7 +13,7 @@
     #include "KOS.h"
 
     
-    PROC proc[NPROC], *running, *freelist, *readyQueue, *next;
+    PROC proc[NPROC], *running, *freelist, *readyQueue, *next, init_proc;
 
     int procsize = sizeof(PROC);
 
@@ -44,10 +44,12 @@
     readyQueue = NULL;
 
     /*set p0 as initial running process*/
-    p = get_proc(&freelist);
-    p->priority = 0; //lowest priority cannot be used by any other proc
+    //p = get_proc(&freelist);
+    //p->priority = 0; //lowest priority cannot be used by any other proc
+    //running = p;
+    p = &init_proc;
+    p->proc_state = FREE;
     running = p;
-    
    }
     /**********************************************
      * Method:  int kernel_fork( void );
@@ -60,7 +62,7 @@
      * Returns: int 
      * 
     **********************************************/
-   int kernel_fork( int function, uint8_t priority){
+   int kernel_fork( void(*function)(void), uint8_t priority){
     PROC *p = get_proc(&freelist); //grab first node in freelist
     /*list is empty*/
     if(p == NULL){
@@ -70,7 +72,7 @@
     p->proc_state = READY;
     p->priority = priority;
     p->kstack[SSIZE-1] = (1U<<24);
-    p->kstack[SSIZE-2] = function;
+    p->kstack[SSIZE-2] = (int)function;
     for(uint8_t i = 3; i < 9; i++){
         p->kstack[SSIZE-i] = (uint32_t)0xDECAF;
     }
@@ -117,8 +119,49 @@
         queue_proc(&readyQueue, running);
     }
     next = deqeue_proc(&readyQueue);
-    return 0;
+    if(next != running){
+        return 1;
+    }else return 0;
    }
+    /**********************************************
+     * Method:  block(SEMAPHORE *s)
+     * 
+     * Description: blocks a process
+     * 
+     * Notes:
+     * 
+     * Returns: none
+     * 
+    **********************************************/
+   void block(SEMAPHORE *s){
+    /*set running status to blocked*/
+    running->proc_state = BLOCKED;
+    /*queue the processes into the sempahore struct*/
+    if(scheduler){
+        queue_proc(&s->queue, running);
+    }
+    //triggers pendSV interrupt
+    switch_task();
+   }
+    /**********************************************
+     * Method:  signal(SEMAPHORE *s)
+     * 
+     * Description: prepares a process as ready 
+     * and queues it in the ready queue
+     * 
+     * Notes:
+     * 
+     * Returns: none
+     * 
+    **********************************************/
+    void signal(SEMAPHORE *s){
+        /*dequeue proc from semaphore queue and 
+        and set to ready*/
+        PROC *p = deqeue_proc(&s->queue);
+        p->proc_state = READY;
+        queue_proc(&readyQueue, p);
+    }
+
 
 
 

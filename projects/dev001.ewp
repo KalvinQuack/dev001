@@ -2218,6 +2218,9 @@
         <name>$PROJ_DIR$\..\middleware\hw_interfaces\src\digitalOutput_interface.c</name>
     </file>
     <file>
+        <name>$PROJ_DIR$\..\kOS\src\KOS.c</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\..\modules\src\serial.c</name>
     </file>
     <file>

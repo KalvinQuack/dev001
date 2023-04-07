@@ -50,7 +50,7 @@
     void enable_sysTick_int     ( void );
     void enable_NVIC            ( void );
     void disable_NVIC           ( void );
-    void enable_PendSV          ( void );
+    void trigger_PendSV          ( void );
 
     
 

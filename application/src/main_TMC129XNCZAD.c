@@ -1,7 +1,10 @@
 /*
     This is the development main for LOR Mobile Controls Project Phoenix
     THIS IS NOT FOR PRODUCTION USE
+
+    Version: V.01
 */
+
 //standard includes 
 #include <stdint.h>
 #include <stdbool.h>
@@ -19,41 +22,71 @@
 #include "UART_interface.h"
 #include "driverlib/uart.h"
 #include "inc/hw_memmap.h"
-uint32_t clockSrc;
-char k = 'm';
+#include "digitalOutput_interface.h"
+
+SEMAPHORE s = {1, NULL};
+
+void critical_section( int x ){
+    int a = x;
+    for(int i = 0; i < a; i++){
+      
+    }
+}
+
 void init_machine( void ){
-    clockSrc = init_systemClock();
+    uint32_t clockSrc = init_systemClock();
     init_peripherals();
-    init_sysTick(true, 10, clockSrc);
-    config_UART(SYSTEM_UART, false, 9600, clockSrc);
-    app_config();
+    init_sysTick(true, 5, clockSrc);  
+    digitalOutput_config(OUT_01_DO, PUSH_PULL);
+    digitalOutput_config(OUT_02_DO, PUSH_PULL);
+    digitalOutput_config(OUT_03_DO, PUSH_PULL);
+    
+    
+}
+void start_system( void ){
     init_interrupts(true);
-     
 }
-int process_digitalInputs ( void ){
-    while(1){
-        processButtons();
+
+void process_digitalInputs ( void ){
+    while(1){     
+      digitalOutput_control(OUT_01_DO, 1);
+      digitalOutput_control(OUT_02_DO, 0);
+      digitalOutput_control(OUT_03_DO, 0);
+      P(&s);
+      critical_section(900000);
+      V(&s);
+      //enable_PendSV();
     }
 }
-int process_application ( void ){
+void  process_application ( void ){
     while(1){
-        send_UART(SYSTEM_UART);
+      digitalOutput_control(OUT_01_DO, 0);
+      digitalOutput_control(OUT_02_DO, 1);
+      digitalOutput_control(OUT_03_DO, 0);
+      P(&s);
+      critical_section(100000);
+      V(&s);
+      //enable_PendSV();
     }
 }
-int process_app( void ){
+void  process_app( void ){
     while(1){
-        //serial_print("t");
+      digitalOutput_control(OUT_01_DO, 0);
+      digitalOutput_control(OUT_02_DO, 0);
+       digitalOutput_control(OUT_03_DO, 1);
+       //enable_PendSV();
     }
     
 }
 
 int main()
 {   
-    kernel_init();
-    kernel_fork((int)process_application, 2);
-    kernel_fork((int)process_digitalInputs, 2);
-    kernel_fork((int)process_app, 2);
+    OS_init();
     init_machine();
+    kernel_fork(&process_digitalInputs, 2);
+    kernel_fork(&process_application, 2);
+    kernel_fork(&process_app, 2);
+    start_system();
     while(1){};
     return 0;
 }

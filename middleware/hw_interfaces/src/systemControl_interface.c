@@ -191,7 +191,7 @@
         SysTickIntEnable();
     }
 
-    void enable_PendSV ( void ){
+    void trigger_PendSV ( void ){
         IntPendSet(FAULT_PENDSV);
     }
     #endif

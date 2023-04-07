@@ -15,5 +15,8 @@
     uint8_t init_interrupts     ( bool config );
     void sysTickHandler         ( void );
     uint8_t initPeriph_UART     ( uint32_t index );
+    void disable_IRQ            ( void );
+    void enable_IRQ             ( void );
+    void switch_task            ( void );
     
 #endif      

@@ -30,7 +30,7 @@
         EXTERN  __call_ctors
         EXTERN  main
         EXTERN  exit
-        IMPORT proc 
+        IMPORT init_proc 
         IMPORT procsize
         IMPORT irq_stack_top
 
@@ -63,8 +63,8 @@ __iar_init$$done:                 ; Copy initialization is done
 ?l3:
 _call_main:
         ; _call_main is used by debugger, see IDE-5069
-        //set msp to the first process (process 0)
-        ldr r0, =proc 
+        //set msp to the init_processes, this process gets never returned
+        ldr r0, =init_proc 
         ldr r1, =procsize
         ldr r2, [r1]
         add r0, r0, r2

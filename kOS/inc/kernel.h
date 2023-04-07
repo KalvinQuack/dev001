@@ -8,11 +8,11 @@
     #define SSIZE 1024
 
     /*prototypes*/
-    void kernel_init( void );
-    int kernel_fork( int function, uint8_t priority);
-    void kernel_exit( void );
-    int scheduler ( void );
-    int testBody( void );
-    void tswitch( void );
+    void kernel_init    ( void );
+    int kernel_fork     ( void(*function)(void), uint8_t priority);
+    void kernel_exit    ( void );
+    int scheduler       ( void );
+    void block          ( SEMAPHORE *s );
+    void signal         ( SEMAPHORE *s );
 
 #endif

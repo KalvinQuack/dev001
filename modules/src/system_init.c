@@ -35,8 +35,9 @@
     **********************************************/
     void sysTickHandler( void ){
         disable_NVIC();
-        scheduler();
-        enable_PendSV();
+        if(scheduler()){
+            trigger_PendSV(); //trigger pendSV if next task is not the current
+        }
         enable_NVIC();  
     }
     /**********************************************
@@ -60,7 +61,7 @@
             INT_OSC,        //using internal osc
             true,           //enable PLL
             VCO_320_MHZ,    //set the PLL freq to 320 Mhz
-            40000000        //desired frequency (hz) 40 Mhz
+            16000000        //desired frequency (hz) 40 Mhz
         );
 
         if(!clock_config){
@@ -196,5 +197,37 @@
         peripheralInit(uart_device->uart_peripheral);
 
         return 0;
+    }
+    /**********************************************
+     * Method:  enable_IRQ( void )
+     * 
+     * Description: enables the master NVIC for the processor
+     *              
+     * 
+     * Notes:
+     * 
+     * Returns: none
+     * 
+    **********************************************/
+    void enable_IRQ( void ){
+        enable_NVIC();
+    }
+    /**********************************************
+     * Method:  disable_IRQ( void )
+     * 
+     * Description: disables the master NVIC for the processor
+     *              
+     * 
+     * Notes:
+     * 
+     * Returns: none
+     * 
+    **********************************************/
+    void disable_IRQ( void ){
+        disable_NVIC();
+    }
+
+    void switch_task( void ){
+        trigger_PendSV();
     }
 #endif
