@@ -1,8 +1,0 @@
-# ninja log v5
-141	569	7013692701327754	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/interrupts/ewarm/Obj/Source/startup_ewarm.o	ff4916cc99b88af5
-20	844	7013692703515615	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/interrupts/ewarm/Obj/Source/frame.o	4fe309a76a4d4c99
-105	1112	7013692708202757	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/interrupts/ewarm/Obj/Source/pinout.o	b918a28b1aa58213
-77	1251	7013692709453103	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/interrupts/ewarm/Obj/Source/kentec320x240x16_ssd2119.o	f0563da1db3fe444
-55	1473	7013692709609376	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/interrupts/ewarm/Obj/Source/interrupts.o	7db24862218e0817
-1507	2941	7013692726328210	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/interrupts/ewarm/Exe/interrupts.out	f364e0dbb041504b
-2962	3051	7013692728046932	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/interrupts/ewarm/Exe/interrupts.bin	c98cb3dedb9a6517

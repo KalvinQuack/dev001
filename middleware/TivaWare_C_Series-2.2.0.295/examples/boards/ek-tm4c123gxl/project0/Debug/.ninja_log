@@ -1,5 +1,0 @@
-# ninja log v5
-1	154	6829034507939495	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/project0/ewarm/Obj/Source/startup_ewarm.o	bcaa8998495a4dbb
-32	178	6829034508158901	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/project0/ewarm/Obj/Source/project0.o	ffd0b02f452e6409
-189	667	6829034513074057	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/project0/ewarm/Exe/project0.out	df9d0fea27c5e7f6
-681	813	6829034514580058	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/project0/ewarm/Exe/project0.bin	30f7e4b9c458ef71

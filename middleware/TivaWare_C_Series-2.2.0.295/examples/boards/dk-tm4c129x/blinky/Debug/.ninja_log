@@ -1,6 +1,0 @@
-# ninja log v5
-80	447	6968997262064468	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/blinky/ewarm/Obj/Source/startup_ewarm.o	5ca00b61a79d38dc
-0	1439	7000105478488441	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/blinky/ewarm/Obj/Source/blinky.o	4518323665ad6c3e
-133	1864	7000105649425713	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/blinky/ewarm/Obj/Source/blinky.o	4518323665ad6c3e
-2200	5807	7000105687550714	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/blinky/ewarm/Exe/blinky.out	84222c881d418b83
-5970	6403	7000105699425742	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/blinky/ewarm/Exe/blinky.bin	521b66a47c8c171b

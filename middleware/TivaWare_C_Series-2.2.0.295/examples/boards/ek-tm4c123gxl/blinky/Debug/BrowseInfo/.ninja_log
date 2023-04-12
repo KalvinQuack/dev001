@@ -1,7 +1,0 @@
-# ninja log v5
-1	209	6829015250000000	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/blinky/Debug/BrowseInfo/Source/startup_ewarm.xcl	c662de8ec76371b4
-42	251	6829015250000000	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/blinky/Debug/BrowseInfo/Source/blinky.xcl	5eba81b88445d048
-218	345	6829015258601022	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/blinky/Debug/BrowseInfo/Source/startup_ewarm.pbi	fd18a397119df1c1
-260	377	6829015258920167	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/blinky/Debug/BrowseInfo/Source/blinky.pbi	97de48f26287e2c0
-382	433	6829015259449038	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/blinky/Debug/BrowseInfo/blinky.pbd	c2bc51ca0ccceefb
-441	1280	6829015267597056	C:/Users/kquackenbush/Desktop/Tiva_C_Series_Launchpad/project0/TivaWare_C_Series-2.2.0.295/examples/boards/ek-tm4c123gxl/blinky/Debug/BrowseInfo/blinky.pbw	12edb16cadbe168
