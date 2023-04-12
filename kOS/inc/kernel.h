@@ -14,5 +14,7 @@
     int scheduler       ( void );
     void block          ( SEMAPHORE *s );
     void signal         ( SEMAPHORE *s );
+    void kernel_tick    ( void );
+    void kernel_delay   ( uint32_t ticks);
 
 #endif

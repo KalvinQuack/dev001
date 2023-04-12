@@ -59,7 +59,7 @@
 
 
     }
-
+    //!------------ THIS FUNCTION IS BROKEN AND NEEDS FIXIN ----------
     uint8_t send_UART (HAL_UARTS device){
         UART_DEV* uart_ptr = accessUART_device((uint32_t)device);
         uart_comm* buffer = &uart_obj[(uint32_t)device];

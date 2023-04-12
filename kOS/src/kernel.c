@@ -2,7 +2,7 @@
     This is the development main for LOR Mobile Controls Project Phoenix
     THIS IS NOT FOR PRODUCTION USE
 
-    Version: V.03
+    Version: V.04
 */
 #ifndef __KERNEL_C__
 #define __KERNEL_C__
@@ -115,7 +115,7 @@
      * 
     **********************************************/
    int scheduler( void ){
-    if(running->proc_state == READY){
+    if(running->proc_state == READY){ 
         queue_proc(&readyQueue, running);
     }
     next = deqeue_proc(&readyQueue);
@@ -137,7 +137,7 @@
     /*set running status to blocked*/
     running->proc_state = BLOCKED;
     /*queue the processes into the sempahore struct*/
-    if(scheduler){
+    if((int)scheduler){
         queue_proc(&s->queue, running);
     }
     //triggers pendSV interrupt
@@ -158,8 +158,51 @@
         /*dequeue proc from semaphore queue and 
         and set to ready*/
         PROC *p = deqeue_proc(&s->queue);
-        p->proc_state = READY;
-        queue_proc(&readyQueue, p);
+        if(p != NULL){
+            p->proc_state = READY;
+            queue_proc(&readyQueue, p);
+      }
+    }
+    /**********************************************
+     * Method:  kernel_delay( uint32_t ticks)
+     * 
+     * Description: block thread and sets timeout tick
+     * 
+     * Notes:
+     * 
+     * Returns: none
+     * 
+    **********************************************/
+    void kernel_delay( uint32_t ticks){
+        disable_IRQ();
+        running->proc_state = BLOCKED;
+        running->timeout = ticks;
+        enable_IRQ();
+        scheduler();
+        switch_task();
+    }
+    /**********************************************
+     * Method:  kernel_tick( void )
+     * 
+     * Description: counts down timeout and readys task
+     * 
+     * Notes: ticks * systick interrupt occurence 
+     * = total delay
+     * 
+     * Returns: none
+     * 
+    **********************************************/
+    void kernel_tick( void ){
+        for(uint32_t i = 1; i<NPROC; i++){
+            PROC *p = &proc[i];
+            if(p->timeout != 0){
+                --p->timeout;
+                if(p->timeout == 0){
+                    p->proc_state = READY;
+                    queue_proc(&readyQueue, p);
+                }
+            }
+        }
     }
 
 
