@@ -48,8 +48,10 @@ void start_system( void ){
 
 void process_digitalInputs ( void ){
     while(1){     
-    app();
-    kernel_delay(1);
+      digitalOutput_control(OUT_01_DO, 1);
+      kernel_delay(100);
+      digitalOutput_control(OUT_01_DO, 0);
+      kernel_delay(100);
       
     }
 }
@@ -58,12 +60,12 @@ void  process_application ( void ){
       
       //data going to the buffer
       P(&s);
-      
+      app();
       messages();
       digitalOutput_control(OUT_01_DO, 0);
       //kernel_delay(10);
       V(&s);
-      kernel_delay(100);
+      kernel_delay(1);
       
       
     }
@@ -77,7 +79,7 @@ void  process_app( void ){
        digitalOutput_control(OUT_01_DO, 1);
        //kernel_delay(10);
        V(&s);
-        kernel_delay(1);
+       kernel_delay(1);
         
     }
     
@@ -89,7 +91,6 @@ int main()
     init_machine();
     kernel_fork(&process_app, 3);
     kernel_fork(&process_application, 2);
-    kernel_fork(&process_digitalInputs, 4);
     app_config();
     start_system();
     while(1){};

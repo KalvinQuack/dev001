@@ -4,6 +4,7 @@
     #include <stdarg.h>
     /* FUNCTION PROTOTYPES*/
     uint8_t serial_write( const char *format, ...);
+    uint8_t serial_printf(char *string, ...);
     uint8_t serial_print(char *string);
     
 #endif

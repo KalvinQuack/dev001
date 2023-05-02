@@ -24,6 +24,7 @@
         proc_status proc_state; //state of process
         uint8_t priority;       //process priority
         int kstack[STACKSIZE];  //size of processs stack 
+        uint32_t timeout;        //process timeout
     }PROC;
 
     /* semaphore struct */

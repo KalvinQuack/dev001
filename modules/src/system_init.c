@@ -35,6 +35,7 @@
     **********************************************/
     void sysTickHandler( void ){
         disable_NVIC();
+        kernel_tick();//tick down for sleeping procs
         if(scheduler()){
             trigger_PendSV(); //trigger pendSV if next task is not the current
         }
@@ -61,7 +62,7 @@
             INT_OSC,        //using internal osc
             true,           //enable PLL
             VCO_320_MHZ,    //set the PLL freq to 320 Mhz
-            16000000        //desired frequency (hz) 40 Mhz
+            40000000        //desired frequency (hz) 40 Mhz
         );
 
         if(!clock_config){

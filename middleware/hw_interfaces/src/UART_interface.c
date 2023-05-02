@@ -63,16 +63,13 @@
     uint8_t send_UART (HAL_UARTS device){
         UART_DEV* uart_ptr = accessUART_device((uint32_t)device);
         uart_comm* buffer = &uart_obj[(uint32_t)device];
-        
-        if(buffer->write_tail == buffer->write_head && !buffer->buffFull){
-            //buffer is empty
-            return 0;
-        }
-        if((buffer->write_tail+1)%BUFF_SIZE != buffer->write_head){
+    
+
+        if((buffer->write_tail+1)%BUFF_SIZE != (buffer->write_head+1)%BUFF_SIZE){
             UARTCharPutNonBlocking(uart_ptr->uart_base, buffer->circBuff[buffer->write_tail]);
-            buffer->write_tail = (buffer->write_tail+1) % BUFF_SIZE;
+            buffer->write_tail = (buffer->write_tail+1)%BUFF_SIZE;
         }
-        buffer->buffFull = false;
+        
         return 1;
     }
 #endif 
