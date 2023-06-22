@@ -68,7 +68,7 @@ _call_main:
         ldr r1, =procsize
         ldr r2, [r1]
         add r0, r0, r2
-        mov sp, R0
+        mov sp, r0
         
         BL      __iar_data_init_done
 

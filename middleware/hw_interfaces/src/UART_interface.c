@@ -6,6 +6,7 @@
 */
 #ifndef __UART_INTERFACE_C__
 #define __UART_INTERFACE_C__
+
     #include "UART_interface.h"
     #include "driverlib/uart.h"
     #include "driverlib/sysctl.h"
@@ -14,10 +15,9 @@
     
     #define MAX_PINS 2
     uart_comm uart_obj[UART_TOTAL];
-    static char done[] = "#### UART INIT ####";
 
 
-    void config_UART(HAL_UARTS device, bool interrupt, uint32_t baudRate, uint32_t clk){
+    void UART_config(HAL_UARTS device, bool interrupt, uint32_t baudRate, uint32_t clk){
         
         if(device > UART_TOTAL){
             while(1){}
@@ -45,7 +45,6 @@
             UART_CONFIG_STOP_ONE|
             UART_CONFIG_PAR_NONE
             ); 
-        //UARTFIFOEnable(uart_ptr->uart_base);
         UARTEnable(uart_ptr->uart_base);
 
         for(int i = 0; i < sizeof(BUFF_SIZE); i++){
@@ -59,17 +58,18 @@
 
 
     }
-    //!------------ THIS FUNCTION IS BROKEN AND NEEDS FIXIN ----------
+
     uint8_t send_UART (HAL_UARTS device){
         UART_DEV* uart_ptr = accessUART_device((uint32_t)device);
         uart_comm* buffer = &uart_obj[(uint32_t)device];
-    
-
-        if((buffer->write_tail+1)%BUFF_SIZE != (buffer->write_head+1)%BUFF_SIZE){
-            UARTCharPutNonBlocking(uart_ptr->uart_base, buffer->circBuff[buffer->write_tail]);
-            buffer->write_tail = (buffer->write_tail+1)%BUFF_SIZE;
-        }
         
+        while((buffer->write_tail) != (buffer->write_head)){
+          if(UARTCharPutNonBlocking(uart_ptr->uart_base, buffer->circBuff[buffer->write_tail])){
+            buffer->write_tail = (buffer->write_tail+1)%BUFF_SIZE;
+            buffer->count = buffer->count--;
+          }
+        }
+        buffer->buffFull = false;
         return 1;
     }
 #endif 

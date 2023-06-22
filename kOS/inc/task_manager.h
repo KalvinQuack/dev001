@@ -21,10 +21,13 @@
         struct process *next;   //pointer to next process 
         int pid;                //specific process id
         int *ksp;               //holds stack pointer location when context switching
+        //do add anything above this
         proc_status proc_state; //state of process
         uint8_t priority;       //process priority
+        uint32_t timeout;       //process timeout
+        uint32_t event;         //process event for sleep/wakeup
         int kstack[STACKSIZE];  //size of processs stack 
-        uint32_t timeout;        //process timeout
+        
     }PROC;
 
     /* semaphore struct */

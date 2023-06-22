@@ -10,9 +10,9 @@
 #include <stdbool.h>
 #include <main_TMC129XNCZAD.h>
 //hardware abstraction layer include
-#include "testHAL.h"
+#include "dev001HAL.h"
 //module includes
-#include "system_init.h"
+#include "system.h"
 #include "application.c"
 //operating system
 #include "KOS.h"
@@ -37,7 +37,7 @@ void init_machine( void ){
     uint32_t clockSrc = init_systemClock();
     init_peripherals();
     init_sysTick(true, 5, clockSrc);  
-    config_UART(SYSTEM_UART, false, 9600, clockSrc);
+    UART_config(SYSTEM_UART, false, 9600, clockSrc);
     digitalOutput_config(OUT_01_DO, PUSH_PULL);
     digitalOutput_config(OUT_02_DO, PUSH_PULL);
     digitalOutput_config(OUT_03_DO, PUSH_PULL);  

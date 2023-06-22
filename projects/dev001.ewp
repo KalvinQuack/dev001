@@ -2205,10 +2205,10 @@
             <name>$PROJ_DIR$\..\kOS\src\queue.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\modules\src\system_init.c</name>
+            <name>$PROJ_DIR$\..\modules\src\system.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\modules\inc\system_init.h</name>
+            <name>$PROJ_DIR$\..\modules\inc\system.h</name>
         </file>
     </group>
     <file>

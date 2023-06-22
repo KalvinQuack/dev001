@@ -9,12 +9,15 @@
 
     /*prototypes*/
     void kernel_init    ( void );
-    int kernel_fork     ( void(*function)(void), uint8_t priority);
+    int  kernel_fork    ( void(*function)(void), uint8_t priority);
     void kernel_exit    ( void );
-    int scheduler       ( void );
+    int  scheduler      ( void );
     void block          ( SEMAPHORE *s );
     void signal         ( SEMAPHORE *s );
     void kernel_tick    ( void );
     void kernel_delay   ( uint32_t ticks );
+    
+    void kernel_sleep   ( void );
+    void kernel_wake    ( void );
 
 #endif

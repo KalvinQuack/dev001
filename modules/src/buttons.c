@@ -11,7 +11,6 @@
 #include "digitalInput_interface.h"
 
 /*total inputs*/
-extern digitalInput digitalInputs[IN_TOTAL_DI];
 BUTTON* buttonList = NULL;
 /**********************************************
  * Method:  uint32_t newDigitalButton( HAL_DINS pin )
@@ -24,7 +23,7 @@ BUTTON* buttonList = NULL;
  * Returns: uint32_t
  * 
 **********************************************/
-uint32_t newDigitalButton( HAL_DINS pin ){
+uint32_t newDigitalButton( HAL_DINS pin, button_state state){
     BUTTON* button = malloc(sizeof(BUTTON)); 
     if(pin < IN_TOTAL_DI){
         /*initialize ID*/
@@ -49,29 +48,18 @@ uint32_t newDigitalButton( HAL_DINS pin ){
         button->THRESH_LOW = 0; 
         button->VALUE = 0xb00d1e;   
     }
-    digitalInput_config(BINARY_NO, false, pin);
+    switch(state){
+        case NC:
+            digitalInput_config(BINARY_NC, true, pin);
+        break;
+        case NO:
+            digitalInput_config(BINARY_NO, true, pin);
+        break;
+    };
     /*return the pointer address in uint32_t*/
     return (uint32_t)button;
 }
-/**********************************************
- * Method:  processButtons( void )
- * 
- * Description: 
- *              
- * 
- * Notes:
- * 
- * Returns: 0
- * 
-**********************************************/
-int processButtons( void ){
-    if(buttonList != NULL){
-        readDigitalPin(buttonList->ID, BINARY_NO);
-        buttonList->VALUE = digitalInputs[buttonList->ID].value;
-        buttonList = buttonList->NEXT;
-        }
-    return 0;
-}
+
 /**********************************************
  * Method:  readButton(uint32_t button)
  * 
@@ -85,5 +73,11 @@ int processButtons( void ){
 **********************************************/
 uint8_t readButton(uint32_t button){
     BUTTON* temp = (BUTTON*)button;
+    switch(temp->TYPE){
+        case DI: temp->VALUE = readPin_digital(temp->ID);
+        break;
+        case AI:
+        break;
+    };
     return temp->VALUE;
 }

@@ -52,7 +52,6 @@
     void disable_NVIC           ( void );
     void trigger_PendSV          ( void );
 
-    
 
     
     #endif 

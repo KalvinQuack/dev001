@@ -12,14 +12,13 @@
     #include <stdint.h>
     #include <stdlib.h>
     /*environment includes*/
-    #include "system_init.h"
+    #include "system.h"
     #include "systemControl_interface.h"
-    #include "testHAL.h"
+    #include "digitalInput_interface.h"
+    #include "dev001HAL.h"
     #include "pinmap.h"
     #include "KOS.h"
     
-
-
     /**********************************************
      * Method:  sysTickHandler( void )
      * 
@@ -30,12 +29,13 @@
      * Notes: This function is used in conjunction with 
      * kOS
      * 
-     * Returns: None
+     * Returns: Atomic function
      * 
     **********************************************/
     void sysTickHandler( void ){
         disable_NVIC();
         kernel_tick();//tick down for sleeping procs
+        
         if(scheduler()){
             trigger_PendSV(); //trigger pendSV if next task is not the current
         }
@@ -54,7 +54,7 @@
      * Returns: clock rate in Hz
      * 
     **********************************************/
-    uint32_t init_systemClock( void ){
+    uint32_t init_systemClock( uint32_t speed_hz ){
         uint32_t clock_config = systemClockInit(
 
             false,          //not using external osc
@@ -62,7 +62,7 @@
             INT_OSC,        //using internal osc
             true,           //enable PLL
             VCO_320_MHZ,    //set the PLL freq to 320 Mhz
-            40000000        //desired frequency (hz) 40 Mhz
+            speed_hz        //desired frequency (hz) 60 Mhz
         );
 
         if(!clock_config){
@@ -89,6 +89,8 @@
         PINOUT *digitalDevice = accessDevice_pinout(DIGITAL_INPUTS, index);
         if(index < IN_TOTAL_DI){
             while(!peripheralInit(digitalDevice->device_peripheral)){}
+            /* add gpio interrupt function*/
+
             return 1;
         }else return 0;
     }
@@ -127,7 +129,7 @@
     uint8_t init_peripherals( void ){
         /*digital input peripherals*/
         for(int i = 0; i < IN_TOTAL_DI; i++){ 
-                init_digitalInputs(i);
+                init_digitalInputs(i); //enable perph clock
         }
         /*digital output peripherals*/
         for(int i = 0; i < OUT_TOTAL_DO; i++){
@@ -227,8 +229,20 @@
     void disable_IRQ( void ){
         disable_NVIC();
     }
-
+    /**********************************************
+     * Method:  switch_task( void )
+     * 
+     * Description: triggers PendSV interrupt
+     *              
+     * 
+     * Notes:
+     * 
+     * Returns: none
+     * 
+    **********************************************/
     void switch_task( void ){
+      if((int)scheduler()){
         trigger_PendSV();
+      }   
     }
 #endif

@@ -4243,6 +4243,6 @@ Total : 4233 files,  -1593297 codes, -917288 comments, -188722 blanks, all -2699
 | [middleware/hw_interfaces/src/digitalOutput_interface.c](/middleware/hw_interfaces/src/digitalOutput_interface.c) | C | -33 | -8 | -4 | -45 |
 | [middleware/hw_interfaces/src/systemControl_interface.c](/middleware/hw_interfaces/src/systemControl_interface.c) | C | -168 | -19 | -13 | -200 |
 | [middleware/pinmap.h](/middleware/pinmap.h) | C | -30 | -5 | -7 | -42 |
-| [middleware/testHAL.h](/middleware/testHAL.h) | C++ | -37 | -9 | -8 | -54 |
+| [middleware/dev001HAL.h](/middleware/dev001HAL.h) | C++ | -37 | -9 | -8 | -54 |
 
 [Summary](results.md) / [Details](details.md) / [Diff Summary](diff.md) / Diff Details

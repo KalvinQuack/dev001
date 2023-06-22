@@ -5,7 +5,7 @@
     #include <stdbool.h>
 
     /*environment includes*/
-    #include "testHAL.h"
+    #include "dev001HAL.h"
 
     /*enum types*/
     typedef enum outputState{
@@ -20,7 +20,7 @@
     
 
     /*function prototypes*/
-    void digitalOutput_config(HAL_DOUTS index, sourceType type);
-    void digitalOutput_control(HAL_DOUTS index, outputState val);
+    void digitalOutput_config   (HAL_DOUTS index, sourceType type);
+    void digitalOutput_control  (HAL_DOUTS index, outputState val);
 
 #endif

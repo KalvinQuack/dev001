@@ -13,8 +13,8 @@
     #include "KOS.h"
 
     
-    PROC proc[NPROC], *running, *freelist, *readyQueue, *next, init_proc;
-
+    PROC proc[NPROC], *running, *freelist, *readyQueue, *next, init_proc, *sleepQueue;
+    
     int procsize = sizeof(PROC);
 
     /**********************************************
@@ -178,7 +178,7 @@
         running->proc_state = BLOCKED;
         running->timeout = ticks;
         enable_IRQ();
-        scheduler();
+        //scheduler();
         switch_task();
     }
     /**********************************************

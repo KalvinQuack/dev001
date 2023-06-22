@@ -82,3 +82,33 @@ void V(SEMAPHORE *s){
     }
     enable_IRQ();
 }
+/**********************************************
+ * Method:  task_sleep(SEMAPHORE *s)
+ * 
+ * Description: sleeps task based
+ * 
+ * Notes:
+ * 
+ * Returns: none
+ * 
+**********************************************/
+void task_sleep(SEMAPHORE *s){
+    disable_IRQ();
+    block(s);
+    enable_IRQ();
+}
+/**********************************************
+ * Method:  task_wakeup(SEMAPHORE *s)
+ * 
+ * Description: wakes up task
+ * 
+ * Notes:
+ * 
+ * Returns: none
+ * 
+**********************************************/
+void task_wakeup(SEMAPHORE *s){
+    disable_IRQ();
+    signal(s);
+    enable_IRQ();   
+}

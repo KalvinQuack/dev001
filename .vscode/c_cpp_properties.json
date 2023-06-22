@@ -13,7 +13,8 @@
                 "${workspaceFolder}/modules/src",
                 "${workspaceFolder}/kOS/inc",
                 "${workspaceFolder}/middleware/hw_interfaces/inc",
-                "${workspaceFolder}/middleware/hw_interfaces/src"
+                "${workspaceFolder}/middleware/hw_interfaces/src",
+                "${workspaceFolder}/middleware/TivaWare_C_Series-2.2.0.295"
             ],
             "defines": [
                 "_DEBUG",

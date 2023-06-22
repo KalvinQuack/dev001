@@ -5,7 +5,12 @@
     #include <stdio.h>
     #include <stdbool.h>
     #include <stdint.h>
-    #include "testHAL.h"
+    #include "dev001HAL.h"
+
+    typedef enum STATE{
+        NC, 
+        NO
+    }button_state;
     typedef enum ERROR{
         OPEN, 
         SHORT,
@@ -31,7 +36,7 @@
     }BUTTON;
 
     /*function prototypes*/
-    uint32_t newDigitalButton(HAL_DINS pin);
+    uint32_t newDigitalButton(HAL_DINS pin, button_state state);
     uint8_t readButton(uint32_t button);
     int processButtons( void );
 

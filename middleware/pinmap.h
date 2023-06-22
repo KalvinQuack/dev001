@@ -27,7 +27,7 @@
          uint32_t device_peripheral;    //perpiheral register
          uint32_t device_port;          //port regsiter
          uint32_t device_pin;           //pin number
-    } PINOUT;
+    }PINOUT;
 
     typedef struct UART_DEV {
         uint32_t uart_peripheral;       //uart peripheral
@@ -35,6 +35,12 @@
         uint32_t uart_rx;               //uart_rx
         uint32_t uart_tx;               //uart_tx
     }UART_DEV;
+
+    typedef struct TIMER_DEV {
+        uint32_t timer_base;
+        uint32_t timerA;
+        uint32_t timerB;
+    }TIMER_DEV;
 
     PINOUT* accessDevice_pinout(DEVICE deviceType, uint32_t deviceIndex);
     UART_DEV* accessUART_device(uint32_t UART_index);
