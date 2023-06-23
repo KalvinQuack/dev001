@@ -6,39 +6,43 @@
     #include <stdbool.h>
     #include <stdint.h>
     #include "dev001HAL.h"
-
-    typedef enum STATE{
+    #include "digitalInput_interface.h"
+    #include "main_TMC129XNCZAD.h"
+    //#include "util/inc/observer.h"
+    typedef enum __state{
         NC, 
         NO
     }button_state;
-    typedef enum ERROR{
+    typedef enum __error{
         OPEN, 
         SHORT,
         NA
-    }error_status;
+    }button_error;
 
-    typedef enum TYPE{
+    typedef enum __type{
         DI,
         AI,
-        INT
     }button_type;
 
-    typedef struct BUTTON{
+    typedef struct __button{
+        uint32_t value;
+        button_error status;
+        button_type type;
+        button_state state;
+        HAL_DINS ID;
+        void(*subscribe)(struct __button*, void*);
+        void(*destroy)(struct __button*);
+        void(*config)(struct __button*, button_state, HAL_DINS);
+    }button;
 
-        uint32_t        VALUE;
-        error_status    ERROR;
-        button_type     TYPE;
-        uint16_t        THRESH_LOW;
-        uint16_t        THRESH_HIGH;
-        HAL_DINS        ID;
-        struct BUTTON  *NEXT;
-
-    }BUTTON;
-
+    
     /*function prototypes*/
-    uint32_t newDigitalButton(HAL_DINS pin, button_state state);
-    uint8_t readButton(uint32_t button);
-    int processButtons( void );
+    button* button_create(HAL_DINS __inputPin, button_state __state);
+
+    
+
+
+
 
 
 #endif

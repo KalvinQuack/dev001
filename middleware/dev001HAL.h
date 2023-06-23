@@ -37,6 +37,18 @@ THIS IS NOT DISTRIBUTED FOR COMMERCIAL USE
             }HAL_DOUTS;
         
         #endif
+        #ifndef _ANALOG_INPUTS_
+        #define _ANALOG_INPUTS_
+        /*DIGITAL INPUTS*/
+            typedef enum ANALOG_INPUTS{
+                IN_01_AI, //0
+                IN_02_AI, //1
+                IN_03_AI, //2 
+                IN_04_AI, //3
+                IN_05_AI, //4
+                IN_TOTAL_AI //total number of digital inputs
+            }HAL_AINS;
+        #endif
 
         #ifndef _UARTS_
         #define _UARTS_
@@ -46,6 +58,7 @@ THIS IS NOT DISTRIBUTED FOR COMMERCIAL USE
                 UART_TOTAL
             }HAL_UARTS;
         #endif
+
     #endif
 #endif
 

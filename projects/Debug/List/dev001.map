@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.30.1.335/W64 for ARM                  22/Jun/2023  08:14:29
+# IAR ELF Linker V9.30.1.335/W64 for ARM                  23/Jun/2023  13:29:16
 # Copyright 2007-2022 IAR Systems AB.
 #
 #    Output file  =
@@ -11,11 +11,10 @@
 #        -f
 #        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Exe\dev001.out.rsp
 #        (R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\pinmap\BSP.o
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Libraries\buttons.o
+#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\buttons.o
 #        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Assembly\context.o
 #        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Assembly\custom_cmain.o
 #        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\digitalInput_interface.o
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\digitalOutput_interface.o
 #        R:\SourceCode\TIVA\Development\dev001\middleware\TivaWare_C_Series-2.2.0.295\driverlib\ewarm\Exe\driverlib.a
 #        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\src\kernel.o
 #        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\KOS.o
@@ -26,7 +25,6 @@
 #        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\src\system.o
 #        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Assembly\system_reset.o
 #        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\systemControl_interface.o
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\UART_interface.o
 #        --no_out_extension -o
 #        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Exe\dev001.out
 #        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
@@ -45,9 +43,9 @@
 ***
 
 Warning[Lt009]: Inconsistent wchar_t size
-            gpio.o(driverlib.a) and 5 other objects in driverlib.a have wchar_t
+            gpio.o(driverlib.a) and 4 other objects in driverlib.a have wchar_t
                       size 16 bits
-            BSP.o and 32 other objects, some of them in dl7M_tln.a and 11 other
+            BSP.o and 31 other objects, some of them in dl7M_tln.a and 11 other
                       libraries have wchar_t size 32 bits
 
 
@@ -57,7 +55,7 @@ Warning[Lt009]: Inconsistent wchar_t size
 
 CppFlavor       = *
 __CPP_Runtime   = 1
-__Heap_Handler  = NoFree
+__Heap_Handler  = Basic
 __SystemLibrary = DLib
 __dlib_version  = 6
 
@@ -66,8 +64,9 @@ __dlib_version  = 6
 *** HEAP SELECTION
 ***
 
-The no free heap was selected because no calls to memory
-deallocation functions were found in the application.
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
 
 
 *******************************************************************************
@@ -89,115 +88,77 @@ initialize by copy { rw };
   .intvec            const            0x0     0x200  startup_ewarm.o [1]
                                   - 0x200     0x200
 
-"P1":                                        0x385b
-  .text              ro code        0x200     0xe8e  xprintffull_nomb.o [6]
-  .text              ro code       0x108e      0x7e  lz77_init_single.o [9]
-  .text              ro code       0x110c      0x16  strchr.o [9]
-  .text              ro code       0x1122       0xa  xsprout.o [6]
-  .text              ro code       0x112c      0x40  xfail_s.o [6]
-  .text              ro code       0x116c      0x36  strlen.o [9]
-  .text              ro code       0x11a4      0x58  memchr.o [9]
-  .text              ro code       0x11fc      0xa6  ABImemcpy.o [9]
-  .text              ro code       0x12a4      0x70  frexp.o [8]
-  .text              ro code       0x1314      0x34  DblCmpLe.o [8]
-  .text              ro code       0x1348      0x34  DblCmpGe.o [8]
-  .text              ro code       0x137c     0x13a  ldexp.o [8]
-  .text              ro code       0x14b8      0x36  DblToS32.o [8]
-  .text              ro code       0x14f0      0x22  S32ToDbl.o [8]
-  .text              ro code       0x1514     0x24e  DblAddSub.o [8]
-  .text              ro code       0x1764     0x246  DblDiv.o [8]
-  .text              ro code       0x19ac      0x22  DblToU32.o [8]
-  .text              ro code       0x19d0      0x1c  U32ToDbl.o [8]
-  .text              ro code       0x19ec     0x1aa  DblMul.o [8]
-  .text              ro code       0x1b98     0x230  I64DivMod.o [9]
-  .text              ro code       0x1dc8       0x6  abort.o [6]
-  .text              ro code       0x1dd0       0x2  I64DivZer.o [9]
-  .text              ro code       0x1dd4      0x14  exit.o [10]
-  .text              ro code       0x1de8     0x52c  gpio.o [7]
-  .text              ro code       0x2314     0x1d8  interrupt.o [7]
-  .text              ro code       0x24ec      0x10  cpu.o [7]
-  .text              ro code       0x24fc     0x4f0  sysctl.o [7]
-  .text              ro code       0x29ec     0x23a  systemControl_interface.o [1]
-  .text              ro code       0x2c28      0x40  systick.o [7]
-  .text              ro code       0x2c68     0x1a4  kernel.o [5]
-  .text              ro code       0x2e0c      0xca  queue.o [5]
-  .text              ro code       0x2ed8     0x148  system.o [5]
-  .text              ro code       0x3020      0x64  BSP.o [4]
-  .text              ro code       0x3084     0x180  main_TMC129XNCZAD.o [5]
-  .text              ro code       0x3204      0xa8  buttons.o [3]
-  .text              ro code       0x32ac      0xa0  serial.o [1]
-  .text              ro code       0x334c     0x126  digitalInput_interface.o [1]
-  .text              ro code       0x3474      0x80  KOS.o [1]
-  .text              ro code       0x34f4     0x150  UART_interface.o [1]
-  .text              ro code       0x3644      0x70  digitalOutput_interface.o [1]
-  .text              ro code       0x36b4      0x4c  no_free_heap0.o [6]
-  .text              ro code       0x3700       0x6  ABImemclr.o [9]
-  .text              ro code       0x3708      0x34  vsprintf.o [6]
-  .text              ro code       0x373c      0x96  uart.o [7]
-  .text              ro code       0x37d4      0x2c  xgetmemchunk.o [6]
-  .text              ro code       0x3800      0x5e  ABImemset.o [9]
-  .text              ro code       0x3860      0x4c  context.o [2]
-  .text              ro code       0x38ac      0x38  zero_init3.o [9]
-  .text              ro code       0x38e4      0x30  custom_cmain.o [2]
-  .text              ro code       0x3914       0x4  low_level_init.o [6]
-  .text              ro code       0x3918      0x28  data_init.o [9]
-  .text              ro code       0x3940       0x4  exit.o [6]
-  .text              ro code       0x3944       0xa  cexit.o [9]
-  .text              ro code       0x3950      0x22  fpinit_M.o [8]
-  .iar.init_table    const         0x3974      0x20  - Linker created -
-  .text              ro code       0x3994      0x1e  startup_ewarm.o [1]
-  .text              ro code       0x39b4      0x1c  system_reset.o [2]
-  .rodata            const         0x39d0      0x18  main_TMC129XNCZAD.o [5]
-  .rodata            const         0x39e8       0x0  zero_init3.o [9]
-  .rodata            const         0x39e8       0x0  lz77_init_single.o [9]
-  Initializer bytes  const         0x39e8      0x73  <for P2-1>
-                                 - 0x3a5b    0x385b
+"P1":                                        0x1769
+  .text              ro code        0x200     0x4f0  sysctl.o [6]
+  .text              ro code        0x6f0     0x3f0  gpio.o [6]
+  .text              ro code        0xae0     0x1d8  interrupt.o [6]
+  .text              ro code        0xcb8      0x10  cpu.o [6]
+  .text              ro code        0xcc8     0x23a  systemControl_interface.o [1]
+  .text              ro code        0xf02      0x7e  lz77_init_single.o [8]
+  .text              ro code        0xf80      0x40  systick.o [6]
+  .text              ro code        0xfc0     0x188  kernel.o [4]
+  .text              ro code       0x1148      0xca  queue.o [4]
+  .text              ro code       0x1214     0x148  system.o [4]
+  .text              ro code       0x135c      0x64  BSP.o [3]
+  .text              ro code       0x13c0     0x13c  heap0.o [5]
+  .text              ro code       0x14fc      0x2c  xgetmemchunk.o [5]
+  .text              ro code       0x1528     0x128  digitalInput_interface.o [1]
+  .text              ro code       0x1650       0x4  heaptramp0.o [5]
+  .text              ro code       0x1654      0xe0  main_TMC129XNCZAD.o [4]
+  .text              ro code       0x1734      0x40  KOS.o [1]
+  .text              ro code       0x1774      0x4c  context.o [2]
+  .text              ro code       0x17c0      0x38  zero_init3.o [8]
+  .text              ro code       0x17f8      0x30  custom_cmain.o [2]
+  .text              ro code       0x1828       0x4  low_level_init.o [5]
+  .text              ro code       0x182c      0x28  data_init.o [8]
+  .text              ro code       0x1854       0x4  exit.o [5]
+  .text              ro code       0x1858       0xa  cexit.o [8]
+  .text              ro code       0x1864      0x14  exit.o [9]
+  .text              ro code       0x1878      0x22  fpinit_M.o [7]
+  .iar.init_table    const         0x189c      0x20  - Linker created -
+  .text              ro code       0x18bc      0x1e  startup_ewarm.o [1]
+  .text              ro code       0x18dc      0x1c  system_reset.o [2]
+  .rodata            const         0x18f8       0x0  zero_init3.o [8]
+  .rodata            const         0x18f8       0x0  lz77_init_single.o [8]
+  Initializer bytes  const         0x18f8      0x71  <for P2-1>
+                                 - 0x1969    0x1769
 
-"P2", part 1 of 3:                            0x100
-  P2-1                        0x2000'0000     0x100  <Init block>
-    .data            inited   0x2000'0000      0x3c  BSP.o [4]
-    .data            inited   0x2000'003c      0x3c  BSP.o [4]
-    .data            inited   0x2000'0078      0x24  BSP.o [4]
-    .data            inited   0x2000'009c      0x30  BSP.o [4]
-    .data            inited   0x2000'00cc      0x20  BSP.o [4]
-    .data            inited   0x2000'00ec       0x4  kernel.o [5]
-    .data            inited   0x2000'00f0       0x8  main_TMC129XNCZAD.o [5]
-    .data            inited   0x2000'00f8       0x8  main_TMC129XNCZAD.o [5]
-                            - 0x2000'0100     0x100
+"P2", part 1 of 3:                             0xf8
+  P2-1                        0x2000'0000      0xf8  <Init block>
+    .data            inited   0x2000'0000      0x3c  BSP.o [3]
+    .data            inited   0x2000'003c      0x3c  BSP.o [3]
+    .data            inited   0x2000'0078      0x24  BSP.o [3]
+    .data            inited   0x2000'009c      0x30  BSP.o [3]
+    .data            inited   0x2000'00cc      0x20  BSP.o [3]
+    .data            inited   0x2000'00ec       0x4  kernel.o [4]
+    .data            inited   0x2000'00f0       0x8  main_TMC129XNCZAD.o [4]
+                            - 0x2000'00f8      0xf8
 
-"P2", part 2 of 3:                           0xada8
-  .bss               zero     0x2000'0100    0x90d8  kernel.o [5]
-  .bss               zero     0x2000'91d8    0x1018  kernel.o [5]
-  .bss               zero     0x2000'a1f0     0x830  UART_interface.o [1]
-  VTABLE             zero     0x2000'ac00     0x26c  interrupt.o [7]
-  .bss               zero     0x2000'ae6c       0x8  digitalInput_interface.o [1]
-  .bss               zero     0x2000'ae74       0x4  buttons.o [3]
-  .bss               zero     0x2000'ae78       0x4  kernel.o [5]
-  .bss               zero     0x2000'ae7c       0x4  kernel.o [5]
-  .bss               zero     0x2000'ae80       0x4  kernel.o [5]
-  .bss               zero     0x2000'ae84       0x4  kernel.o [5]
-  .bss               zero     0x2000'ae88       0x4  main_TMC129XNCZAD.o [5]
-  .bss               zero     0x2000'ae8c       0x4  main_TMC129XNCZAD.o [5]
-  .bss               zero     0x2000'ae90       0x4  main_TMC129XNCZAD.o [5]
-  .bss               zero     0x2000'ae94       0x4  main_TMC129XNCZAD.o [5]
-  .bss               zero     0x2000'ae98       0x4  main_TMC129XNCZAD.o [5]
-  .bss               zero     0x2000'ae9c       0x4  xfail_s.o [6]
-  .bss               zero     0x2000'aea0       0x4  no_free_heap0.o [6]
-  .bss               zero     0x2000'aea4       0x4  xgetmemchunk.o [6]
-                            - 0x2000'aea8    0xada8
+"P2", part 2 of 3:                           0xa5a4
+  .bss               zero     0x2000'00f8    0x90d8  kernel.o [4]
+  .bss               zero     0x2000'91d0    0x1018  kernel.o [4]
+  VTABLE             zero     0x2000'a400     0x26c  interrupt.o [6]
+  .bss               zero     0x2000'a66c      0x14  main_TMC129XNCZAD.o [4]
+  .bss               zero     0x2000'a680       0x8  heap0.o [5]
+  .bss               zero     0x2000'a688       0x4  kernel.o [4]
+  .bss               zero     0x2000'a68c       0x4  kernel.o [4]
+  .bss               zero     0x2000'a690       0x4  kernel.o [4]
+  .bss               zero     0x2000'a694       0x4  kernel.o [4]
+  .bss               zero     0x2000'a698       0x4  xgetmemchunk.o [5]
+                            - 0x2000'a69c    0xa5a4
 
-"P2", part 3 of 3:                         0x1'0200
-  .noinit            uninit   0x2000'aea8     0x200  startup_ewarm.o [1]
-  HEAP                        0x2000'b0a8  0x1'0000  <Block>
-    HEAP             uninit   0x2000'b0a8  0x1'0000  <Block tail>
-                            - 0x2001'b0a8  0x1'0200
+"P2", part 3 of 3:                         0x1'0204
+  .noinit            uninit   0x2000'a69c     0x200  startup_ewarm.o [1]
+  HEAP                        0x2000'a8a0  0x1'0000  <Block>
+    HEAP             uninit   0x2000'a8a0  0x1'0000  <Block tail>
+                            - 0x2001'a8a0  0x1'0204
 
 Unused ranges:
 
          From           To      Size
          ----           --      ----
-       0x3a5b     0xf'ffff  0xf'c5a5
-  0x2001'b0a8  0x2003'ffff  0x2'4f58
+       0x1969     0xf'ffff  0xf'e697
+  0x2001'a8a0  0x2003'ffff  0x2'5760
 
 
 *******************************************************************************
@@ -207,14 +168,14 @@ Unused ranges:
           Address      Size
           -------      ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0xada8:
-          0x2000'0100  0xada8
+    1 destination range, total size 0xa5a4:
+          0x2000'00f8  0xa5a4
 
 Copy/lz77 (__iar_lz77_init_single3)
-    1 source range, total size 0x73 (44% of destination):
-               0x39e8    0x73
-    1 destination range, total size 0x100:
-          0x2000'0000   0x100
+    1 source range, total size 0x71 (45% of destination):
+               0x18f8    0x71
+    1 destination range, total size 0xf8:
+          0x2000'0000    0xf8
 
 
 
@@ -229,15 +190,12 @@ command line/config:
     Total:
 
 R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj: [1]
-    KOS.o                          128
-    UART_interface.o               336             2'096
-    digitalInput_interface.o       294                 8
-    digitalOutput_interface.o      112
-    serial.o                       160
+    KOS.o                           64
+    digitalInput_interface.o       296
     startup_ewarm.o                 30      512      512
     systemControl_interface.o      570
     ----------------------------------------------------
-    Total:                       1'630      512    2'616
+    Total:                         960      512      512
 
 R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Assembly: [2]
     context.o                       76
@@ -246,88 +204,59 @@ R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Assembly: [2]
     ----------------------------------------------------
     Total:                         152
 
-R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Libraries: [3]
-    buttons.o                      168                 4
+R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\pinmap: [3]
+    BSP.o                          100      107      236
     ----------------------------------------------------
-    Total:                         168                 4
+    Total:                         100      107      236
 
-R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\pinmap: [4]
-    BSP.o                          100      106      236
-    ----------------------------------------------------
-    Total:                         100      106      236
-
-R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\src: [5]
-    kernel.o                       420        1   41'220
-    main_TMC129XNCZAD.o            384       32       36
+R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\src: [4]
+    kernel.o                       392        2   41'220
+    main_TMC129XNCZAD.o            224        4       28
     queue.o                        202
     system.o                       328
     ----------------------------------------------------
-    Total:                       1'334       33   41'256
+    Total:                       1'146        6   41'248
 
-dl7M_tln.a: [6]
-    abort.o                          6
+dl7M_tln.a: [5]
     exit.o                           4
+    heap0.o                        316                 8
+    heaptramp0.o                     4
     low_level_init.o                 4
-    no_free_heap0.o                 76                 4
-    vsprintf.o                      52
-    xfail_s.o                       64                 4
     xgetmemchunk.o                  44                 4
-    xprintffull_nomb.o           3'726
-    xsprout.o                       10
     ----------------------------------------------------
-    Total:                       3'986                12
+    Total:                         372                12
 
-driverlib.a: [7]
+driverlib.a: [6]
     cpu.o                           16
-    gpio.o                       1'324
+    gpio.o                       1'008
     interrupt.o                    472               620
     sysctl.o                     1'264
     systick.o                       64
-    uart.o                         150
     ----------------------------------------------------
-    Total:                       3'290               620
+    Total:                       2'824               620
 
-m7M_tls.a: [8]
-    DblAddSub.o                    590
-    DblCmpGe.o                      52
-    DblCmpLe.o                      52
-    DblDiv.o                       582
-    DblMul.o                       426
-    DblToS32.o                      54
-    DblToU32.o                      34
-    S32ToDbl.o                      34
-    U32ToDbl.o                      28
+m7M_tls.a: [7]
     fpinit_M.o                      34
-    frexp.o                        112
-    ldexp.o                        314
     ----------------------------------------------------
-    Total:                       2'312
+    Total:                          34
 
-rt7M_tl.a: [9]
-    ABImemclr.o                      6
-    ABImemcpy.o                    166
-    ABImemset.o                     94
-    I64DivMod.o                    560
-    I64DivZer.o                      2
+rt7M_tl.a: [8]
     cexit.o                         10
     data_init.o                     40
     lz77_init_single.o             126
-    memchr.o                        88
-    strchr.o                        22
-    strlen.o                        54
     zero_init3.o                    56
     ----------------------------------------------------
-    Total:                       1'224
+    Total:                         232
 
-shb_l.a: [10]
+shb_l.a: [9]
     exit.o                          20
     ----------------------------------------------------
     Total:                          20
 
-    Gaps                            38        2      480
+    Gaps                             6        2      536
     Linker created                           32   65'536
 --------------------------------------------------------
-    Grand Total:                14'254      685  110'760
+    Grand Total:                 5'846      659  108'700
 
 
 *******************************************************************************
@@ -336,233 +265,151 @@ shb_l.a: [10]
 
 Entry                       Address    Size  Type      Object
 -----                       -------    ----  ----      ------
-.iar.init_table$$Base        0x3974           --   Gb  - Linker created -
-.iar.init_table$$Limit       0x3994           --   Gb  - Linker created -
-?main                        0x38e5          Code  Gb  custom_cmain.o [2]
-CPUcpsid                     0x24ed     0x8  Code  Gb  cpu.o [7]
-CPUcpsie                     0x24f5     0x8  Code  Gb  cpu.o [7]
-DIN                     0x2000'00f8     0x8  Data  Gb  main_TMC129XNCZAD.o [5]
-DIN_ISR                      0x30df     0xe  Code  Lc  main_TMC129XNCZAD.o [5]
-FaultISR                     0x39af     0x2  Code  Lc  startup_ewarm.o [1]
-GPIODirModeSet               0x1e29    0x28  Code  Gb  gpio.o [7]
-GPIOIntClear                 0x2027     0x6  Code  Gb  gpio.o [7]
-GPIOIntEnable                0x2011     0x6  Code  Gb  gpio.o [7]
-GPIOIntRegister              0x202d    0x14  Code  Gb  gpio.o [7]
-GPIOIntStatus                0x2017    0x10  Code  Gb  gpio.o [7]
-GPIOIntTypeSet               0x1e51    0x4c  Code  Gb  gpio.o [7]
-GPIOPadConfigSet             0x1e9d   0x174  Code  Gb  gpio.o [7]
-GPIOPinConfigure             0x2099    0x38  Code  Gb  gpio.o [7]
-GPIOPinRead                  0x2049     0x6  Code  Gb  gpio.o [7]
-GPIOPinTypeGPIOOutput        0x2059     0xa  Code  Gb  gpio.o [7]
-GPIOPinTypeGPIOOutputOD
-                             0x2063     0x8  Code  Gb  gpio.o [7]
-GPIOPinTypeUART              0x2085    0x14  Code  Gb  gpio.o [7]
-GPIOPinWrite                 0x204f     0x6  Code  Gb  gpio.o [7]
-HEAP$$Base              0x2000'b0a8           --   Gb  - Linker created -
-HEAP$$Limit             0x2001'b0a8           --   Gb  - Linker created -
-IntDefaultHandler            0x39b1     0x2  Code  Lc  startup_ewarm.o [1]
-IntEnable                    0x2375    0x56  Code  Gb  interrupt.o [7]
-IntMasterDisable             0x231d     0x6  Code  Gb  interrupt.o [7]
-IntMasterEnable              0x2315     0x8  Code  Gb  interrupt.o [7]
-IntPendSet                   0x23cb    0x48  Code  Gb  interrupt.o [7]
-IntPrioritySet               0x2351    0x24  Code  Gb  interrupt.o [7]
-IntRegister                  0x232b    0x26  Code  Gb  interrupt.o [7]
-NmiSR                        0x39ad     0x2  Code  Lc  startup_ewarm.o [1]
-OS_idle                      0x3475     0x2  Code  Gb  KOS.o [1]
-OS_init                      0x3477    0x10  Code  Gb  KOS.o [1]
-P                            0x348d    0x20  Code  Gb  KOS.o [1]
-RGBled_pinout           0x2000'0078    0x24  Data  Gb  BSP.o [4]
-Region$$Table$$Base          0x3974           --   Gb  - Linker created -
-Region$$Table$$Limit         0x3994           --   Gb  - Linker created -
-ResetISR                     0x3995    0x12  Code  Gb  startup_ewarm.o [1]
-SysCtlClockFreqSet           0x2563   0x204  Code  Gb  sysctl.o [7]
-SysCtlPeripheralEnable       0x2547     0x8  Code  Gb  sysctl.o [7]
+.iar.init_table$$Base        0x189c           --   Gb  - Linker created -
+.iar.init_table$$Limit       0x18bc           --   Gb  - Linker created -
+?main                        0x17f9          Code  Gb  custom_cmain.o [2]
+Aldata                  0x2000'a680     0x8  Data  Lc  heap0.o [5]
+CPUcpsid                      0xcb9     0x8  Code  Gb  cpu.o [6]
+CPUcpsie                      0xcc1     0x8  Code  Gb  cpu.o [6]
+DIN                     0x2000'00f0     0x8  Data  Gb  main_TMC129XNCZAD.o [4]
+DIN_ISR                      0x1655    0x2e  Code  Lc  main_TMC129XNCZAD.o [4]
+FaultISR                     0x18d7     0x2  Code  Lc  startup_ewarm.o [1]
+GPIOIntClear                  0x907     0x6  Code  Gb  gpio.o [6]
+GPIOIntEnable                 0x8f1     0x6  Code  Gb  gpio.o [6]
+GPIOIntRegister               0x90d    0x14  Code  Gb  gpio.o [6]
+GPIOIntStatus                 0x8f7    0x10  Code  Gb  gpio.o [6]
+GPIOIntTypeSet                0x731    0x4c  Code  Gb  gpio.o [6]
+GPIOPadConfigSet              0x77d   0x174  Code  Gb  gpio.o [6]
+GPIOPinRead                   0x929     0x6  Code  Gb  gpio.o [6]
+HEAP$$Base              0x2000'a8a0           --   Gb  - Linker created -
+HEAP$$Limit             0x2001'a8a0           --   Gb  - Linker created -
+IntDefaultHandler            0x18d9     0x2  Code  Lc  startup_ewarm.o [1]
+IntEnable                     0xb41    0x56  Code  Gb  interrupt.o [6]
+IntMasterDisable              0xae9     0x6  Code  Gb  interrupt.o [6]
+IntMasterEnable               0xae1     0x8  Code  Gb  interrupt.o [6]
+IntPendSet                    0xb97    0x48  Code  Gb  interrupt.o [6]
+IntPrioritySet                0xb1d    0x24  Code  Gb  interrupt.o [6]
+IntRegister                   0xaf7    0x26  Code  Gb  interrupt.o [6]
+NmiSR                        0x18d5     0x2  Code  Lc  startup_ewarm.o [1]
+OS_idle                      0x1735     0x2  Code  Gb  KOS.o [1]
+OS_init                      0x1737    0x10  Code  Gb  KOS.o [1]
+RGBled_pinout           0x2000'0078    0x24  Data  Gb  BSP.o [3]
+Region$$Table$$Base          0x189c           --   Gb  - Linker created -
+Region$$Table$$Limit         0x18bc           --   Gb  - Linker created -
+ResetISR                     0x18bd    0x12  Code  Gb  startup_ewarm.o [1]
+SysCtlClockFreqSet            0x267   0x204  Code  Gb  sysctl.o [6]
+SysCtlPeripheralEnable        0x24b     0x8  Code  Gb  sysctl.o [6]
 SysCtlPeripheralPresent
-                             0x251d     0xa  Code  Gb  sysctl.o [7]
-SysCtlPeripheralReady        0x2527     0x8  Code  Gb  sysctl.o [7]
-SysTickEnable                0x2c29     0xc  Code  Gb  systick.o [7]
-SysTickIntEnable             0x2c4b     0xc  Code  Gb  systick.o [7]
-SysTickIntRegister           0x2c35    0x16  Code  Gb  systick.o [7]
-SysTickPeriodSet             0x2c57     0x8  Code  Gb  systick.o [7]
-UARTCharPutNonBlocking       0x37c5     0xe  Code  Gb  uart.o [7]
-UARTConfigSetExpClk          0x373d    0x4c  Code  Gb  uart.o [7]
-UARTDisable                  0x37a3    0x1e  Code  Gb  uart.o [7]
-UARTEnable                   0x3789    0x1a  Code  Gb  uart.o [7]
-UARTS                   0x2000'00cc    0x20  Data  Gb  BSP.o [4]
-UARTS_pinout            0x2000'009c    0x30  Data  Gb  BSP.o [4]
-UART_config                  0x34f5    0xee  Code  Gb  UART_interface.o [1]
-V                            0x34ad    0x20  Code  Gb  KOS.o [1]
-_GPIOIntNumberGet            0x1de9    0x40  Code  Lc  gpio.o [7]
-_LC                           0x201     0x6  Code  Lc  xprintffull_nomb.o [6]
-_LitobFullNoMb                0xe91   0x114  Code  Lc  xprintffull_nomb.o [6]
-_PrintfFullNoMb               0x207   0xc76  Code  Gb  xprintffull_nomb.o [6]
-_PutcharsFullNoMb             0xffd    0x2e  Code  Lc  xprintffull_nomb.o [6]
-_SProut                      0x1123     0xa  Code  Gb  xsprout.o [6]
-_SysCtlMemTimingGet          0x24fd    0x20  Code  Lc  sysctl.o [7]
-__aeabi_cdcmple              0x1315          Code  Gb  DblCmpLe.o [8]
-__aeabi_cdrcmple             0x1349          Code  Gb  DblCmpGe.o [8]
-__aeabi_d2iz                 0x14b9          Code  Gb  DblToS32.o [8]
-__aeabi_d2uiz                0x19ad          Code  Gb  DblToU32.o [8]
-__aeabi_ddiv                 0x1765          Code  Gb  DblDiv.o [8]
-__aeabi_dmul                 0x19ed          Code  Gb  DblMul.o [8]
-__aeabi_dsub                 0x1681          Code  Gb  DblAddSub.o [8]
-__aeabi_i2d                  0x14f1          Code  Gb  S32ToDbl.o [8]
-__aeabi_ldiv0                0x1dd1          Code  Gb  I64DivZer.o [9]
-__aeabi_memclr               0x3701          Code  Gb  ABImemclr.o [9]
-__aeabi_memcpy               0x11fd          Code  Gb  ABImemcpy.o [9]
-__aeabi_memcpy4              0x121d          Code  Gb  ABImemcpy.o [9]
-__aeabi_memcpy8              0x121d          Code  Gb  ABImemcpy.o [9]
-__aeabi_ui2d                 0x19d1          Code  Gb  U32ToDbl.o [8]
-__aeabi_uldivmod             0x1b99          Code  Gb  I64DivMod.o [9]
-__cmain                      0x38e5          Code  Gb  custom_cmain.o [2]
-__data_GetMemChunk           0x37d5    0x2c  Code  Gb  xgetmemchunk.o [6]
+                              0x221     0xa  Code  Gb  sysctl.o [6]
+SysCtlPeripheralReady         0x22b     0x8  Code  Gb  sysctl.o [6]
+SysTickEnable                 0xf81     0xc  Code  Gb  systick.o [6]
+SysTickIntEnable              0xfa3     0xc  Code  Gb  systick.o [6]
+SysTickIntRegister            0xf8d    0x16  Code  Gb  systick.o [6]
+SysTickPeriodSet              0xfaf     0x8  Code  Gb  systick.o [6]
+UARTS                   0x2000'00cc    0x20  Data  Gb  BSP.o [3]
+UARTS_pinout            0x2000'009c    0x30  Data  Gb  BSP.o [3]
+_GPIOIntNumberGet             0x6f1    0x40  Code  Lc  gpio.o [6]
+_SysCtlMemTimingGet           0x201    0x20  Code  Lc  sysctl.o [6]
+__basic_free                 0x146d    0x16  Code  Gb  heap0.o [5]
+__basic_free_intern          0x1483    0x74  Code  Lc  heap0.o [5]
+__basic_malloc               0x13c1    0x18  Code  Gb  heap0.o [5]
+__basic_malloc_intern        0x13d9    0x94  Code  Lc  heap0.o [5]
+__clearInterrupt             0x1573     0xe  Code  Gb  digitalInput_interface.o [1]
+__cmain                      0x17f9          Code  Gb  custom_cmain.o [2]
+__config                     0x1581    0x88  Code  Gb  digitalInput_interface.o [1]
+__data_GetMemChunk           0x14fd    0x2c  Code  Gb  xgetmemchunk.o [5]
 __data_GetMemChunk::start
-                        0x2000'aea4     0x4  Data  Lc  xgetmemchunk.o [6]
-__exit                       0x1dd5    0x14  Code  Gb  exit.o [10]
-__iar_Fail_s                 0x112d    0x1c  Code  Gb  xfail_s.o [6]
-__iar_Memchr                 0x11a5          Code  Gb  memchr.o [9]
-__iar_Memset_word            0x3801          Code  Gb  ABImemset.o [9]
-__iar_Strchr                 0x110d          Code  Gb  strchr.o [9]
-__iar_data_init3             0x3919    0x28  Code  Gb  data_init.o [9]
-__iar_frexp                  0x12b1          Code  Gb  frexp.o [8]
-__iar_frexpl                 0x12b1          Code  Gb  frexp.o [8]
-__iar_init_vfp               0x3951          Code  Gb  fpinit_M.o [8]
-__iar_ldexp64                0x137d          Code  Gb  ldexp.o [8]
+                        0x2000'a698     0x4  Data  Lc  xgetmemchunk.o [5]
+__destroy                    0x154d     0xe  Code  Gb  digitalInput_interface.o [1]
+__exit                       0x1865    0x14  Code  Gb  exit.o [9]
+__getInterrupt               0x155b    0x18  Code  Gb  digitalInput_interface.o [1]
+__iar_data_init3             0x182d    0x28  Code  Gb  data_init.o [8]
+__iar_init_vfp               0x1879          Code  Gb  fpinit_M.o [7]
 __iar_lz77_init_single3
-                             0x108f    0x7e  Code  Gb  lz77_init_single.o [9]
-__iar_program_start          0x39b5          Code  Gb  system_reset.o [2]
-__iar_scalbln64              0x137d          Code  Gb  ldexp.o [8]
-__iar_scalbn64               0x137d          Code  Gb  ldexp.o [8]
-__iar_softfp___iar_frexp64
-                             0x12a5          Code  Gb  frexp.o [8]
-__iar_softfp_frexp           0x12a5          Code  Gb  frexp.o [8]
-__iar_softfp_frexpl          0x12a5          Code  Gb  frexp.o [8]
-__iar_zero_init3             0x38ad    0x38  Code  Gb  zero_init3.o [9]
-__low_level_init             0x3915     0x4  Code  Gb  low_level_init.o [6]
-__no_free_malloc             0x36b5    0x46  Code  Gb  no_free_heap0.o [6]
+                              0xf03    0x7e  Code  Gb  lz77_init_single.o [8]
+__iar_program_start          0x18dd          Code  Gb  system_reset.o [2]
+__iar_zero_init3             0x17c1    0x38  Code  Gb  zero_init3.o [8]
+__low_level_init             0x1829     0x4  Code  Gb  low_level_init.o [5]
+__read                       0x1529    0x24  Code  Gb  digitalInput_interface.o [1]
 __vector_table                  0x0   0x200  Data  Gb  startup_ewarm.o [1]
-_call_main                   0x38f1          Code  Gb  custom_cmain.o [2]
-_exit                        0x3945          Code  Gb  cexit.o [9]
-abort                        0x1dc9     0x6  Code  Gb  abort.o [6]
-accessDevice_pinout          0x3021    0x46  Code  Gb  BSP.o [4]
-accessUART_device            0x3067     0x8  Code  Gb  BSP.o [4]
-app                          0x30c9    0x16  Code  Gb  main_TMC129XNCZAD.o [5]
-app_config                   0x3085    0x44  Code  Gb  main_TMC129XNCZAD.o [5]
-block                        0x2d67    0x18  Code  Gb  kernel.o [5]
-button1                 0x2000'ae88     0x4  Data  Gb  main_TMC129XNCZAD.o [5]
-button2                 0x2000'ae8c     0x4  Data  Gb  main_TMC129XNCZAD.o [5]
-button3                 0x2000'ae90     0x4  Data  Gb  main_TMC129XNCZAD.o [5]
-button4                 0x2000'ae94     0x4  Data  Gb  main_TMC129XNCZAD.o [5]
-button5                 0x2000'ae98     0x4  Data  Gb  main_TMC129XNCZAD.o [5]
-buttonList              0x2000'ae74     0x4  Data  Gb  buttons.o [3]
-config_sysTick               0x2ba1    0x46  Code  Gb  systemControl_interface.o [1]
-deqeue_proc                  0x2ec3    0x14  Code  Gb  queue.o [5]
-digitalInput_config          0x334d    0x74  Code  Gb  digitalInput_interface.o [1]
-digitalInputs           0x2000'ae6c     0x8  Data  Gb  digitalInput_interface.o [1]
-digitalInputs_pinout    0x2000'0000    0x3c  Data  Gb  BSP.o [4]
-digitalInterrupts_clear
-                             0x343f    0x34  Code  Gb  digitalInput_interface.o [1]
-digitalInterrupts_enable
-                             0x33fd    0x42  Code  Gb  digitalInput_interface.o [1]
-digitalOutput_config         0x3645    0x32  Code  Gb  digitalOutput_interface.o [1]
-digitalOutput_control        0x3677    0x3e  Code  Gb  digitalOutput_interface.o [1]
-digitalOutputs_pinout   0x2000'003c    0x3c  Data  Gb  BSP.o [4]
-disable_IRQ                  0x3009     0x8  Code  Gb  system.o [5]
-disable_NVIC                 0x2b97     0x8  Code  Gb  systemControl_interface.o [1]
-enable_IRQ                   0x3001     0x8  Code  Gb  system.o [5]
-enable_NVIC                  0x2b8f     0x8  Code  Gb  systemControl_interface.o [1]
-enable_sysTick               0x2bfd    0x20  Code  Gb  systemControl_interface.o [1]
-exit                         0x3941     0x4  Code  Gb  exit.o [6]
-freelist                0x2000'ae7c     0x4  Data  Gb  kernel.o [5]
-g_pfnRAMVectors         0x2000'ac00   0x26c  Data  Lc  interrupt.o [7]
-g_pppui32XTALtoVCO           0x2804   0x1b0  Data  Lc  sysctl.o [7]
+_call_main                   0x1805          Code  Gb  custom_cmain.o [2]
+_exit                        0x1859          Code  Gb  cexit.o [8]
+accessDevice_pinout          0x135d    0x46  Code  Gb  BSP.o [3]
+accessUART_device            0x13a3     0x8  Code  Gb  BSP.o [3]
+block                        0x10bf    0x18  Code  Gb  kernel.o [4]
+config_sysTick                0xe7d    0x46  Code  Gb  systemControl_interface.o [1]
+deqeue_proc                  0x11ff    0x14  Code  Gb  queue.o [4]
+digitalInput_create          0x1609    0x2e  Code  Gb  digitalInput_interface.o [1]
+digitalInputs_pinout    0x2000'0000    0x3c  Data  Gb  BSP.o [3]
+digitalOutputs_pinout   0x2000'003c    0x3c  Data  Gb  BSP.o [3]
+dins                    0x2000'a66c    0x14  Data  Gb  main_TMC129XNCZAD.o [4]
+disable_IRQ                  0x1345     0x8  Code  Gb  system.o [4]
+disable_NVIC                  0xe73     0x8  Code  Gb  systemControl_interface.o [1]
+enable_IRQ                   0x133d     0x8  Code  Gb  system.o [4]
+enable_NVIC                   0xe6b     0x8  Code  Gb  systemControl_interface.o [1]
+enable_sysTick                0xed9    0x20  Code  Gb  systemControl_interface.o [1]
+exit                         0x1855     0x4  Code  Gb  exit.o [5]
+free                         0x1651     0x4  Code  Gb  heaptramp0.o [5]
+freelist                0x2000'a68c     0x4  Data  Gb  kernel.o [4]
+g_pfnRAMVectors         0x2000'a400   0x26c  Data  Lc  interrupt.o [6]
+g_pppui32XTALtoVCO            0x508   0x1b0  Data  Lc  sysctl.o [6]
 g_ppui32GPIOIntMapBlizzard
-                             0x20ec    0xc0  Data  Lc  gpio.o [7]
+                              0x948    0xc0  Data  Lc  gpio.o [6]
 g_ppui32GPIOIntMapSnowflake
-                             0x21ac    0xd8  Data  Lc  gpio.o [7]
-g_pui32EnRegs                0x24c4    0x14  Data  Lc  interrupt.o [7]
-g_pui32GPIOBaseAddrs         0x2284    0x90  Data  Lc  gpio.o [7]
-g_pui32PendRegs              0x24d8    0x14  Data  Lc  interrupt.o [7]
-g_pui32Regs                  0x2428    0x9c  Data  Lc  interrupt.o [7]
-g_pui32VCOFrequencies        0x29e4     0x8  Data  Lc  sysctl.o [7]
-g_pui32Xtals                 0x2798    0x6c  Data  Lc  sysctl.o [7]
-g_sXTALtoMEMTIM              0x29b4    0x30  Data  Lc  sysctl.o [7]
-get_proc                     0x2e0d    0x14  Code  Gb  queue.o [5]
-initPeriph_UART              0x2fdb    0x26  Code  Gb  system.o [5]
-init_digitalInputs           0x2f11    0x24  Code  Gb  system.o [5]
-init_digitalOutputs          0x2f35    0x24  Code  Gb  system.o [5]
-init_interrupts              0x2fc5    0x16  Code  Gb  system.o [5]
-init_machine                 0x313d     0xc  Code  Lc  main_TMC129XNCZAD.o [5]
-init_peripherals             0x2f59    0x36  Code  Gb  system.o [5]
-init_proc               0x2000'91d8  0x1018  Data  Gb  kernel.o [5]
-init_sysTick                 0x2f8f    0x32  Code  Gb  system.o [5]
-init_systemClock             0x2ef5    0x1c  Code  Gb  system.o [5]
-kernel_delay                 0x2d99    0x1e  Code  Gb  kernel.o [5]
-kernel_fork                  0x2cbf    0x7a  Code  Gb  kernel.o [5]
-kernel_init                  0x2c69    0x56  Code  Gb  kernel.o [5]
-kernel_tick                  0x2db7    0x36  Code  Gb  kernel.o [5]
-ldexp                        0x137d          Code  Gb  ldexp.o [8]
-ldexpl                       0x137d          Code  Gb  ldexp.o [8]
-main                         0x31a3    0x2c  Code  Gb  main_TMC129XNCZAD.o [5]
-memchr                       0x11a5          Code  Gb  memchr.o [9]
-newDigitalButton             0x3205    0x80  Code  Gb  buttons.o [3]
-next                    0x2000'ae84     0x4  Data  Gb  kernel.o [5]
-peripheralInit               0x29ed    0x34  Code  Gb  systemControl_interface.o [1]
-proc                    0x2000'0100  0x90d8  Data  Gb  kernel.o [5]
-processDigital_inputs        0x33cb    0x2e  Code  Gb  digitalInput_interface.o [1]
-process_app                  0x318b    0x18  Code  Lc  main_TMC129XNCZAD.o [5]
-process_application          0x3167    0x24  Code  Lc  main_TMC129XNCZAD.o [5]
-process_digital              0x3153    0x14  Code  Lc  main_TMC129XNCZAD.o [5]
-procsize                0x2000'00ec     0x4  Data  Gb  kernel.o [5]
-pui32Stack              0x2000'aea8   0x200  Data  Lc  startup_ewarm.o [1]
-qs                      0x2000'aea0     0x4  Data  Lc  no_free_heap0.o [6]
-queue_proc                   0x2e21    0xa2  Code  Gb  queue.o [5]
-readButton                   0x328d    0x20  Code  Gb  buttons.o [3]
-readPin_digital              0x33c1     0xa  Code  Gb  digitalInput_interface.o [1]
-readyQueue              0x2000'ae80     0x4  Data  Gb  kernel.o [5]
-running                 0x2000'ae78     0x4  Data  Gb  kernel.o [5]
-s                       0x2000'00f0     0x8  Data  Gb  main_TMC129XNCZAD.o [5]
-scalbln                      0x137d          Code  Gb  ldexp.o [8]
-scalblnl                     0x137d          Code  Gb  ldexp.o [8]
-scalbn                       0x137d          Code  Gb  ldexp.o [8]
-scalbnl                      0x137d          Code  Gb  ldexp.o [8]
-scale                         0xfa5    0x46  Code  Lc  xprintffull_nomb.o [6]
-scheduler                    0x2d39    0x2e  Code  Gb  kernel.o [5]
-sec_hand                0x2000'ae9c     0x4  Data  Lc  xfail_s.o [6]
-send_UART                    0x35e3    0x5e  Code  Gb  UART_interface.o [1]
-serial_printf                0x32ad    0xa0  Code  Gb  serial.o [1]
-setupHardware                0x30f1    0x40  Code  Lc  main_TMC129XNCZAD.o [5]
-setupInterrupts              0x3131     0xc  Code  Lc  main_TMC129XNCZAD.o [5]
-signal                       0x2d7f    0x1a  Code  Gb  kernel.o [5]
-start_system                 0x3149     0xa  Code  Lc  main_TMC129XNCZAD.o [5]
-strchr                       0x110d          Code  Gb  strchr.o [9]
-strlen                       0x116d          Code  Gb  strlen.o [9]
-switch_task                  0x3011    0x10  Code  Gb  system.o [5]
-sysTickHandler               0x2ed9    0x1c  Code  Gb  system.o [5]
-systemClockInit              0x2a21   0x16e  Code  Gb  systemControl_interface.o [1]
-task_sleep                   0x34cd    0x14  Code  Gb  KOS.o [1]
-task_wakeup                  0x34e1    0x14  Code  Gb  KOS.o [1]
-test01                       0x30ed     0x4  Code  Lc  main_TMC129XNCZAD.o [5]
-trigger_PendSV               0x2c1d     0xa  Code  Gb  systemControl_interface.o [1]
-tswitch                      0x3861          Code  Gb  context.o [2]
-uart_obj                0x2000'a1f0   0x830  Data  Gb  UART_interface.o [1]
-vsprintf                     0x3709    0x34  Code  Gb  vsprintf.o [6]
+                              0xa08    0xd8  Data  Lc  gpio.o [6]
+g_pui32EnRegs                 0xc90    0x14  Data  Lc  interrupt.o [6]
+g_pui32PendRegs               0xca4    0x14  Data  Lc  interrupt.o [6]
+g_pui32Regs                   0xbf4    0x9c  Data  Lc  interrupt.o [6]
+g_pui32VCOFrequencies         0x6e8     0x8  Data  Lc  sysctl.o [6]
+g_pui32Xtals                  0x49c    0x6c  Data  Lc  sysctl.o [6]
+g_sXTALtoMEMTIM               0x6b8    0x30  Data  Lc  sysctl.o [6]
+get_proc                     0x1149    0x14  Code  Gb  queue.o [4]
+initPeriph_UART              0x1317    0x26  Code  Gb  system.o [4]
+init_digitalInputs           0x124d    0x24  Code  Gb  system.o [4]
+init_digitalOutputs          0x1271    0x24  Code  Gb  system.o [4]
+init_interrupts              0x1301    0x16  Code  Gb  system.o [4]
+init_peripherals             0x1295    0x36  Code  Gb  system.o [4]
+init_proc               0x2000'91d0  0x1018  Data  Gb  kernel.o [4]
+init_sysTick                 0x12cb    0x32  Code  Gb  system.o [4]
+init_systemClock             0x1231    0x1c  Code  Gb  system.o [4]
+kernel_fork                  0x1017    0x7a  Code  Gb  kernel.o [4]
+kernel_init                   0xfc1    0x56  Code  Gb  kernel.o [4]
+kernel_tick                  0x10f1    0x36  Code  Gb  kernel.o [4]
+main                         0x16cf    0x52  Code  Gb  main_TMC129XNCZAD.o [4]
+next                    0x2000'a694     0x4  Data  Gb  kernel.o [4]
+peripheralInit                0xcc9    0x34  Code  Gb  systemControl_interface.o [1]
+proc                    0x2000'00f8  0x90d8  Data  Gb  kernel.o [4]
+process_digital              0x16a1    0x2e  Code  Gb  main_TMC129XNCZAD.o [4]
+procsize                0x2000'00ec     0x4  Data  Gb  kernel.o [4]
+pui32Stack              0x2000'a69c   0x200  Data  Lc  startup_ewarm.o [1]
+queue_proc                   0x115d    0xa2  Code  Gb  queue.o [4]
+readyQueue              0x2000'a690     0x4  Data  Gb  kernel.o [4]
+running                 0x2000'a688     0x4  Data  Gb  kernel.o [4]
+scheduler                    0x1091    0x2e  Code  Gb  kernel.o [4]
+setupHardware                0x1683    0x1e  Code  Lc  main_TMC129XNCZAD.o [4]
+signal                       0x10d7    0x1a  Code  Gb  kernel.o [4]
+switch_task                  0x134d    0x10  Code  Gb  system.o [4]
+sysTickHandler               0x1215    0x1c  Code  Gb  system.o [4]
+systemClockInit               0xcfd   0x16e  Code  Gb  systemControl_interface.o [1]
+task_sleep                   0x174d    0x14  Code  Gb  KOS.o [1]
+task_wakeup                  0x1761    0x14  Code  Gb  KOS.o [1]
+trigger_PendSV                0xef9     0xa  Code  Gb  systemControl_interface.o [1]
+tswitch                      0x1775          Code  Gb  context.o [2]
 
 
 [1] = R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj
 [2] = R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Assembly
-[3] = R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Libraries
-[4] = R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\pinmap
-[5] = R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\src
-[6] = dl7M_tln.a
-[7] = driverlib.a
-[8] = m7M_tls.a
-[9] = rt7M_tl.a
-[10] = shb_l.a
+[3] = R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\pinmap
+[4] = R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\src
+[5] = dl7M_tln.a
+[6] = driverlib.a
+[7] = m7M_tls.a
+[8] = rt7M_tl.a
+[9] = shb_l.a
 
-   14'254 bytes of readonly  code memory
-      685 bytes of readonly  data memory
-  110'760 bytes of readwrite data memory
+    5'846 bytes of readonly  code memory
+      659 bytes of readonly  data memory
+  108'700 bytes of readwrite data memory
 
 Errors: none
 Warnings: 1

@@ -356,6 +356,7 @@
                     <state>$PROJ_DIR$\..\modules\inc</state>
                     <state>$PROJ_DIR$\..\modules\src</state>
                     <state>$PROJ_DIR$\..\kOS\inc</state>
+                    <state>$PROJ_DIR$\..\</state>
                     <state>$PROJ_DIR$\..\kOS\src</state>
                     <state>$PROJ_DIR$\..\middleware</state>
                     <state>$PROJ_DIR$\..\middleware\hw_interfaces\inc</state>
@@ -2172,12 +2173,6 @@
     <group>
         <name>Libraries</name>
         <file>
-            <name>$PROJ_DIR$\..\modules\src\buttons.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\modules\inc\buttons.h</name>
-        </file>
-        <file>
             <name>$PROJ_DIR$\..\middleware\TivaWare_C_Series-2.2.0.295\driverlib\ewarm\Exe\driverlib.a</name>
         </file>
     </group>
@@ -2212,10 +2207,13 @@
         </file>
     </group>
     <file>
-        <name>$PROJ_DIR$\..\middleware\hw_interfaces\src\digitalInput_interface.c</name>
+        <name>$PROJ_DIR$\..\modules\src\buttons.c</name>
     </file>
     <file>
-        <name>$PROJ_DIR$\..\middleware\hw_interfaces\src\digitalOutput_interface.c</name>
+        <name>$PROJ_DIR$\..\modules\inc\buttons.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\..\middleware\hw_interfaces\src\digitalInput_interface.c</name>
     </file>
     <file>
         <name>$PROJ_DIR$\..\kOS\src\KOS.c</name>
@@ -2231,8 +2229,5 @@
     </file>
     <file>
         <name>$PROJ_DIR$\..\middleware\hw_interfaces\inc\systemControl_interface.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\middleware\hw_interfaces\src\UART_interface.c</name>
     </file>
 </project>

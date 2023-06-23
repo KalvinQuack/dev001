@@ -11,146 +11,64 @@
     #include <stdint.h>
     #include <stdlib.h>
     /* environment includes */
-    #include "dev001HAL.h"
-    #include "pinmap.h"
+   
     #include "digitalInput_interface.h"
-    #include "driverlib/gpio.h"
-    #include "driverlib/interrupt.h"
     /* interface includes */
-    //#include "systemControl_interface.h"
-     struct digitalInput {
-        uint8_t value;
-    };
 
-    struct digitalInput digitalInputs[IN_TOTAL_DI];
+   void __read(digitalInput* me){
+        me->val = (GPIOPinRead(me->port, me->pin) && me->pin);
+        //notify when created observer/subject
+   }
+  
+    void __destroy(digitalInput* me){
+        if(me != NULL){
+            free(me);
+            me = NULL;
+        }
+    }
 
-    void digitalInput_config(inputTypes type,
-                             uint8_t internalPull, 
-                             HAL_DINS index)
-    {
-        PINOUT *digitalDevice = accessDevice_pinout(DIGITAL_INPUTS, (uint32_t)index);
+    bool __getInterrupt(digitalInput *me){
+        return GPIOIntStatus(me->port, true);
+    }
+
+    int __clearInterrupt(digitalInput* me){
+            GPIOIntClear(me->port, me->pin);
+            return OK;
+    }
+
+    void __config(bool interrupt, void(*ISR)(void), bool internalPull, inputTypes type, struct __digitalInput* me){
         switch(type){
-            /*binary normally closed switch will display a 0 in the normal state
-                and a 1 when activated */
-            case BINARY_NO:
-                if(index < IN_TOTAL_DI){
-                    if(internalPull){
-                        GPIOPadConfigSet(
-                            digitalDevice->device_port,  //specified port
-                            digitalDevice->device_pin,   //specified pin
-                            GPIO_STRENGTH_2MA,           //output drive strength (does not affect input)
-                            GPIO_PIN_TYPE_STD_WPD        //configures internal weak pullup
-                        );    
-                    }else{
-                        GPIOPadConfigSet(
-                            digitalDevice->device_port, //specified port
-                            digitalDevice->device_pin,  //specified pin
-                            GPIO_STRENGTH_2MA,          //output drive strength (does not affect input)
-                            GPIO_PIN_TYPE_STD           //configures standard (ext resistor required)
-                        );
-                    }                      
-                }  
+            case normallyClosed:
+                if(internalPull){
+                    GPIOPadConfigSet(me->port, me->pin, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPD);
+                }else GPIOPadConfigSet(me->port, me->pin, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD);
             break;
-            /*binary normally closed switch will display a 1 in normal state
-                and a 0 when activated*/
-            case BINARY_NC:
-                if(index < IN_TOTAL_DI){
-                    if(internalPull){
-                        GPIOPadConfigSet(
-                            digitalDevice->device_port,  //specified port
-                            digitalDevice->device_pin,   //specified pin
-                            GPIO_STRENGTH_2MA,           //output drive strength (does not affect input)
-                            GPIO_PIN_TYPE_STD_WPU        //configures internal weak pullup
-                        );    
-                    }else{
-                        GPIOPadConfigSet(
-                            digitalDevice->device_port, //specified port
-                            digitalDevice->device_pin,  //specified pin
-                            GPIO_STRENGTH_2MA,          //output drive strength (does not affect input)
-                            GPIO_PIN_TYPE_STD           //configures standard (ext resistor required)
-                        );
-                    }                      
-                } 
+            case normallyOpen :
+                if(internalPull){
+                    GPIOPadConfigSet(me->port, me->pin, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPU);
+                }else GPIOPadConfigSet(me->port, me->pin, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD);
             break;
-        };
-    }
-    /**********************************************
-     * Method:  void readDigitalPin( HAL_DINS index, inputTypes type );
-     * 
-     * Description: reads GPIO pin status and stores in
-     *              
-     * 
-     * Notes: private function
-     * 
-     * Returns: int 
-     * 
-    **********************************************/
-    uint8_t readPin_digital(HAL_DINS index){
-        uint32_t val;
-        val = digitalInputs[index].value;
-        return val; 
-
-    }
-    /**********************************************
-     * Method:  void processDigital_inputs( void )
-     * 
-     * Description: Reads specific gpio pin and stores 
-     * value into digitalInput linked list.
-     *              
-     * 
-     * Notes:
-     * 
-     * Returns: None 
-     * 
-    **********************************************/
-    void processDigital_inputs( void ){
-        for(HAL_DINS i = 0; i < IN_TOTAL_DI; i++){
-            PINOUT* digitalDevice = accessDevice_pinout(DIGITAL_INPUTS, i);
-           digitalInputs[i].value = GPIOPinRead(digitalDevice->device_port, digitalDevice->device_pin); 
         }
-    }
-    /**********************************************
-     * Method:  digitalInterrupts_enable( bool enable )
-     * 
-     * Description: Goes through the hal digital inputs and 
-     * enables the interrupts for only the digital pins that are
-     * being used on the HAL
-     *              
-     * 
-     * Notes:
-     * 
-     * Returns: None 
-     * 
-    **********************************************/   
-    void digitalInterrupts_enable( bool enable, void(*pfunction)(void) ){
-        if(enable){    
-          for(HAL_DINS i = 0; i < IN_TOTAL_DI; i++){
-            PINOUT* digitalDevice = accessDevice_pinout(DIGITAL_INPUTS, i);
-            GPIOIntEnable   (digitalDevice->device_port, digitalDevice->device_pin);
-            GPIOIntTypeSet  (digitalDevice->device_port, digitalDevice->device_pin, GPIO_BOTH_EDGES);
-            GPIOIntRegister (digitalDevice->device_port, pfunction);
-            }  
-        }
-    }
-    /**********************************************
-     * Method:  digitalInterrupts_clear( void )
-     * 
-     * Description: Combs through digital inputs to clear interrupts
-     *              
-     * 
-     * Notes:
-     * 
-     * Returns: None 
-     * 
-    **********************************************/  
-    void digitalInterrupts_clear( void ){
-        /*comb through each interrupt and clear it if it's digital input*/
-        for(HAL_DINS i = 0; i < IN_TOTAL_DI; i++){
-            PINOUT* digitalDevice = accessDevice_pinout(DIGITAL_INPUTS, i);
-            if(GPIOIntStatus(digitalDevice->device_port, true) == digitalDevice->device_pin){
-                GPIOIntClear(digitalDevice->device_port, digitalDevice->device_pin);
-            }
-        }
+        if(interrupt){
+            GPIOIntTypeSet(me->port, me->pin, GPIO_BOTH_EDGES);
+            GPIOIntRegister(me->port, ISR);
+            GPIOIntEnable(me->port, me->pin);
+        }else me->interruptStatus = NULL;
     }
 
+
+
+    digitalInput* digitalInput_create(uint32_t __perph, uint32_t __port, uint32_t __pin){
+        digitalInput* me = (digitalInput*)malloc(sizeof(*me));
+        me->perph = __perph;
+        me->port = __port;
+        me->pin = __pin;
+        me->val = 0xDEADBEEF;
+        me->config = (void(*)(bool, void(*)(void), bool, inputTypes, struct __digitalInput*))__config;
+        me->read = (void(*)(struct __digitalInput*))__read;
+        me->destroy = (void(*)(struct __digitalInput*))__destroy;
+        me->clearInt = (int(*)(struct __digitalInput*))__clearInterrupt;
+        me->interruptStatus = (bool(*)(struct __digitalInput*))__getInterrupt;
+        return me;
+    }
 #endif

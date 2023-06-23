@@ -22,86 +22,68 @@
 #include "UART_interface.h"
 #include "driverlib/uart.h"
 #include "inc/hw_memmap.h"
-#include "digitalOutput_interface.h"
+//#include "digitalOutput_interface.h"
 #include "digitalInput_interface.h"
+#include "buttons.h"
+#include "dev001HAL.h"
+#include "pinmap.h"
+
 SEMAPHORE s = {1, NULL};
 SEMAPHORE DIN = {1, NULL};
+digitalInput* dins[IN_TOTAL_DI];
+button* button01;
+button* button02;
 
 static void DIN_ISR( void ){
-    digitalInterrupts_clear();
+    for(HAL_DINS i = IN_01_DI; i < IN_TOTAL_DI; i ++){
+        dins[i]->clearInt(dins[i]);
+    }
     task_wakeup(&DIN);
 }
 
 static void setupHardware( void ){
     uint32_t clockSrc = init_systemClock(100000000);
     init_peripherals();
+    enable_IRQ();
     init_sysTick(true, 2, clockSrc); 
-    UART_config(SYSTEM_UART, false, 115200, clockSrc);
-    digitalOutput_config(OUT_01_DO, PUSH_PULL);
-    digitalOutput_config(OUT_02_DO, PUSH_PULL);
-    digitalOutput_config(OUT_03_DO, PUSH_PULL); 
+    //UART_config(SYSTEM_UART, false, 115200, clockSrc);
+    //digitalOutput_config(OUT_01_DO, PUSH_PULL);
+    //digitalOutput_config(OUT_02_DO, PUSH_PULL);
+    //digitalOutput_config(OUT_03_DO, PUSH_PULL); 
 }
-
-static void setupInterrupts( void ){
-    digitalInterrupts_enable(true, &DIN_ISR);
-}
-
-static void init_machine( void ){
-    setupHardware();
-    setupInterrupts();
- 
-}
-
-static void start_system( void ){
-    init_interrupts(true);
-}
-
-static void process_digital (void ){
+ void process_digital( void ){
     while(1){
-        kernel_delay(5);//10 ms debounce
-        processDigital_inputs();
-        task_sleep(&DIN);       
-    }
-}
-
-static void process_application ( void ){
-    while(1){
-    P(&s);
-      digitalOutput_control(OUT_01_DO, 0);
-      //app();
-      kernel_delay(5);
-    V(&s);  
-      
-    }
-}
-
-static void process_app( void ){
-    while(1){
-       digitalOutput_control(OUT_01_DO, 1);
-       send_UART(SYSTEM_UART);
-       kernel_delay(1);      
+        for(HAL_DINS i = IN_01_DI; i < IN_TOTAL_DI; i++){
+            dins[i]->read(dins[i]);
+        }
+        task_sleep(&DIN);
     }
     
-}
+ }
 
-void test01(){
-    int a = 1;
-}
-void test02(){
-    int a = 1;
-}
+
+
 int main()
 {   
 
-    app* newApp = app_create((char*)'X', (void(*)(void))test01, (void(*)(void))test02);
     OS_init();
-    init_machine();
+    setupHardware();
+     for(int i = 0; i < IN_TOTAL_DI; i++){
+        PINOUT* bsp = accessDevice_pinout(DIGITAL_INPUTS, (uint32_t)i);
+        dins[i] = digitalInput_create(bsp->device_peripheral, bsp->device_port, bsp->device_pin); 
+        dins[i]->config(true, &DIN_ISR, false, normallyClosed, dins[i]);
+    } 
+    //button01 = button_create(IN_01_DI, normallyClosed);
+    //button02 = button_create(IN_02_DI, normallyClosed);
+    kernel_fork(&process_digital, 3);
+
     
-    kernel_fork(&process_app, 3);
-    kernel_fork(&process_application, 2);
-    kernel_fork(&process_digital, 4);
-    start_system();
-    while(1){};
+    //kernel_fork(&process_application, 2);
+    //kernel_fork(&process_digital, 4);
+    init_interrupts(true);
+    while(1){
+        
+    };
     return 0;
 }
 

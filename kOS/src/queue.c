@@ -39,6 +39,7 @@
      * Returns: 0
      * 
     **********************************************/
+   //!This FUNCTION WILL NOT WORK !!!!!!
     int append_proc(PROC **list, PROC *node){
 
         PROC **tracer = list;
