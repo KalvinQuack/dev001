@@ -21,6 +21,8 @@ R:\SourceCode\TIVA\Development\dev001\projects\..\modules\src
 -I
 R:\SourceCode\TIVA\Development\dev001\projects\..\kOS\inc
 -I
+R:\SourceCode\TIVA\Development\dev001\projects\..
+-I
 R:\SourceCode\TIVA\Development\dev001\projects\..\kOS\src
 -I
 R:\SourceCode\TIVA\Development\dev001\projects\..\middleware
@@ -54,6 +56,8 @@ R:\SourceCode\TIVA\Development\dev001\modules\inc
 R:\SourceCode\TIVA\Development\dev001\modules\src
 -I
 R:\SourceCode\TIVA\Development\dev001\kOS\inc
+-I
+R:\SourceCode\TIVA\Development\dev001
 -I
 R:\SourceCode\TIVA\Development\dev001\kOS\src
 -I

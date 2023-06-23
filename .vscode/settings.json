@@ -10,6 +10,11 @@
         "cstdio": "c",
         "interrupt.h": "c",
         "uart_interface.h": "c",
-        "cstdarg": "c"
+        "cstdarg": "c",
+        "gpio.h": "c",
+        "cstddef": "c",
+        "functional": "c",
+        "tuple": "c",
+        "type_traits": "c"
     }
 }
