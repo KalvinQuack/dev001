@@ -16,7 +16,7 @@
     #include "systemControl_interface.h"
     #include "digitalInput_interface.h"
     #include "dev001HAL.h"
-    #include "pinmap.h"
+    #include "BSP.h"
     #include "KOS.h"
     
     /**********************************************
@@ -54,24 +54,7 @@
      * Returns: clock rate in Hz
      * 
     **********************************************/
-    uint32_t init_systemClock( uint32_t speed_hz ){
-        uint32_t clock_config = systemClockInit(
-
-            false,          //not using external osc
-            _XTAL_UNUSED_,  //desired ext osc freq unused
-            INT_OSC,        //using internal osc
-            true,           //enable PLL
-            VCO_320_MHZ,    //set the PLL freq to 320 Mhz
-            speed_hz        //desired frequency (hz) 60 Mhz
-        );
-
-        if(!clock_config){
-            while(1){
-                //error handler
-            }
-        }
-       return clock_config; //return system clock in HZ
-    }
+ 
     /**********************************************
      * Method:  init_digitalInputs( uint32_t index )
      * 

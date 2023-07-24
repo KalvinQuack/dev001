@@ -7,8 +7,6 @@
 #ifndef __KERNEL_C__
 #define __KERNEL_C__
     /*standard includes*/
-    #include <stdlib.h>
-    #include <stdint.h>
     /*environment includes*/
     #include "KOS.h"
 
@@ -137,11 +135,10 @@
     /*set running status to blocked*/
     running->proc_state = BLOCKED;
     /*queue the processes into the sempahore struct*/
-    if((int)scheduler){
+    if(scheduler()){
         queue_proc(&s->queue, running);
+        IntPendSet(FAULT_PENDSV);
     }
-    //triggers pendSV interrupt
-    switch_task();
    }
     /**********************************************
      * Method:  signal(SEMAPHORE *s)
@@ -174,12 +171,15 @@
      * 
     **********************************************/
     void kernel_delay( uint32_t ticks){
-        disable_IRQ();
+        IntMasterDisable();
         running->proc_state = BLOCKED;
         running->timeout = ticks;
-        enable_IRQ();
         //scheduler();
-        switch_task();
+        if((int)scheduler()){
+            IntPendSet(FAULT_PENDSV);
+        }
+        IntMasterEnable();
+        
     }
     /**********************************************
      * Method:  kernel_tick( void )

@@ -4242,7 +4242,7 @@ Total : 4233 files,  -1593297 codes, -917288 comments, -188722 blanks, all -2699
 | [middleware/hw_interfaces/src/digitalInput_interface.c](/middleware/hw_interfaces/src/digitalInput_interface.c) | C | -77 | -25 | -8 | -110 |
 | [middleware/hw_interfaces/src/digitalOutput_interface.c](/middleware/hw_interfaces/src/digitalOutput_interface.c) | C | -33 | -8 | -4 | -45 |
 | [middleware/hw_interfaces/src/systemControl_interface.c](/middleware/hw_interfaces/src/systemControl_interface.c) | C | -168 | -19 | -13 | -200 |
-| [middleware/pinmap.h](/middleware/pinmap.h) | C | -30 | -5 | -7 | -42 |
+| [middleware/BSP.h](/middleware/BSP.h) | C | -30 | -5 | -7 | -42 |
 | [middleware/dev001HAL.h](/middleware/dev001HAL.h) | C++ | -37 | -9 | -8 | -54 |
 
 [Summary](results.md) / [Details](details.md) / [Diff Summary](diff.md) / Diff Details

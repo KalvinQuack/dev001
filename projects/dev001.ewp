@@ -365,6 +365,9 @@
                     <state>$PROJ_DIR$\..\application</state>
                     <state>$PROJ_DIR$\..\application\src</state>
                     <state>$PROJ_DIR$\..\application\inc</state>
+                    <state>$PROJ_DIR$\..\util</state>
+                    <state>$PROJ_DIR$\..\util\design_patterns/src</state>
+                    <state>$PROJ_DIR$\..\util\design_patterns/inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2182,7 +2185,7 @@
             <name>$PROJ_DIR$\..\middleware\BSP.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\middleware\pinmap.h</name>
+            <name>$PROJ_DIR$\..\middleware\BSP.h</name>
         </file>
     </group>
     <group>
@@ -2199,13 +2202,13 @@
         <file>
             <name>$PROJ_DIR$\..\kOS\src\queue.c</name>
         </file>
-        <file>
-            <name>$PROJ_DIR$\..\modules\src\system.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\modules\inc\system.h</name>
-        </file>
     </group>
+    <file>
+        <name>$PROJ_DIR$\..\util\buffers\buffer.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\..\util\buffers\buffer.h</name>
+    </file>
     <file>
         <name>$PROJ_DIR$\..\modules\src\buttons.c</name>
     </file>
@@ -2216,7 +2219,22 @@
         <name>$PROJ_DIR$\..\middleware\hw_interfaces\src\digitalInput_interface.c</name>
     </file>
     <file>
+        <name>$PROJ_DIR$\..\middleware\hw_interfaces\inc\digitalInput_interface.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\..\middleware\hw_interfaces\src\digitalOutput_interface.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\..\middleware\hw_interfaces\inc\digitalOutput_interface.h</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\..\kOS\src\KOS.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\..\util\design_patterns\src\observer.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\..\util\design_patterns\inc\observer.h</name>
     </file>
     <file>
         <name>$PROJ_DIR$\..\modules\src\serial.c</name>
@@ -2225,9 +2243,18 @@
         <name>$PROJ_DIR$\startup_ewarm.c</name>
     </file>
     <file>
+        <name>$PROJ_DIR$\..\util\design_patterns\src\subject.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\..\util\design_patterns\inc\subject.h</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\..\middleware\hw_interfaces\src\systemControl_interface.c</name>
     </file>
     <file>
         <name>$PROJ_DIR$\..\middleware\hw_interfaces\inc\systemControl_interface.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\..\middleware\hw_interfaces\src\UART_interface.c</name>
     </file>
 </project>

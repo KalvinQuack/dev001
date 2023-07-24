@@ -6,7 +6,7 @@
     #include <stdbool.h>
 
     /*environment includes*/
-    #include "KOS.h"
+   
 
     /*function prototypes*/
     uint8_t     init_digitalInputs  ( uint32_t index );

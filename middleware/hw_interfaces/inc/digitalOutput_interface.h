@@ -1,8 +1,7 @@
 #ifndef __DIGITAL_OUPUT_INTERFACE_H__
 #define __DIGITAL_OUPUT_INTERFACE_H__
     /*standard includes*/
-    #include <stdio.h>
-    #include <stdbool.h>
+    #include "common.h"
 
     /*environment includes*/
     #include "dev001HAL.h"

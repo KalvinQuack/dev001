@@ -1,30 +1,51 @@
 #ifndef __UART_INTERFACE_H__
 #define __UART_INTERFACE_H__
-    #include <stdint.h>
-    #include <stdbool.h>
+    #include "common.h"
 
     #include "dev001HAL.h"
-    #define BUFF_SIZE 1024
-    typedef struct UART_struct{
+/*     #define BUFF_SIZE 1024
 
-        uint8_t circBuff[BUFF_SIZE];
-        uint32_t write_head;
-        uint32_t write_tail;
-        uint32_t read_head;
-        uint32_t read_tail;
-        uint32_t count;
-        bool     buffFull;
+    typedef enum buffLock
+    {
+        LOCKED, 
+        UNLOCKED
+    }buffLock; */
+
+    typedef enum _parity
+    {
+        PAR_NONE, 
+        PAR_EVEN, 
+        PAR_ODD, 
+        PAR_ONE, 
+        PAR_ZERO
+
+    }parity;
+    typedef enum _stopBit
+    {
+        STP_ONE, 
+        STP_TWO
         
-    }uart_comm;
+    }stopBit;
 
+    typedef enum _dataBit
+    {
+        LEN_8, 
+        LEN_7, 
+        LEN_6, 
+        LEN_5
 
-    void UART_config    ( HAL_UARTS device, 
-                          bool interrupt, 
-                          uint32_t baudRate, 
-                          uint32_t clk 
-                        );
-    void enable_UART    ( HAL_UARTS device );
-    void disable_UART   ( HAL_UARTS device );
-    uint8_t send_UART   ( HAL_UARTS device );
-    uint8_t recieve_UART( HAL_UARTS device );
+    }dataBit;
+    
+
+    typedef struct _uart uart;
+
+    int     uart_create( uint32_t id );
+    void    uart_send( uint32_t id);
+    int     uart_insertBuff(char data, uint32_t id);
+    int     uart_checkLock( uint32_t id);
+    void    uart_lockBuff( uint32_t id );
+    void    uart_unlockBuff( uint32_t id );
+    void    uart_process(uint32_t id);
+    int     uart_config(uint32_t id,  uint32_t clockSource, uint32_t baud, parity uart_par, stopBit uart_stop, dataBit uart_dataLen);
+
 #endif

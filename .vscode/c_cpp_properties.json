@@ -14,13 +14,17 @@
                 "${workspaceFolder}/kOS/inc",
                 "${workspaceFolder}/middleware/hw_interfaces/inc",
                 "${workspaceFolder}/middleware/hw_interfaces/src",
-                "${workspaceFolder}/middleware/TivaWare_C_Series-2.2.0.295"
+                "${workspaceFolder}/middleware/TivaWare_C_Series-2.2.0.295",
+                "${workspaceFolder}/util/design_patterns/inc",
+                "${workspaceFolder}/util",
+                "${workspaceFolder}"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE",
-                "_DEV001_DEVICE_"
+                "_DEV001_DEVICE_",
+                "PART_TM4C1290NCPDT"
             ],
             "intelliSenseMode": "${default}",
             "compilerPath": "C:\\msys64\\ucrt64\\bin\\gcc.exe",

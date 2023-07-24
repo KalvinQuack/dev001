@@ -8,14 +8,16 @@
 #include <stdbool.h>
 #include "application.h"
 
-__destroy(app* me){
+__destroy(app* me)
+{
     if(me != NULL){
         free(me);
         me = NULL;
     }
 }
 
-app* app_create(char* appName, void(*config_file)(void), void(*running_file)(void)){
+app* app_create(char* appName, void(*config_file)(void), void(*running_file)(void))
+{
     app* me = (app*)malloc(sizeof(*me));
 
     me->name = appName;

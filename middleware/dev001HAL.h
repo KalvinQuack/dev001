@@ -13,6 +13,18 @@ THIS IS NOT DISTRIBUTED FOR COMMERCIAL USE
         #ifndef _DIGITAL_INPUTS_
         #define _DIGITAL_INPUTS_
         /*DIGITAL INPUTS*/
+        
+        #define DI_01 0
+        #define DI_02 1
+        #define DI_03 2
+        #define DI_04 3
+        #define DI_05 4
+        #define DI_TOTAL 5
+
+        #define UART_SYS 0
+        #define UART_0 1
+        #define UART_TOTAL 2
+        
             typedef enum DIGITAL_INPUTS{
                 IN_01_DI, //0
                 IN_02_DI, //1
@@ -50,13 +62,13 @@ THIS IS NOT DISTRIBUTED FOR COMMERCIAL USE
             }HAL_AINS;
         #endif
 
-        #ifndef _UARTS_
-        #define _UARTS_
+        #ifndef _SERIAL_
+        #define _SERIAL_/* 
             typedef enum UARTS{
-                SYSTEM_UART,
                 UART_01,
+                UART_02,
                 UART_TOTAL
-            }HAL_UARTS;
+            }HAL_UARTS; */
         #endif
 
     #endif

@@ -11,190 +11,237 @@
     #include <stdint.h>
     #include <stdbool.h>
     /*environment includes*/
+    #include "systemControl_interface.h"
+        /*drivers*/
     #include "driverlib/sysctl.h"
     #include "driverlib/systick.h"
     #include "driverlib/interrupt.h"
+    #include "driverlib/gpio.h"
+    /*deivce includes*/
     #include "inc/hw_ints.h"
-    #include "systemControl_interface.h"
-    
+    #include "BSP.h"
 
-    uint8_t peripheralInit(uint32_t peripheral){
+    static hardwareSystem* machine = NULL;
+
+    uint32_t oscillator[source_total] = 
+    {
+        SYSCTL_XTAL_4MHZ,
+        SYSCTL_XTAL_5MHZ, 
+        SYSCTL_XTAL_6MHZ,
+        SYSCTL_XTAL_8MHZ,
+        SYSCTL_XTAL_10MHZ,
+        SYSCTL_XTAL_12MHZ,
+        SYSCTL_XTAL_16MHZ,
+        SYSCTL_XTAL_18MHZ,
+        SYSCTL_XTAL_20MHZ,
+        SYSCTL_XTAL_24MHZ,
+        SYSCTL_XTAL_25MHZ, 
+        SYSCTL_OSC_INT,
+        SYSCTL_OSC_INT30,
+        SYSCTL_OSC_EXT32
+    };
+
+    uint8_t __peripheralInit(uint32_t peripheral){
         if(SysCtlPeripheralPresent(peripheral)){
             if(SysCtlPeripheralReady(peripheral)){
-                return 1;
+                return OK;
             }else{
                 SysCtlPeripheralEnable(peripheral);
                 while(!SysCtlPeripheralReady(peripheral)){}
-                return 1;
+                return OK;
 
             } 
-        }else return 0;
+        }else return KO;
     }
+
     #ifdef DEVICE_TM4C123
     void SystemClockConfig(){}
     #else
-   uint32_t systemClockInit(bool externalOsc, XTAL_FREQ desiredFrequency_xtal, OSC_SOURCE oscillatorSource, bool enablePLL, PLL_FREQ pllFrequency_type, uint32_t desiredFrequency_hz){
-    uint32_t sysClock;
-    if(externalOsc && (oscillatorSource == MAIN_OSC)){
-            switch(desiredFrequency_xtal){
-                case _5MHZ_:
-                    sysClock = SysCtlClockFreqSet( SYSCTL_OSC_MAIN|
-                                        SYSCTL_USE_OSC,
-                                        SYSCTL_XTAL_5MHZ);
+    static uint32_t __config(oscType type, PLLfrequency enablePLL, uint32_t desiredFreq, hardwareSystem* sys){
+        if(type < source_total && desiredFreq <= 120000000){
+            uint32_t actualFreq = 0;
+            switch(type){
+                case _internalLow:
+                    actualFreq = SysCtlClockFreqSet(oscillator[type]|SYSCTL_USE_OSC, 30000);
+                    sys->systemSource = main_source;
                 break;
-                case _6MHZ_:
-                    sysClock = SysCtlClockFreqSet( SYSCTL_OSC_MAIN|
-                                        SYSCTL_USE_OSC,
-                                        SYSCTL_XTAL_6MHZ);
+
+                case _hibernate:
+                    actualFreq = SysCtlClockFreqSet(oscillator[type]|SYSCTL_USE_OSC, 32786);
+                    sys->systemSource = main_source;
                 break;
-                case _8MHZ_:
-                    sysClock = SysCtlClockFreqSet( SYSCTL_OSC_MAIN|
-                                        SYSCTL_USE_OSC,
-                                        SYSCTL_XTAL_8MHZ);
-                break;
-                case _10MHZ_:
-                    sysClock = SysCtlClockFreqSet( SYSCTL_OSC_MAIN|
-                                        SYSCTL_USE_OSC,
-                                        SYSCTL_XTAL_10MHZ);
-                break;
-                case _12MHZ_:
-                    sysClock = SysCtlClockFreqSet( SYSCTL_OSC_MAIN|
-                                        SYSCTL_USE_OSC,
-                                        SYSCTL_XTAL_12MHZ);
-                break;
-                case _16MHZ_:
-                    sysClock = SysCtlClockFreqSet( SYSCTL_OSC_MAIN|
-                                        SYSCTL_USE_OSC,
-                                        SYSCTL_XTAL_16MHZ);
-                break;
-                case _18MHZ_:
-                    sysClock = SysCtlClockFreqSet( SYSCTL_OSC_MAIN|
-                                        SYSCTL_USE_OSC,
-                                        SYSCTL_XTAL_18MHZ);
-                break;
-                case _20MHZ_:
-                    sysClock = SysCtlClockFreqSet( SYSCTL_OSC_MAIN|
-                                        SYSCTL_USE_OSC,
-                                        SYSCTL_XTAL_20MHZ);
-                break;
-                case _24MHZ_:
-                    sysClock = SysCtlClockFreqSet( SYSCTL_OSC_MAIN|
-                                        SYSCTL_USE_OSC,
-                                        SYSCTL_XTAL_24MHZ);
-                break;
-                case _25MHZ_:
-                    sysClock = SysCtlClockFreqSet( SYSCTL_OSC_MAIN|
-                                        SYSCTL_USE_OSC,
-                                        SYSCTL_XTAL_25MHZ);
-                break;
-                case _CUSTOM_:
-                    /* if using PLL the desired frequency can be anything between
-                        5Mhz-25Mhz*/
-                    if(enablePLL){
-                        switch(pllFrequency_type){
-                            case VCO_320_MHZ:
-                                sysClock = SysCtlClockFreqSet( SYSCTL_OSC_MAIN|
-                                                    SYSCTL_USE_PLL|
-                                                    SYSCTL_CFG_VCO_320,
-                                                    desiredFrequency_hz);
-                            break;
-                            case VCO_480_MHZ:
-                                sysClock =SysCtlClockFreqSet( SYSCTL_OSC_MAIN|
-                                                    SYSCTL_USE_PLL|
-                                                    SYSCTL_CFG_VCO_480,
-                                                    desiredFrequency_hz);
-                            break;
+
+                default:
+                    switch(enablePLL){
+                        case mhz_320:
+                        if(type != _4mhz && (5000000 <= desiredFreq && desiredFreq <= 320000000)){
+                            actualFreq = SysCtlClockFreqSet(oscillator[type]|SYSCTL_USE_PLL|SYSCTL_CFG_VCO_320, desiredFreq);
+                            sys->systemSource = pll_source;
                         }
-                    }else sysClock = 0; 
-                break;
-            };
-        }else{
-            switch(oscillatorSource){
-                case INT_OSC:
-                    if(enablePLL){
-                        switch (pllFrequency_type){
-                            /*is using PLL the desired frequency can be anything between
-                                16Mhz-320Mhz*/
-                            case VCO_320_MHZ:
-                              sysClock = SysCtlClockFreqSet( SYSCTL_OSC_INT|
-                                                    SYSCTL_USE_PLL|
-                                                    SYSCTL_CFG_VCO_320,
-                                                    desiredFrequency_hz);
-                            break;
-                            case VCO_480_MHZ:
-                            /*is using PLL the desired frequency can be anything between
-                                16Mhz-480Mhz*/
-                                sysClock = SysCtlClockFreqSet( SYSCTL_OSC_INT|
-                                                    SYSCTL_USE_PLL|
-                                                    SYSCTL_CFG_VCO_480,
-                                                    desiredFrequency_hz);
-                            break;
-                        };
-                    }else{
-                        sysClock = SysCtlClockFreqSet( SYSCTL_OSC_INT|
-                                            SYSCTL_USE_OSC,
-                                            desiredFrequency_hz);
+                        break;
 
+                        case mhz_480:
+                        if(type != _4mhz && (5000000 <= desiredFreq && desiredFreq <= 480000000)){
+                            actualFreq = SysCtlClockFreqSet(oscillator[type]|SYSCTL_USE_PLL|SYSCTL_CFG_VCO_480, desiredFreq);
+                            sys->systemSource = pll_source;
+                        }else return KO;
+                        break;
+                        case unused:
+                            if(4000000 <= desiredFreq && desiredFreq <= 25000000){
+                                actualFreq = SysCtlClockFreqSet(oscillator[type]|SYSCTL_USE_OSC, desiredFreq);
+                                sys->systemSource = main_source;
+                            }else return KO;
+                        break;
                     }
+                    
                 break;
-                /*  Cannot use PLL with low frequency oscillator
-                    Tiva C Series TM4C129 User Manual pg 237    */
-                case INT30_OSC:
-                    sysClock = SysCtlClockFreqSet( SYSCTL_OSC_INT30|
-                                        SYSCTL_USE_OSC,
-                                        desiredFrequency_hz);
-                break;
-                /*  Cannot use PLL with HIB Module Oscillator 
-                    Tiva C Series TM4C129 User Manual pg 237  */
-                case EXT32_OSC:
-                    sysClock = SysCtlClockFreqSet( SYSCTL_OSC_EXT32|
-                                        SYSCTL_USE_OSC,
-                                        desiredFrequency_hz);
-                break;
-            };
-        }
-        return sysClock;    
-    }
-
-    void enable_NVIC( void ){
-        IntMasterEnable();
-    }
-
-    void disable_NVIC( void ){
-        IntMasterDisable();
-    }
-
-    void config_sysTick( uint32_t interval_ms, uint32_t clockFreq_hz){
-        float desiredInterval = ((float)interval_ms/1000)*clockFreq_hz;
-        if(!desiredInterval || desiredInterval > 16777216){
-            while(1){
-                //error handling
             }
-        }
-        SysTickPeriodSet((uint32_t)desiredInterval);
+            sys->oscType = type;
+            sys->PLL = enablePLL;
+            sys->desiredFreq = desiredFreq;
+            sys->clockFreq = actualFreq;
+            return OK;
+        }else return KO;
     }
 
-    void enable_sysTick(uint8_t enable, uint8_t enableInterrupt, void (*handler)(void)){
-        if(enableInterrupt){
+
+    static void __systickEnable( bool enable){
+        if(enable){
+            SysTickEnable();
+        }else SysTickDisable();
+    }
+
+    
+
+    static uint32_t __systickConfig( uint32_t interval_ms, void(*handler)(void), hardwareSystem* sys){
+        if(sys->clockFreq ==  0xDEADBEEF){
+            return KO;
+        }
+        float desiredInterval = ((float)interval_ms/1000)*(sys->clockFreq);
+        if(!(1 <= desiredInterval) && !(desiredInterval <= 16777216))return KO;
+        SysTickPeriodSet((uint32_t)desiredInterval);
+        if(handler != NULL){
             SysTickIntRegister(handler);
             IntPrioritySet(FAULT_SYSTICK, 0);
-            SysTickIntEnable();
+            __systickEnable(false);
         }
-        SysTickEnable();
+        sys->systickValue = desiredInterval;
+        return OK;
     }
 
-    void disable_sysTick_int( void ){
-        SysTickIntDisable();
-    }
 
-    void enable_sysTick_int( void ){
-        SysTickIntEnable();
-    }
-
-    void trigger_PendSV ( void ){
+    static void __triggerPendSV( void ){
         IntPendSet(FAULT_PENDSV);
     }
-    #endif
+
+    static void __enableNVIC( bool enable){
+        if(enable)IntMasterEnable();
+        else IntMasterDisable();
+    }
+
+    hardwareSystem* getSystem(void){
+        static hardwareSystem instance;
+        
+
+        
+
+
+        return &instance;
+    }
+
+    int system_init( void )
+    {
+        if(machine != NULL)return KO;
+        else
+        {
+            machine = (hardwareSystem*)malloc(sizeof(hardwareSystem));
+            machine->clkConfig      = (uint32_t(*)(oscType type,PLLfrequency enablePLL,uint32_t desiredFreq,struct __hardwareSystem*))__config;
+            machine->systickConfig  = (uint32_t(*)(uint32_t interval_ms, void(*handler)(void), struct __hardwareSystem*))__systickConfig;
+            machine->systickEnable  = (void(*)(bool))__systickEnable;
+            machine->triggerSwitch  = (void(*)(void))__triggerPendSV;
+            machine->enableInts     = (void(*)(bool))__enableNVIC;
+            machine->perphInit      = (void(*)(uint32_t))__peripheralInit;
+            machine->enableInts(false);
+            machine->clockFreq      = 0xDEADBEEF;
+            machine->desiredFreq    = 0xDEADBEEF;
+        }
+        return OK;//system object has been initiliazed but not config
+    }
+
+    int system_configClock( oscType type,PLLfrequency enablePLL,uint32_t desiredFreq )
+    {
+        if(machine != NULL)
+        {
+            if(machine->clkConfig(type, enablePLL, desiredFreq, machine))return OK;
+            else return KO;
+        }else return KO;
+
+    }
+    int system_configSysTick(uint32_t interval_ms, void(*handler)(void))
+    {
+        if(machine != NULL)
+        {
+            if(machine->systickConfig(interval_ms, handler, machine))return OK;
+            else return KO;
+        }
+    }
+
+    int system_initPeripherals ( void )
+    {
+        if(machine != NULL)
+        {
+            uint8_t length = sizeof(peripheralLookup)/sizeof(peripheralLookup[0]);
+            for(uint8_t i = 0; i < length;)
+            {
+                uint32_t peripheral = peripheralLookup[i];
+                machine->perphInit(peripheral);
+                i++;
+            }
+            return OK;            
+        }else return KO;
+    }
+    void system_enableInterrupts( bool state){
+        if(machine != NULL){
+            machine->enableInts(state);
+        }
+    }
+
+    void system_enableSysTick( bool state){
+        if(machine != NULL){
+            machine->systickEnable(state);
+        }
+    }
+    void system_triggerPendSV( void )
+    {
+        if(machine != NULL)
+        {
+            machine->triggerSwitch();
+        }
+    }
+    int system_initUART( void )
+    {
+        uint8_t length = sizeof(uartGPIO_lookup)/sizeof(uartGPIO_lookup[0]);
+        for(uint8_t i = 0; i<length; i++)
+        {
+            GPIOPinConfigure(uart_lookup[i][uart_rx]);
+            GPIOPinConfigure(uart_lookup[i][uart_tx]);
+            GPIOPinTypeUART(uartGPIO_lookup[i][uart_base], uartGPIO_lookup[i][uart_rx]|uartGPIO_lookup[i][uart_tx]);
+
+        }
+        return OK;
+    }
+    uint32_t system_getClock( void )
+    {
+        if(machine != NULL)
+        {
+            return machine->clockFreq;
+        }else return KO;
+    }
+    void system_start( void )
+    {
+        //check through all the precursors to make sure everything is correct
+    }
     
+    #endif
 
 #endif

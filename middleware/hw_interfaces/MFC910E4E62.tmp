@@ -1,7 +1,7 @@
 #ifndef __digital_interface_C__
 #define __digital_interface_C__
     #include "dev001HAL.h"
-    //#include "dev001_pinmap.h"
+    //#include "dev001_BSP.h"
     #include "digitalInput_interface.h"
     #include "gpio.h"
 

@@ -14,8 +14,8 @@
     #include <stdarg.h>
     #include <stdio.h>
 
-    extern uart_comm uart_obj[UART_TOTAL];
     
+    #define SERIAL_LIMIT 1024
 /**********************************************
  * Method:  uint8_t serial_printf(char *string, ...)
  * 
@@ -31,31 +31,36 @@
 **********************************************/
     uint8_t serial_printf(char *string, ...){
 
-        uart_comm* uart_buff =  &uart_obj[SYSTEM_UART];
+        
         va_list args;
-        char temp[BUFF_SIZE] = "\0";
+        char temp[SERIAL_LIMIT] = "\0";
         /*decode and convert args into chars*/
         va_start(args, string);
             vsprintf(temp, string, args);
         va_end(args); 
-        
-        if((uart_buff->write_head+1)%BUFF_SIZE == uart_buff->write_tail){
-            uart_buff->buffFull = true;
-            return 0;
-        } 
 
-        for(int i = 0; i < strlen(temp);i++){
-            if((uart_buff->write_head+1)%BUFF_SIZE != uart_buff->write_tail){
-                uart_buff->circBuff[uart_buff->write_head] = temp[i];
-                uart_buff->write_head = (uart_buff->write_head+1)%BUFF_SIZE;
-                uart_buff->count = uart_buff->count++;
-            }else{
-                uart_buff->buffFull = true;
-                return 0;                   
+        if(uart_checkLock(UART_SYS)){
+          uart_send(UART_SYS);
+            return KO;
+        }
+        else
+        {
+            uart_lockBuff(UART_SYS);
+            for(int i = 0; i < strlen(temp);)
+            {
+                if(uart_insertBuff(temp[i], UART_SYS))i++;
+                else {
+                    uart_unlockBuff(UART_SYS);
+                    uart_send(UART_SYS);
+                    return KO;
+                }
             }
+            uart_unlockBuff(UART_SYS);
+            
         }
 
-        return 1;
+        uart_send(UART_SYS);
+        return OK;
     }
 
 #endif

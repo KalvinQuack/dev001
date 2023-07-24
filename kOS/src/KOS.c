@@ -6,11 +6,11 @@
 */
 
 /*standard includes*/
-#include <stdint.h>
-#include <stdbool.h>
+
 
 /*environment includes*/
 #include "KOS.h"
+
 /**********************************************
  * Method:  OS_idle ( void )
  * 
@@ -55,12 +55,12 @@ void OS_init( void ){
 **********************************************/
 void P( SEMAPHORE *s){
     /*atomic function*/
-    disable_IRQ();
+    IntMasterDisable();
     s->value--;
     if(s->value < 0){
         block(s);
     }
-    enable_IRQ();
+    IntMasterEnable();
 }    
 /**********************************************
  * Method:  V(SEMAPHORE *s)
@@ -75,12 +75,12 @@ void P( SEMAPHORE *s){
 **********************************************/
 void V(SEMAPHORE *s){
     /*atomic function*/
-    disable_IRQ();
+    IntMasterDisable();
     s->value++;
     if(s->value >= 0){
         signal(s);
     }
-    enable_IRQ();
+    IntMasterEnable();
 }
 /**********************************************
  * Method:  task_sleep(SEMAPHORE *s)
@@ -93,9 +93,9 @@ void V(SEMAPHORE *s){
  * 
 **********************************************/
 void task_sleep(SEMAPHORE *s){
-    disable_IRQ();
+    IntMasterDisable();
     block(s);
-    enable_IRQ();
+    IntMasterEnable();
 }
 /**********************************************
  * Method:  task_wakeup(SEMAPHORE *s)
@@ -108,7 +108,7 @@ void task_sleep(SEMAPHORE *s){
  * 
 **********************************************/
 void task_wakeup(SEMAPHORE *s){
-    disable_IRQ();
+    IntMasterDisable();
     signal(s);
-    enable_IRQ();   
+    IntMasterEnable();  
 }

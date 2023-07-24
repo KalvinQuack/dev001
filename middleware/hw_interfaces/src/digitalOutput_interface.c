@@ -12,7 +12,7 @@
     #include <stdlib.h>
     /*environment includes*/
     #include "dev001HAL.h"
-    #include "pinmap.h"
+    #include "BSP.h"
     #include "driverlib/gpio.h"
     #include "digitalOutput_interface.h"
 
