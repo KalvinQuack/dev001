@@ -1,0 +1,5 @@
+{
+    "ewp": "${workspaceFolder}\\usb_stick_demo.ewp",
+    "configuration": "Debug",
+    "toolchain": "C:\\\\Program Files\\\\IAR Systems\\\\Embedded Workbench 9.1"
+}

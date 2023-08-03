@@ -4,23 +4,22 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/middleware",
-                "${workspaceFolder}/middleware/TivaWare_C_Series-2.2.0.295/driverlib",
-                "${workspaceFolder}/middleware/TivaWare_C_Series-2.2.0.295/inc",
-                "${workspaceFolder}/src",
-                "${workspaceFolder}/libraries",
-                "${workspaceFolder}/modules/inc",
-                "${workspaceFolder}/modules/src",
+                "${workspaceFolder}/board_support_package",
+                "${workspaceFolder}/board_support_package/TivaWare_C_Series-2.2.0.295/driverlib",
+                "${workspaceFolder}/board_support_package/TivaWare_C_Series-2.2.0.295/inc",
+                "${workspaceFolder}/middleware/inc",
                 "${workspaceFolder}/kOS/inc",
-                "${workspaceFolder}/middleware/hw_interfaces/inc",
-                "${workspaceFolder}/middleware/hw_interfaces/src",
-                "${workspaceFolder}/middleware/TivaWare_C_Series-2.2.0.295"
+                "${workspaceFolder}/board_support_package/hw_interfaces/inc",
+                "${workspaceFolder}/util/design_patterns/inc",
+                "${workspaceFolder}/util",
+                "${workspaceFolder}"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE",
-                "_DEV001_DEVICE_"
+                "_DEV001_DEVICE_",
+                "PART_TM4C1290NCPDT"
             ],
             "intelliSenseMode": "${default}",
             "compilerPath": "C:\\msys64\\ucrt64\\bin\\gcc.exe",

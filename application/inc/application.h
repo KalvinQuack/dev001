@@ -8,7 +8,7 @@
             char* name;
             void (*running)( void );
             void (*config)( void );
-            void (*destroy)(struct __observer*);
+            void (*destroy)(struct _observer*);
         }app;
 
         /* FUNCTION PROTOTYPES*/
