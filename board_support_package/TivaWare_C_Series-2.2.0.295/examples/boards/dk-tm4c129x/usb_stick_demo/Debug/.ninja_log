@@ -1,0 +1,8 @@
+# ninja log v5
+1749	4693	6999900028564344	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/usb_stick_demo/ewarm/Obj/Source/startup_ewarm.o	5f8fdff749a2ee8d
+762	6783	6999900029189582	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/usb_stick_demo/ewarm/Obj/Source/frame.o	ca02210a67389df0
+1026	7878	6999900063251839	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/usb_stick_demo/ewarm/Obj/Source/pinout.o	413e2d346f80c670
+2004	9829	6999900085595423	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/usb_stick_demo/ewarm/Obj/Source/usb_stick_demo.o	eeb1b308bd398a67
+1228	10388	6999900086220425	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/usb_stick_demo/ewarm/Obj/Source/kentec320x240x16_ssd2119.o	8cb35126676074f2
+10881	37695	6999900355908584	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/usb_stick_demo/ewarm/Exe/usb_stick_demo.out	1d20328935a73f5d
+38376	39387	6999900383877381	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/usb_stick_demo/ewarm/Exe/usb_stick_demo.bin	3b48142992a34be3

@@ -21,6 +21,10 @@
         "array": "c",
         "utility": "c",
         "observer.h": "c",
-        "common.h": "c"
+        "common.h": "c",
+        "system.h": "c",
+        "string": "c",
+        "string_view": "c",
+        "*.tcc": "c"
     }
 }

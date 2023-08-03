@@ -22,7 +22,8 @@
  * 
 **********************************************/
 void OS_idle ( void ){
-    while(1){
+    
+  while(1){
         //put cpu to sleep state?
     };
 }

@@ -1,12 +1,13 @@
 {
-  "ewp": "${workspaceFolder}\\middleware\\TivaWare_C_Series-2.2.0.295\\examples\\boards\\dk-tm4c129x\\aes_cbc_decrypt\\aes_cbc_decrypt.ewp",
+  "ewp": "${workspaceFolder}\\BSP\\TivaWare_C_Series-2.2.0.295\\examples\\boards\\dk-tm4c129x\\aes_cbc_decrypt\\aes_cbc_decrypt.ewp",
   "configuration": "Debug",
   "toolchain": "C:\\\\Program Files\\\\IAR Systems\\\\Embedded Workbench 9.1",
   "project": {
-    "path": "${workspaceFolder}\\middleware\\TivaWare_C_Series-2.2.0.295\\examples\\boards\\ek-tm4c129exl\\adc_udma_pingpong\\adc_udma_pingpong.ewp"
+    "path": "${workspaceFolder}\\board_support_package\\TivaWare_C_Series-2.2.0.295\\examples\\boards\\ek-tm4c129exl\\adc_udma_pingpong\\adc_udma_pingpong.ewp"
   },
   "configs": {
-    "${workspaceFolder}\\middleware\\TivaWare_C_Series-2.2.0.295\\examples\\boards\\ek-tm4c129exl\\adc_udma_pingpong\\adc_udma_pingpong.ewp": "Debug"
+    "${workspaceFolder}\\BSP\\TivaWare_C_Series-2.2.0.295\\examples\\boards\\ek-tm4c129exl\\adc_udma_pingpong\\adc_udma_pingpong.ewp": "Debug",
+    "${workspaceFolder}\\board_support_package\\TivaWare_C_Series-2.2.0.295\\examples\\boards\\ek-tm4c129exl\\adc_udma_pingpong\\adc_udma_pingpong.ewp": "Debug"
   },
   "workbench": {
     "path": "C:\\\\Program Files (x86)\\\\IAR Systems\\\\Embedded Workbench 8.3"

@@ -16,9 +16,11 @@
     me->read_tail = 0;
     me->write_head = 0; 
     me->write_tail = 0;
-    for(uint32_t i = 0; i < sizeof(BUFF_SIZE); i++)
+    me->dataAvail = false; 
+    for(uint32_t i = 0; i < BUFF_SIZE; i++)
     {
         me->circBuff[i] = '\0';
+        me->readBuff[i] = '\0';
     }
     return me;
    } 

@@ -1,0 +1,23 @@
+# ninja log v5
+99	512	7016400108929268	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Obj/Source/startup_ewarm.o	90a629c7581db904
+21	751	7016400109615987	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Obj/Source/frame.o	6f6f4862863de6e3
+179	821	7016400111621994	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Obj/Source/uart_echo.o	cd7942ccce95a001
+64	956	7016400113619361	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Obj/Source/pinout.o	e35486db42c3ab05
+135	1068	7016400114776380	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Obj/Source/kentec320x240x16_ssd2119.o	b448975fc0262caf
+1106	2597	7016400129476273	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Exe/uart_echo.out	e873777750ab1068
+2630	2721	7016400131768166	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Exe/uart_echo.bin	e9f7f27aee90a9f5
+20	515	7016400908081816	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Obj/Source/uart_echo.o	cd7942ccce95a001
+550	1878	7016400921450039	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Exe/uart_echo.out	e873777750ab1068
+1901	2014	7016400923760531	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Exe/uart_echo.bin	e9f7f27aee90a9f5
+25	621	7016430784971620	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Obj/Source/uart_echo.o	cd7942ccce95a001
+653	2224	7016430800646105	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Exe/uart_echo.out	e873777750ab1068
+2251	2406	7016430803486929	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Exe/uart_echo.bin	e9f7f27aee90a9f5
+72	809	7016448048708337	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Obj/Source/uart_echo.o	cd7942ccce95a001
+836	2165	7016448061849217	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Exe/uart_echo.out	e873777750ab1068
+2191	2282	7016448064158583	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Exe/uart_echo.bin	e9f7f27aee90a9f5
+45	520	7016450420552076	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Obj/Source/uart_echo.o	cd7942ccce95a001
+547	1837	7016450433387868	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Exe/uart_echo.out	e873777750ab1068
+1861	1968	7016450435543701	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Exe/uart_echo.bin	e9f7f27aee90a9f5
+17	531	7016451226961547	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Obj/Source/uart_echo.o	cd7942ccce95a001
+552	1841	7016451240102840	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Exe/uart_echo.out	e873777750ab1068
+1869	1961	7016451242100657	R:/SourceCode/TIVA/Development/dev001/middleware/TivaWare_C_Series-2.2.0.295/examples/boards/dk-tm4c129x/uart_echo/ewarm/Exe/uart_echo.bin	e9f7f27aee90a9f5

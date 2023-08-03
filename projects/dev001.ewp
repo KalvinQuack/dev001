@@ -291,7 +291,7 @@
                 <option>
                     <name>CCAllowList</name>
                     <version>1</version>
-                    <state>00000000</state>
+                    <state>11111110</state>
                 </option>
                 <option>
                     <name>CCDebugInfo</name>
@@ -353,15 +353,15 @@
                     <name>CCIncludePath2</name>
                     <state>$PROJ_DIR$</state>
                     <state>$PROJ_DIR$\..\src</state>
-                    <state>$PROJ_DIR$\..\modules\inc</state>
-                    <state>$PROJ_DIR$\..\modules\src</state>
+                    <state>$PROJ_DIR$\..\middleware\inc</state>
+                    <state>$PROJ_DIR$\..\middleware\src</state>
                     <state>$PROJ_DIR$\..\kOS\inc</state>
                     <state>$PROJ_DIR$\..\</state>
                     <state>$PROJ_DIR$\..\kOS\src</state>
-                    <state>$PROJ_DIR$\..\middleware</state>
-                    <state>$PROJ_DIR$\..\middleware\hw_interfaces\inc</state>
-                    <state>$PROJ_DIR$\..\middleware\hw_interfaces\src</state>
-                    <state>$PROJ_DIR$\..\middleware\TivaWare_C_Series-2.2.0.295</state>
+                    <state>$PROJ_DIR$\..\board_support_package</state>
+                    <state>$PROJ_DIR$\..\board_support_package\hw_interfaces\inc</state>
+                    <state>$PROJ_DIR$\..\board_support_package\hw_interfaces\src</state>
+                    <state>$PROJ_DIR$\..\board_support_package\TivaWare_C_Series-2.2.0.295</state>
                     <state>$PROJ_DIR$\..\application</state>
                     <state>$PROJ_DIR$\..\application\src</state>
                     <state>$PROJ_DIR$\..\application\inc</state>
@@ -383,16 +383,16 @@
                 </option>
                 <option>
                     <name>CCOptLevel</name>
-                    <state>1</state>
+                    <state>3</state>
                 </option>
                 <option>
                     <name>CCOptStrategy</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCOptLevelSlave</name>
-                    <state>1</state>
+                    <state>3</state>
                 </option>
                 <option>
                     <name>CCPosIndRopi</name>
@@ -441,7 +441,7 @@
                 <option>
                     <name>CCOptStrategySlave</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCGuardCalls</name>
@@ -683,7 +683,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>1</hasPrio>
+                <hasPrio>112</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -2174,25 +2174,76 @@
         </file>
     </group>
     <group>
-        <name>Libraries</name>
+        <name>BSP</name>
         <file>
-            <name>$PROJ_DIR$\..\middleware\TivaWare_C_Series-2.2.0.295\driverlib\ewarm\Exe\driverlib.a</name>
+            <name>$PROJ_DIR$\..\board_support_package\hw_interfaces\src\analogInput_interface.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\board_support_package\BSP.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\board_support_package\hw_interfaces\src\digitalInput_interface.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\board_support_package\hw_interfaces\src\digitalOutput_interface.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\board_support_package\hw_interfaces\src\systemControl_interface.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\board_support_package\hw_interfaces\src\UART_interface.c</name>
         </file>
     </group>
     <group>
-        <name>pinmap</name>
+        <name>Libraries</name>
         <file>
-            <name>$PROJ_DIR$\..\middleware\BSP.c</name>
+            <name>$PROJ_DIR$\..\board_support_package\TivaWare_C_Series-2.2.0.295\driverlib\ewarm\Exe\driverlib.a</name>
+        </file>
+    </group>
+    <group>
+        <name>APIS</name>
+        <group>
+            <name>modules</name>
+            <file>
+                <name>$PROJ_DIR$\..\middleware\src\buttons.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\middleware\src\leds.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\middleware\src\serial.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\middleware\src\system.c</name>
+            </file>
+        </group>
+        <group>
+            <name>tools</name>
+            <file>
+                <name>$PROJ_DIR$\..\util\buffers\buffer.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\util\design_patterns\src\observer.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\util\design_patterns\src\subject.c</name>
+            </file>
+        </group>
+    </group>
+    <group>
+        <name>OS</name>
+        <file>
+            <name>$PROJ_DIR$\..\kOS\src\kernel.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\middleware\BSP.h</name>
+            <name>$PROJ_DIR$\..\kOS\src\KOS.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\kOS\src\queue.c</name>
         </file>
     </group>
     <group>
         <name>src</name>
-        <file>
-            <name>$PROJ_DIR$\..\kOS\src\kernel.c</name>
-        </file>
         <file>
             <name>$PROJ_DIR$\..\application\src\main_TMC129XNCZAD.c</name>
         </file>
@@ -2200,61 +2251,7 @@
             <name>$PROJ_DIR$\..\application\inc\main_TMC129XNCZAD.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\kOS\src\queue.c</name>
+            <name>$PROJ_DIR$\startup_ewarm.c</name>
         </file>
     </group>
-    <file>
-        <name>$PROJ_DIR$\..\util\buffers\buffer.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\util\buffers\buffer.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\modules\src\buttons.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\modules\inc\buttons.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\middleware\hw_interfaces\src\digitalInput_interface.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\middleware\hw_interfaces\inc\digitalInput_interface.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\middleware\hw_interfaces\src\digitalOutput_interface.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\middleware\hw_interfaces\inc\digitalOutput_interface.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\kOS\src\KOS.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\util\design_patterns\src\observer.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\util\design_patterns\inc\observer.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\modules\src\serial.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\startup_ewarm.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\util\design_patterns\src\subject.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\util\design_patterns\inc\subject.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\middleware\hw_interfaces\src\systemControl_interface.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\middleware\hw_interfaces\inc\systemControl_interface.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\..\middleware\hw_interfaces\src\UART_interface.c</name>
-    </file>
 </project>
