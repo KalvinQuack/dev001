@@ -4,7 +4,7 @@
         "testhal.h": "c",
         "kos.h": "c",
         "stdbool.h": "c",
-        "BSP.h": "c",
+        "MCU.h": "c",
         "sysctl.h": "c",
         "pin_map.h": "c",
         "cstdio": "c",
@@ -25,6 +25,13 @@
         "system.h": "c",
         "string": "c",
         "string_view": "c",
-        "*.tcc": "c"
+        "*.tcc": "c",
+        "digitaloutput_interface.h": "c",
+        "hw_memmap.h": "c",
+        "rom_map.h": "c",
+        "rom.h": "c",
+        "main_tmc129xnczad.h": "c",
+        "board_configuration.h": "c",
+        "bsp_io.h": "c"
     }
 }

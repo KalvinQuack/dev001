@@ -37,8 +37,8 @@
 //
 //*****************************************************************************
 
-#ifndef __DRIVERLIB_PWM_H__
-#define __DRIVERLIB_PWM_H__
+#ifndef __PWM_H__
+#define __PWM_H__
 
 //*****************************************************************************
 //
@@ -323,4 +323,4 @@ extern void PWMOutputUpdateMode(uint32_t ui32Base,
 }
 #endif
 
-#endif // __DRIVERLIB_PWM_H__
+#endif/* __PWM_H__ */

@@ -7,5 +7,4 @@
     #define QUANTA 20
     /*function prototypes*/
     
-    digitalInput* getDIN( HAL_DINS pin );
 #endif

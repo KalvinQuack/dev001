@@ -1,0 +1,4 @@
+#ifndef __ANALOG_INPUT_INTERFACE_H__
+#define __ANALOG_INPUT_INTERFACE_H__
+    
+#endif/* __ANALOG_INPUT_INTERFACE_H__ */

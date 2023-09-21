@@ -7,19 +7,20 @@
                 "${workspaceFolder}/board_support_package",
                 "${workspaceFolder}/board_support_package/TivaWare_C_Series-2.2.0.295/driverlib",
                 "${workspaceFolder}/board_support_package/TivaWare_C_Series-2.2.0.295/inc",
-                "${workspaceFolder}/middleware/inc",
                 "${workspaceFolder}/kOS/inc",
                 "${workspaceFolder}/board_support_package/hw_interfaces/inc",
                 "${workspaceFolder}/util/design_patterns/inc",
                 "${workspaceFolder}/util",
-                "${workspaceFolder}"
+                "${workspaceFolder}",
+                "${workspaceFolder}/board_support_package/TivaWare_C_Series-2.2.0.295"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE",
-                "_DEV001_DEVICE_",
-                "PART_TM4C1290NCPDT"
+                "_DEV001_DEVICE_", 
+                "PART_TM4C129XNCZAD",
+                "TARGET_IS_SNOWFLAKE_RA2"
             ],
             "intelliSenseMode": "${default}",
             "compilerPath": "C:\\msys64\\ucrt64\\bin\\gcc.exe",

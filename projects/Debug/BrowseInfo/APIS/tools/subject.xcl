@@ -33,6 +33,8 @@ R:\SourceCode\TIVA\Development\dev001\projects\..\board_support_package\hw_inter
 -I
 R:\SourceCode\TIVA\Development\dev001\projects\..\board_support_package\TivaWare_C_Series-2.2.0.295
 -I
+R:\SourceCode\TIVA\Development\dev001\projects\..\board_support_package\TivaWare_C_Series-2.2.0.295\driverlib
+-I
 R:\SourceCode\TIVA\Development\dev001\projects\..\application
 -I
 R:\SourceCode\TIVA\Development\dev001\projects\..\application\src
@@ -40,6 +42,8 @@ R:\SourceCode\TIVA\Development\dev001\projects\..\application\src
 R:\SourceCode\TIVA\Development\dev001\projects\..\application\inc
 -I
 R:\SourceCode\TIVA\Development\dev001\projects\..\util
+-I
+R:\SourceCode\TIVA\Development\dev001\projects\..\util\unit_test
 -I
 R:\SourceCode\TIVA\Development\dev001\projects\..\util\design_patterns/src
 -I
@@ -75,6 +79,8 @@ R:\SourceCode\TIVA\Development\dev001\board_support_package\hw_interfaces\src
 -I
 R:\SourceCode\TIVA\Development\dev001\board_support_package\TivaWare_C_Series-2.2.0.295
 -I
+R:\SourceCode\TIVA\Development\dev001\board_support_package\TivaWare_C_Series-2.2.0.295\driverlib
+-I
 R:\SourceCode\TIVA\Development\dev001\application
 -I
 R:\SourceCode\TIVA\Development\dev001\application\src
@@ -82,6 +88,8 @@ R:\SourceCode\TIVA\Development\dev001\application\src
 R:\SourceCode\TIVA\Development\dev001\application\inc
 -I
 R:\SourceCode\TIVA\Development\dev001\util
+-I
+R:\SourceCode\TIVA\Development\dev001\util\unit_test
 -I
 R:\SourceCode\TIVA\Development\dev001\util\design_patterns\src
 -I
@@ -444,7 +452,6 @@ C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\CMSIS\Core\Include
 -Dewarm=1
 -DDEVICE_TM4C129=1
 -DPART_TM4C129XNCZAD=1
--DTARGET_IS_TM4C129_RA0=1
 -D_DEV001_DEVICE_=1
 -D_DLIB_CONFIG_FILE_HEADER_NAME="C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\inc\c\DLib_Config_Normal.h"
 -D_DLIB_CONFIG_FILE_STRING="C:\\Program Files\\IAR Systems\\Embedded Workbench 9.1\\arm\\inc\\c\\DLib_Config_Normal.h"

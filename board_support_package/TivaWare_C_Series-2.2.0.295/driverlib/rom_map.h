@@ -38,8 +38,8 @@
 //
 //*****************************************************************************
 
-#ifndef __DRIVERLIB_ROM_MAP_H__
-#define __DRIVERLIB_ROM_MAP_H__
+#ifndef __ROM_MAP_H__
+#define __ROM_MAP_H__
 
 //*****************************************************************************
 //
@@ -6572,6 +6572,6 @@
 #else
 #define MAP_Crc32                                                             \
         Crc32
-#endif
+#endif/* __ROM_MAP_H__ */
 
-#endif // __DRIVERLIB_ROM_MAP_H__
+#endif/* __ROM_MAP_H__ */

@@ -46,12 +46,12 @@
 // instead of defined in the source file.
 // TODO: define the correct TARGET_IS_ macro for your device.
 //
-#define TARGET_IS_TM4C123_RA3
+// #define TARGET_IS_TM4C123_RA3
 // #define TARGET_IS_TM4C123_RB1
 // #define TARGET_IS_TM4C123_RB2
 // #define TARGET_IS_TM4C129_RA0
 // #define TARGET_IS_TM4C129_RA1
-// #define TARGET_IS_TM4C129_RA2
+ #define TARGET_IS_TM4C129_RA2
 
 //
 // The order of the following header files is important.  The header rom.h

@@ -20,4 +20,4 @@
     void kernel_sleep   ( void );
     void kernel_wake    ( void );
 
-#endif
+#endif/* __KERNEL_H__ */

@@ -229,7 +229,6 @@
                     <state>ewarm</state>
                     <state>DEVICE_TM4C129</state>
                     <state>PART_TM4C129XNCZAD</state>
-                    <state>TARGET_IS_TM4C129_RA0</state>
                     <state>_DEV001_DEVICE_</state>
                 </option>
                 <option>
@@ -238,11 +237,11 @@
                 </option>
                 <option>
                     <name>CCPreprocComments</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCPreprocLine</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCListCFile</name>
@@ -362,10 +361,12 @@
                     <state>$PROJ_DIR$\..\board_support_package\hw_interfaces\inc</state>
                     <state>$PROJ_DIR$\..\board_support_package\hw_interfaces\src</state>
                     <state>$PROJ_DIR$\..\board_support_package\TivaWare_C_Series-2.2.0.295</state>
+                    <state>$PROJ_DIR$\..\board_support_package\TivaWare_C_Series-2.2.0.295\driverlib</state>
                     <state>$PROJ_DIR$\..\application</state>
                     <state>$PROJ_DIR$\..\application\src</state>
                     <state>$PROJ_DIR$\..\application\inc</state>
                     <state>$PROJ_DIR$\..\util</state>
+                    <state>$PROJ_DIR$\..\util\unit_test</state>
                     <state>$PROJ_DIR$\..\util\design_patterns/src</state>
                     <state>$PROJ_DIR$\..\util\design_patterns/inc</state>
                 </option>
@@ -683,7 +684,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>112</hasPrio>
+                <hasPrio>1</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -2162,6 +2163,24 @@
         </settings>
     </configuration>
     <group>
+        <name>APIS</name>
+        <group>
+            <name>modules</name>
+        </group>
+        <group>
+            <name>tools</name>
+            <file>
+                <name>$PROJ_DIR$\..\util\buffers\buffer.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\util\design_patterns\src\observer.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\util\design_patterns\src\subject.c</name>
+            </file>
+        </group>
+    </group>
+    <group>
         <name>Assembly</name>
         <file>
             <name>$PROJ_DIR$\..\kOS\asm\context.s</name>
@@ -2176,22 +2195,16 @@
     <group>
         <name>BSP</name>
         <file>
-            <name>$PROJ_DIR$\..\board_support_package\hw_interfaces\src\analogInput_interface.c</name>
+            <name>$PROJ_DIR$\..\board_support_package\board_configuration.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\board_support_package\BSP.c</name>
+            <name>$PROJ_DIR$\..\board_support_package\board_configuration.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\board_support_package\hw_interfaces\src\digitalInput_interface.c</name>
+            <name>$PROJ_DIR$\..\board_support_package\BSPInterface.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\board_support_package\hw_interfaces\src\digitalOutput_interface.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\board_support_package\hw_interfaces\src\systemControl_interface.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\board_support_package\hw_interfaces\src\UART_interface.c</name>
+            <name>$PROJ_DIR$\..\board_support_package\pins.h</name>
         </file>
     </group>
     <group>
@@ -2199,36 +2212,6 @@
         <file>
             <name>$PROJ_DIR$\..\board_support_package\TivaWare_C_Series-2.2.0.295\driverlib\ewarm\Exe\driverlib.a</name>
         </file>
-    </group>
-    <group>
-        <name>APIS</name>
-        <group>
-            <name>modules</name>
-            <file>
-                <name>$PROJ_DIR$\..\middleware\src\buttons.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\middleware\src\leds.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\middleware\src\serial.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\middleware\src\system.c</name>
-            </file>
-        </group>
-        <group>
-            <name>tools</name>
-            <file>
-                <name>$PROJ_DIR$\..\util\buffers\buffer.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\util\design_patterns\src\observer.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\util\design_patterns\src\subject.c</name>
-            </file>
-        </group>
     </group>
     <group>
         <name>OS</name>
@@ -2254,4 +2237,22 @@
             <name>$PROJ_DIR$\startup_ewarm.c</name>
         </file>
     </group>
+    <group>
+        <name>Tests</name>
+        <file>
+            <name>$PROJ_DIR$\..\tests\unit_test\unit_test01.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\tests\unit_test\unit_test01.h</name>
+        </file>
+    </group>
+    <file>
+        <name>$PROJ_DIR$\..\util\common.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\..\board_support_package\TivaWare_C_Series-2.2.0.295\driverlib\rom.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\..\board_support_package\TivaWare_C_Series-2.2.0.295\driverlib\rom_map.h</name>
+    </file>
 </project>
