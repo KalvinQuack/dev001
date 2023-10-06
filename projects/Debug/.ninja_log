@@ -1,60 +1,62 @@
 # ninja log v5
-251	899	7156360786961479	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/cpu.o	6b1a262a31bc37b2
-10	384	7169263917424417	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/context.o	b1ffcfc78e7709df
-809	1197	7169263927916214	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Tests/unit_test01.o	b76576c23db70887
 117	608	6983622238773644	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/hw_interfaces/digital_outputs/digitalOutput_interface.o	b9876924b48b6edc
-1476	2030	7169263935935533	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Exe/dev001.out	ab14dbaa9df4f382
+1528	2088	7169282382429453	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Exe/dev001.out	ab14dbaa9df4f382
+54	306	7169282363514234	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/context.o	b1ffcfc78e7709df
+251	899	7156360786961479	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/cpu.o	6b1a262a31bc37b2
+901	1292	7169282374803993	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Tests/unit_test01.o	b76576c23db70887
+2113	2390	7169282386179465	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Exe/dev001.hex	afb6a83503202b3d
 210	1434	7156360790736837	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/comp.o	6ff87891b62d9a2b
-2054	2299	7169263939389092	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Exe/dev001.hex	afb6a83503202b3d
 443	8133	6967426342422627	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/hw_interfaces/digitalInput_interface.o	c6932e5fdaf2ae0d
-278	996	7169263924166217	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/KOS.o	a164ebe3c6791f46
-811	1678	7005247613321650	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/cmain.o	827c9da6cb0a9d01
-779	1968	6981719243096700	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/hw_interfaces/system/systemControl_interface.o	7efa0e6d140fec91
 1026	4347	7088923273443696	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/system_init.o	b72a7354319a56a7
-403	1274	7169263928073359	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/main_TMC129XNCZAD.o	efd3357fb1baf328
-12	500	7121843769243223	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/kernel.o	5fb2abe6d6d9655d
-74	565	6983622238617393	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/hw_interfaces/digital_inputs/digitalInput_interface.o	b02b52d95efc4bb6
+779	1968	6981719243096700	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/hw_interfaces/system/systemControl_interface.o	7efa0e6d140fec91
+430	1119	7169282371053872	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/KOS.o	a164ebe3c6791f46
+811	1678	7005247613321650	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/cmain.o	827c9da6cb0a9d01
+330	1353	7169282374959746	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/main_TMC129XNCZAD.o	efd3357fb1baf328
 202	1231	6969015578605798	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/sysctl.o	6de256b237b52d0e
 510	1183	7156360789935699	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/crc.o	602821dda8021580
-991	1918	7010196650892595	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/t.o	ec3f80bd8b5f03ae
-1529	2324	7121838243562959	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/startup_ewarm.o	87d4c8fb4562ee2e
+74	565	6983622238617393	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/hw_interfaces/digital_inputs/digitalInput_interface.o	b02b52d95efc4bb6
+12	500	7121843769243223	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/kernel.o	5fb2abe6d6d9655d
 1964	3634	7156360810616813	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/hibernate.o	76434b9a5215a0e7
+1529	2324	7121838243562959	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/startup_ewarm.o	87d4c8fb4562ee2e
+991	1918	7010196650892595	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/t.o	ec3f80bd8b5f03ae
 7	290	6982806420511605	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/hw_interfaces/digital_outputs/led_interface.o	48ed67f2cc7cf0fa
 153	437	6983622237992388	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/startup.o	315525cf6a31d9b5
 340	857	7004338687183731	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/__program_start.o	1bd28585016c5a12
 1251	1935	7005247614727884	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/__reset_handler__.o	b66cef90e525ab35
-64	392	7121843767993509	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/queue.o	dd1fd2ebcd7fc0f3
 2110	3773	7156360810304668	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/gpio.o	447743a342be6f59
-62	315	7169263917736976	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/custom_cmain.o	6ecec702f680d5eb
-35	250	7169263917580651	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/system_reset.o	9ff157fe45a2a24
+64	392	7121843767993509	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/queue.o	dd1fd2ebcd7fc0f3
+80	363	7169282363826771	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/custom_cmain.o	6ecec702f680d5eb
 1254	3231	7156360807023088	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/epi.o	8ee30d2810273506
+279	548	7181306974711552	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/HAL/HAL_io.o	f69da13f539788e5
+99	410	7169282364295476	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/system_reset.o	9ff157fe45a2a24
 84	776	7127977144288938	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/digitalInput_interface.o	3e49a02ed1ad94fd
-224	923	7127977145403261	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/UART_interface.o	be6a6524ecc99ceb
 752	1395	7121838232130310	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/KOS.o	9c7d8b3583d758e9
-452	974	7127976699502548	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/analogInput_interface.o	3d4d05bccdc3b68b
+224	923	7127977145403261	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/UART_interface.o	be6a6524ecc99ceb
+61	87	7182334230384778	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
 5294	6561	7156360843559072	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/usb.o	74c8f4692bfcf0fe
 188	1247	7121837941889647	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/serial.o	ac75e14e5b46d76d
 1799	2515	7096819254376671	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/system.o	1fc962981c81c4d
 130	1596	7156360792143219	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/aes.o	208858fe792f725e
 2287	3886	7156360809210574	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/i2c.o	2d9b14ec35b302c7
-1682	2376	7121838243250152	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/subject.o	1c24ee6e08b0c8e1
+452	974	7127976699502548	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/analogInput_interface.o	3d4d05bccdc3b68b
 1611	2241	7121838242937427	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/observer.o	f494d19cc4df9c57
 1130	2109	7121838241053006	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/buffer.o	40cc082ca3d82a4b
+1682	2376	7121838243250152	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/subject.o	1c24ee6e08b0c8e1
 331	747	7121837938295603	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/leds.o	f525d3914d45fe7a
 235	1347	7121837942514274	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/buttons.o	3ce08d52fac298f6
 126	683	7127977143507732	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/digitalOutput_interface.o	b7132f62b7eb9dbd
-151	481	7122601504390902	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/startup_ewarm.o	3b288411ee4adda5
-181	853	7127977144933864	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/systemControl_interface.o	20928957d1e04765
-412	2222	7156360798393229	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/emac.o	6fb481074bb814d8
 3556	4336	7156360821098871	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/mpu.o	4041b11d0eb12359
+412	2222	7156360798393229	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/emac.o	6fb481074bb814d8
+181	853	7127977144933864	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/systemControl_interface.o	20928957d1e04765
+151	481	7122601504390902	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/startup_ewarm.o	3b288411ee4adda5
 39	1316	7128567019822106	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/BSP.o	aa09eede27e3f6e6
-112	1046	7169263924634632	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/kernel.o	2f2ca48109dc1323
-143	775	7169263922759633	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/subject.o	7f1ca8b315948e15
-85	931	7169263922915833	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/buffer.o	1af99e74e0d0b190
-181	650	7169263922447141	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/observer.o	f669425874524d7f
-338	868	7169263923228385	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/queue.o	2c859771573e6dfb
+218	1068	7169282371366031	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/kernel.o	2f2ca48109dc1323
+155	954	7169282369153014	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/subject.o	7f1ca8b315948e15
+264	1011	7169282369493196	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/buffer.o	1af99e74e0d0b190
+124	720	7169282368838440	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/observer.o	f669425874524d7f
 1833	3363	7156360808273112	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/lcd.o	41abccc6643e7e39
-700	1331	7169263928701511	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/startup_ewarm.o	513fb8c49bbdbac0
+378	861	7169282369647100	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/queue.o	2c859771573e6dfb
+756	1411	7169282375428495	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/startup_ewarm.o	513fb8c49bbdbac0
 448	1752	7156360793705974	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/eeprom.o	93452f3b6691f711
 358	1914	7156360791674472	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/flash.o	e976cfd9ddb8d658
 300	2054	7156360792768226	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/can.o	799c96429ba23600
@@ -62,8 +64,8 @@
 2419	2880	7156360806710619	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/fpu.o	a7d2789c063a2383
 1493	3086	7156360807804365	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/adc.o	6785449c61b5728b
 1668	3504	7156360805616878	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/interrupt.o	ef94b4a42ed57371
-3424	4592	7156360822661362	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/qei.o	1818b1d718eae016
 4433	5746	7156360834957659	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/systick.o	a29a60cc0a257762
+3424	4592	7156360822661362	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/qei.o	1818b1d718eae016
 3942	4733	7156360821880462	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/sysexc.o	2839e1b79cbd32c1
 2953	4867	7156360822661362	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/onewire.o	b74c63fe14677c7e
 3152	4988	7156360823286396	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/ssi.o	4f67703242a4608f
@@ -77,123 +79,235 @@
 5181	6336	7156360838402737	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/uart.o	fcb778af52c48943
 430	1978	7158839516189042	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/BSP_io.o	663a7f45b43c3465
 628	1671	7158839516189042	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/BSP/BSP_pwm.o	95b7815b4bfc71f8
-213	1444	7169263930423522	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/board_configuration.o	715e3ce2036bba8c
-51	323	7169265912693931	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/context.o	b1ffcfc78e7709df
-116	393	7169265913162700	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/custom_cmain.o	6ecec702f680d5eb
-85	448	7169265913006466	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/system_reset.o	9ff157fe45a2a24
-142	781	7169265918240116	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/observer.o	f669425874524d7f
-468	906	7169265919205301	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/queue.o	2c859771573e6dfb
-412	1018	7169265919205301	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/startup_ewarm.o	513fb8c49bbdbac0
-289	1069	7169265919048746	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/buffer.o	1af99e74e0d0b190
-178	1131	7169265918709160	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/subject.o	7f1ca8b315948e15
-214	1226	7169265920775645	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/kernel.o	2f2ca48109dc1323
-815	1411	7169265924777064	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/KOS.o	a164ebe3c6791f46
-344	1551	7169265926339681	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/main_TMC129XNCZAD.o	efd3357fb1baf328
-240	1625	7169265926815671	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/board_configuration.o	715e3ce2036bba8c
-107	312	7169267672165070	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/system_reset.o	9ff157fe45a2a24
-47	365	7169267671384156	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/context.o	b1ffcfc78e7709df
-74	428	7169267671852947	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/custom_cmain.o	6ecec702f680d5eb
-140	715	7169267676574155	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/observer.o	f669425874524d7f
-204	834	7169267677355493	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/buffer.o	1af99e74e0d0b190
-397	913	7169267677355493	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/queue.o	2c859771573e6dfb
-231	966	7169267677043346	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/subject.o	7f1ca8b315948e15
-446	1047	7169267678605528	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/KOS.o	a164ebe3c6791f46
-172	1117	7169267678917982	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/kernel.o	2f2ca48109dc1323
-746	1252	7169267682199477	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/startup_ewarm.o	513fb8c49bbdbac0
-862	1349	7169267682511759	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Tests/unit_test01.o	b76576c23db70887
-334	1427	7169267683449222	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/main_TMC129XNCZAD.o	efd3357fb1baf328
-110	345	7169271396219796	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/system_reset.o	9ff157fe45a2a24
-64	405	7169271395750699	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/context.o	b1ffcfc78e7709df
-90	453	7169271396063524	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/custom_cmain.o	6ecec702f680d5eb
-238	742	7169271401379967	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/observer.o	f669425874524d7f
-286	874	7169271401692610	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/subject.o	7f1ca8b315948e15
-420	980	7169271402161356	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/queue.o	2c859771573e6dfb
-165	1039	7169271402005079	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/buffer.o	1af99e74e0d0b190
-371	1119	7169271403162037	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/KOS.o	a164ebe3c6791f46
-132	1181	7169271403630754	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/kernel.o	2f2ca48109dc1323
-777	1369	7169271407239119	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/startup_ewarm.o	513fb8c49bbdbac0
-67	258	7169271578027611	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/custom_cmain.o	6ecec702f680d5eb
-45	327	7169271577715117	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/system_reset.o	9ff157fe45a2a24
-21	380	7169271577403203	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/context.o	b1ffcfc78e7709df
-89	690	7169271582883094	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/observer.o	f669425874524d7f
-403	812	7169271583672497	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/queue.o	2c859771573e6dfb
-347	908	7169271583672497	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/startup_ewarm.o	513fb8c49bbdbac0
-229	959	7169271583203580	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/subject.o	7f1ca8b315948e15
-151	1009	7169271583516963	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/buffer.o	1af99e74e0d0b190
-179	1085	7169271585244238	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/kernel.o	2f2ca48109dc1323
-851	1296	7169271588950134	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Tests/unit_test01.o	b76576c23db70887
-725	1349	7169271589106799	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/KOS.o	a164ebe3c6791f46
-282	1464	7169271589418882	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/main_TMC129XNCZAD.o	efd3357fb1baf328
-123	1619	7169271592264918	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/board_configuration.o	715e3ce2036bba8c
-1647	2147	7169271597589404	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Exe/dev001.out	ab14dbaa9df4f382
-2170	2421	7169271600714052	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Exe/dev001.hex	afb6a83503202b3d
-294	678	7169273782930294	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/context.o	b1ffcfc78e7709df
-321	735	7169273783242507	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/custom_cmain.o	6ecec702f680d5eb
-470	783	7169273783554974	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/system_reset.o	9ff157fe45a2a24
-637	1052	7169273787976614	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/observer.o	f669425874524d7f
-756	1162	7169273788757819	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/queue.o	2c859771573e6dfb
-800	1248	7169273788757819	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/startup_ewarm.o	513fb8c49bbdbac0
-602	1295	7169273788445346	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/buffer.o	1af99e74e0d0b190
-511	1362	7169273788289483	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/subject.o	7f1ca8b315948e15
-576	1437	7169273790014816	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/kernel.o	2f2ca48109dc1323
-1195	1653	7169273793181524	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Tests/unit_test01.o	b76576c23db70887
-1090	1712	7169273793987609	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/KOS.o	a164ebe3c6791f46
-700	1861	7169273795081321	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/main_TMC129XNCZAD.o	efd3357fb1baf328
-542	1978	7169273797268530	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/board_configuration.o	715e3ce2036bba8c
-2007	2536	7169273802667274	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Exe/dev001.out	ab14dbaa9df4f382
-2561	2828	7169273806130672	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Exe/dev001.hex	afb6a83503202b3d
-14	395	7169274024998806	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/context.o	b1ffcfc78e7709df
-39	462	7169274025311288	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/system_reset.o	9ff157fe45a2a24
-122	515	7169274026092887	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/custom_cmain.o	6ecec702f680d5eb
-158	864	7169274031628237	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/observer.o	f669425874524d7f
-418	984	7169274032253386	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/startup_ewarm.o	513fb8c49bbdbac0
-187	1068	7169274031940932	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/subject.o	7f1ca8b315948e15
-481	1145	7169274034132373	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/KOS.o	a164ebe3c6791f46
-336	1196	7169274033347183	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/buffer.o	1af99e74e0d0b190
-307	1253	7169274034601538	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/kernel.o	2f2ca48109dc1323
-898	1457	7169274037743188	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/queue.o	2c859771573e6dfb
-1020	1510	7169274037743188	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Tests/unit_test01.o	b76576c23db70887
-537	1610	7169274037899534	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/main_TMC129XNCZAD.o	efd3357fb1baf328
-269	1759	7169274040711928	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/board_configuration.o	715e3ce2036bba8c
-1792	2328	7169274046197838	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Exe/dev001.out	ab14dbaa9df4f382
-2352	2609	7169274049646098	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Exe/dev001.hex	afb6a83503202b3d
-61	296	7169274625264642	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/system_reset.o	9ff157fe45a2a24
-79	347	7169274625420944	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/custom_cmain.o	6ecec702f680d5eb
-16	393	7169274624952155	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/context.o	b1ffcfc78e7709df
-104	694	7169274630287158	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/observer.o	f669425874524d7f
-365	808	7169274630924173	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/startup_ewarm.o	513fb8c49bbdbac0
-141	931	7169274630767922	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/buffer.o	1af99e74e0d0b190
-246	983	7169274630612058	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/subject.o	7f1ca8b315948e15
-409	1060	7169274632799349	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/KOS.o	a164ebe3c6791f46
-189	1110	7169274633424139	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/kernel.o	2f2ca48109dc1323
-729	1392	7169274636865148	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/queue.o	2c859771573e6dfb
-313	1482	7169274637021402	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/main_TMC129XNCZAD.o	efd3357fb1baf328
-216	1589	7169274639384640	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/board_configuration.o	715e3ce2036bba8c
-37	365	7169275673438954	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/custom_cmain.o	6ecec702f680d5eb
-64	425	7169275673595150	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/system_reset.o	9ff157fe45a2a24
-12	591	7169275673126396	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/context.o	b1ffcfc78e7709df
-275	1018	7169275681766947	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/observer.o	f669425874524d7f
-610	1137	7169275682704411	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/startup_ewarm.o	513fb8c49bbdbac0
-335	1225	7169275682548162	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/buffer.o	1af99e74e0d0b190
-300	1277	7169275682079417	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/subject.o	7f1ca8b315948e15
-389	1326	7169275682548162	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/queue.o	2c859771573e6dfb
-87	1409	7169275683954444	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/kernel.o	2f2ca48109dc1323
-558	1461	7169275683642256	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/KOS.o	a164ebe3c6791f46
-1171	1622	7169275688039504	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Tests/unit_test01.o	b76576c23db70887
-116	1818	7169275690070747	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/board_configuration.o	715e3ce2036bba8c
-1049	1888	7169275689914830	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/main_TMC129XNCZAD.o	efd3357fb1baf328
-54	306	7169282363514234	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/context.o	b1ffcfc78e7709df
-80	363	7169282363826771	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/custom_cmain.o	6ecec702f680d5eb
-99	410	7169282364295476	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Assembly/system_reset.o	9ff157fe45a2a24
-124	720	7169282368838440	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/observer.o	f669425874524d7f
-378	861	7169282369647100	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/queue.o	2c859771573e6dfb
-155	954	7169282369153014	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/subject.o	7f1ca8b315948e15
-264	1011	7169282369493196	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/APIS/tools/buffer.o	1af99e74e0d0b190
-218	1068	7169282371366031	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/kernel.o	2f2ca48109dc1323
-430	1119	7169282371053872	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/OS/KOS.o	a164ebe3c6791f46
-901	1292	7169282374803993	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/Tests/unit_test01.o	b76576c23db70887
-330	1353	7169282374959746	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/main_TMC129XNCZAD.o	efd3357fb1baf328
-756	1411	7169282375428495	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/src/startup_ewarm.o	513fb8c49bbdbac0
 190	1500	7169282376543751	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Obj/bsp/board_configuration.o	715e3ce2036bba8c
-1528	2088	7169282382429453	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Exe/dev001.out	ab14dbaa9df4f382
-2113	2390	7169282386179465	R:/SourceCode/TIVA/Development/dev001/projects/Debug/Exe/dev001.hex	afb6a83503202b3d
+3	92	7181288963583403	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/Assembly/custom_cmain.o	ce95b000af714ebd
+14	70	7181288963660941	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/Assembly/context.o	7c512fa78e440d51
+44	81	7181288963944310	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/Assembly/system_reset.o	61c3ff2c7dd3c784
+270	507	7181306974431610	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/bsp/board_configuration.o	e9898bf0f1b76994
+22	77	7182330540911206	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/OS_781170530740331002.dir/custom_cmain.o	28d0e59107fd48f7
+96	269	7181288965345783	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/OS/queue.o	2edf96dbe57fb668
+85	248	7181288965325293	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/OS/KOS.o	e671d7d9b2c81bc5
+73	306	7181288965676281	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/OS/kernel.o	2354ed22c06fbcfa
+241	363	7181288966847032	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src/startup_ewarm.o	4f9740e6a039212a
+291	598	7181306975269608	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src/main_TMC129XNCZAD.o	438457955242e3a3
+178	232	7182334231788757	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Exe/dev001.out	f547d09d801afdbd
+233	249	7182334232018751	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Exe/dev001.hex	5b91bfc361a52031
+51	200	7181288965222538	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/HAL/HAL_sysctl.o	b6401152e531383e
+36	130	7182334230721830	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	4cba8e4fec5fbcc
+59	128	7181288964519540	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/HAL/HAL_uart.o	aa58ef5fb84b4ba1
+4	480	7181306974082811	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/HAL/HAL_pwm.o	87b6e69d5d07cdac
+297	584	7181306975030481	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/UNIT_TESTS/board_setup_test01.o	c126b4d1dd6898ea
+26	53	7182329149651656	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/Assembly_11855957177011384884.dir/custom_cmain.o	6959c0af93bfa126
+36	60	7182329149722835	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/Assembly_11855957177011384884.dir/system_reset.o	68185bbb3334a0a3
+28	141	7182330541816064	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/OS_781170530740331002.dir/queue.o	e4f098949f306567
+54	144	7182330541810944	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main_TMC129XNCZAD.o	6f017c2744ba6948
+46	75	7182330541169784	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/OS_781170530740331002.dir/context.o	3e7134390a919bea
+2	127	7182330541677913	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/OS_781170530740331002.dir/KOS.o	2978427e9fb4fdca
+14	168	7182330542086925	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/OS_781170530740331002.dir/kernel.o	60c90715b1b06b63
+62	88	7182330541344089	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/OS_781170530740331002.dir/system_reset.o	748dbeb7e4867798
+29	74	7182334230042349	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+22	77	7182334229956751	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+53	153	7182334230978346	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	1df36774b2dae24f
+16	128	7182334230732166	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	6e99ff0c975fd705
+44	165	7182334231072464	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	64d5b310003890ed
+3	176	7182334231208715	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	ac57be21c0714bdb
+38	73	7182334361706839	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+30	75	7182334361624179	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+62	86	7182334361953722	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+2	126	7182334362300711	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	6e99ff0c975fd705
+52	141	7182334362450716	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	4cba8e4fec5fbcc
+45	156	7182334362584052	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	64d5b310003890ed
+15	170	7182334362737176	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	ac57be21c0714bdb
+103	199	7182344199761752	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+173	200	7182344199812294	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+188	209	7182344199960563	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+180	258	7182344200391098	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	edcd630ce2d02204
+79	281	7182344200471185	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	66dd0b5e89be08fb
+3	304	7182344200731201	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	9a0a573ccd15a250
+88	306	7182344200751400	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	b0bddd244419bd9b
+24	80	7182344445077348	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+39	82	7182344445245958	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+65	92	7182344445520514	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+2	138	7182344445915501	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	2f9bafd6f337e175
+56	149	7182344446015761	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	69eb19479c92512b
+46	171	7182344446243434	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	2406f7222204544f
+16	173	7182344446253434	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	519887836950204b
+38	76	7182344678805760	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+55	81	7182344678967711	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+64	88	7182344679050938	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+23	118	7182344679261069	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	4915f4ba9a88c208
+31	131	7182344679340712	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	69eb19479c92512b
+15	133	7182344679411036	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	2f9bafd6f337e175
+46	162	7182344679719270	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	2406f7222204544f
+3	172	7182344679779434	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	519887836950204b
+174	294	7182344681042371	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Exe/dev001.out	f547d09d801afdbd
+296	374	7182344681922453	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Exe/dev001.hex	5b91bfc361a52031
+40	67	7182345528274585	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+26	69	7182345528131754	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+55	80	7182345528441892	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+14	121	7182345528800696	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	2f9bafd6f337e175
+33	123	7182345528800696	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	69eb19479c92512b
+20	134	7182345528896087	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	2406f7222204544f
+47	136	7182345528916231	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	4915f4ba9a88c208
+2	163	7182345529216128	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	519887836950204b
+47	77	7182345882407518	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+57	82	7182345882481890	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+65	92	7182345882584168	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+21	115	7182345882766735	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	5f856f700a2ee457
+30	122	7182345882826868	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	9eb5c8b31aeb596d
+15	132	7182345882911721	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	f0877b918396cee8
+38	148	7182345883101716	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	b98b4323c8c8605b
+2	168	7182345883299074	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	edbe73f3983f9d0d
+40	82	7182346226952637	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+59	89	7182346227171052	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+69	97	7182346227244178	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+25	123	7182346227463393	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	5f856f700a2ee457
+32	128	7182346227503385	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	9eb5c8b31aeb596d
+17	139	7182346227574099	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	f0877b918396cee8
+50	172	7182346227938319	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	b98b4323c8c8605b
+2	182	7182346228009056	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	edbe73f3983f9d0d
+30	75	7182346812343918	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+22	77	7182346812276929	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+63	89	7182346812684865	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+2	132	7182346813052535	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	bc277a84ad1c6d43
+38	134	7182346813042536	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	50f4c32358f16619
+54	144	7182346813148593	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	ec6728a213749a5a
+46	157	7182346813333611	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	16339343b2316ff1
+14	169	7182346813439965	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	f55ec0f754696c12
+22	76	7182349125618843	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+52	80	7182349125972952	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+61	91	7182349126067951	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+3	200	7182349127004933	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	bc277a84ad1c6d43
+28	215	7182349127168179	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	ec6728a213749a5a
+36	237	7182349127363180	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	50f4c32358f16619
+15	249	7182349127493226	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	f55ec0f754696c12
+43	281	7182349127813917	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	16339343b2316ff1
+25	82	7182352557794247	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+60	89	7182352558171624	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+69	97	7182352558263782	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+33	250	7182352559614954	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	16339343b2316ff1
+51	81	7182353105222185	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+25	83	7182353104963141	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+67	94	7182353105409636	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+43	136	7182353105732014	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	cf6de20bad6658af
+3	148	7182353105882130	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	c7c60b7fc971ff93
+33	160	7182353105965217	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	e4a794c0a321b1f4
+17	187	7182353106278421	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	6cc48b231a3a8f4b
+41	81	7182355588879624	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+33	83	7182355588794149	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+67	95	7182355589143730	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+16	222	7182355590253843	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	c7c60b7fc971ff93
+24	230	7182355590323846	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	cf6de20bad6658af
+2	254	7182355590514115	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	6cc48b231a3a8f4b
+49	276	7182355590794561	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	e4a794c0a321b1f4
+24	83	7182374752785499	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+59	88	7182374753148549	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+69	99	7182374753238881	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+40	141	7182374753599116	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	7a46f310e323344d
+3	143	7182374753619217	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	c426120bf0e35ae4
+49	168	7182374753906313	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	a20251bd80f1b
+17	179	7182374753992279	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	957a2a07368fe2eb
+20	66	7182374976206651	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+27	68	7182374976266738	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+56	78	7182374976567031	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+33	112	7182374976848145	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	e0d47a75227fd496
+2	116	7182374976868135	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	c426120bf0e35ae4
+49	129	7182374977028147	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	7a46f310e323344d
+40	142	7182374977148151	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	a20251bd80f1b
+13	152	7182374977248751	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	957a2a07368fe2eb
+32	81	7182375657987998	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+59	84	7182375658256150	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+68	93	7182375658344610	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+15	223	7182375659450197	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	1104c38c071e276d
+24	232	7182375659510550	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	b2a9a45c30f2fbd5
+40	260	7182375659761916	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	6ca2afc4b6833d5f
+2	262	7182375659837338	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	82e235d4661b3ec7
+49	304	7182375660286040	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	c0ed643b8af07db9
+28	86	7182375953200009	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+63	91	7182375953570376	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+71	101	7182375953681677	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+3	145	7182375954024621	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	1104c38c071e276d
+45	147	7182375954024500	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	b2a9a45c30f2fbd5
+54	153	7182375954110203	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	6ca2afc4b6833d5f
+37	157	7182375954171184	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	c0ed643b8af07db9
+19	183	7182375954442088	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	82e235d4661b3ec7
+3	75	7182376161658855	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	6ca2afc4b6833d5f
+76	127	7182376162183030	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Exe/dev001.out	daa91314ebc17955
+133	149	7182376162462990	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Exe/dev001.hex	5b91bfc361a52031
+97	192	7182381145678983	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+178	257	7182381146259819	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	b2a9a45c30f2fbd5
+2	272	7182381146178970	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	1104c38c071e276d
+263	286	7182381146613583	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+193	308	7182381146700656	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	c0ed643b8af07db9
+90	313	7182381146760662	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	82e235d4661b3ec7
+288	315	7182381146892840	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+273	369	7182381147340059	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	6ca2afc4b6833d5f
+51	81	7182381876352413	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+33	83	7182381876187496	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+68	96	7182381876538794	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+42	137	7182381876898152	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	6ca2afc4b6833d5f
+16	138	7182381876908083	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	1104c38c071e276d
+25	149	7182381877013824	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	c0ed643b8af07db9
+60	151	7182381877033884	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	b2a9a45c30f2fbd5
+3	179	7182381877331184	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	82e235d4661b3ec7
+1	92	7182382280954470	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	6ca2afc4b6833d5f
+51	86	7182382327455920	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+34	89	7182382327262134	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+71	98	7182382327637326	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+42	138	7182382327971894	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	b2a9a45c30f2fbd5
+3	150	7182382328061859	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	1104c38c071e276d
+61	151	7182382328137433	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	6ca2afc4b6833d5f
+25	153	7182382328086568	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	c0ed643b8af07db9
+17	181	7182382328412183	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	82e235d4661b3ec7
+26	81	7182382662454632	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+42	82	7182382662595610	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+69	93	7182382662872788	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+3	136	7182382663226117	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	1104c38c071e276d
+50	150	7182382663372446	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	b2a9a45c30f2fbd5
+59	152	7182382663362640	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	6ca2afc4b6833d5f
+34	162	7182382663457751	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	c0ed643b8af07db9
+18	174	7182382663618796	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	82e235d4661b3ec7
+24	86	7182384400684318	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+62	90	7182384401070989	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+71	101	7182384401176239	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+16	219	7182384402207310	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	a5eb403ae2024246
+42	244	7182384402450501	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	36d6009e35c9d765
+3	249	7182384402480505	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	ffea9b135e4eadca
+33	252	7182384402520553	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	fdf539b293d0d380
+52	267	7182384402670500	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	23b9d099f0acdf53
+3	105	7182384758664615	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/HAL_15708474732591101451.dir/HAL.o	515293b9f39714aa
+96	122	7182384758946073	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+108	134	7182384759072549	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+16	141	7182384759062548	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/HAL_15708474732591101451.dir/HAL_io.o	134edc2e6a6d6bef
+124	146	7182384759192081	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+50	168	7182384759355830	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	36d6009e35c9d765
+68	170	7182384759379084	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	23b9d099f0acdf53
+32	180	7182384759454037	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	a5eb403ae2024246
+59	194	7182384759619543	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	fdf539b293d0d380
+41	219	7182384759861876	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	ffea9b135e4eadca
+74	104	7182385538598488	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+17	116	7182385538540784	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/HAL_15708474732591101451.dir/HAL.o	515293b9f39714aa
+106	134	7182385538892336	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+3	145	7182385538747839	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/HAL_15708474732591101451.dir/HAL_io.o	134edc2e6a6d6bef
+25	164	7182385539106048	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	fdf539b293d0d380
+44	166	7182385539150868	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/HAL_15708474732591101451.dir/HAL_sysctl.o	ea1b7135e52fbc41
+136	167	7182385539203829	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+34	170	7182385539192815	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	36d6009e35c9d765
+64	198	7182385539468246	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	a5eb403ae2024246
+119	208	7182385539598509	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	23b9d099f0acdf53
+54	235	7182385539858511	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	ffea9b135e4eadca
+237	289	7182385540410409	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Exe/dev001.out	a43c793853bb63c9
+291	618	7182385543765644	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Exe/dev001.hex	5b91bfc361a52031
+3	64	7182387141827683	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/HAL_15708474732591101451.dir/HAL.o	515293b9f39714aa
+13	95	7182387142118095	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/HAL_15708474732591101451.dir/HAL_io.o	134edc2e6a6d6bef
+27	117	7182387142208096	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/main.o	36d6009e35c9d765
+21	126	7182387142348154	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/KOS.o	a5eb403ae2024246
+66	151	7182387142703860	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/HAL_15708474732591101451.dir/HAL_sysctl.o	ea1b7135e52fbc41
+153	175	7182387142954240	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/custom_cmain.o	2f69800f297501fd
+176	199	7182387143199210	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/system_reset.o	6c381376cce4d1b6
+128	220	7182387143282864	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/src_15346631385785888340.dir/startup_ewarm.o	23b9d099f0acdf53
+201	227	7182387143478688	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/context.o	24926973d237ddc1
+119	233	7182387143488682	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/queue.o	fdf539b293d0d380
+101	247	7182387143608724	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Obj/os_168546619701203456.dir/kernel.o	ffea9b135e4eadca
+249	321	7182387144295947	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Exe/dev001.out	a43c793853bb63c9
+322	342	7182387144628341	C:/Users/kquackenbush/Documents/Local Code/dev001/projects/Debug/Exe/dev001.hex	5b91bfc361a52031

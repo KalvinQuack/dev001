@@ -1,39 +1,53 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.30.1.335/W64 for ARM                  20/Sep/2023  11:47:29
-# Copyright 2007-2022 IAR Systems AB.
+# IAR ELF Linker V9.40.2.374/W64 for ARM                  05/Oct/2023  15:51:54
+# Copyright 2007-2023 IAR Systems AB.
 #
 #    Output file  =
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Exe\dev001.out
+#        C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\Exe\dev001.out
 #    Map file     =
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\List\dev001.map
+#        C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\List\dev001.map
 #    Command line =
-#        -f
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Exe\dev001.out.rsp
-#        (R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\bsp\board_configuration.o
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\APIS\tools\buffer.o
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Assembly\context.o
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Assembly\custom_cmain.o
-#        R:\SourceCode\TIVA\Development\dev001\board_support_package\TivaWare_C_Series-2.2.0.295\driverlib\ewarm\Exe\driverlib.a
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\OS\kernel.o
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\OS\KOS.o
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\src\main_TMC129XNCZAD.o
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\APIS\tools\observer.o
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\OS\queue.o
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\src\startup_ewarm.o
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\APIS\tools\subject.o
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Assembly\system_reset.o
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Tests\unit_test01.o
-#        --no_out_extension -o
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\Exe\dev001.out
-#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
-#        --map
-#        R:\SourceCode\TIVA\Development\dev001\projects\Debug\List\dev001.map
-#        --config "C:\Program Files\IAR Systems\Embedded Workbench
-#        9.1\arm/config/linker/TexasInstruments/TM4C129XNC.icf" --semihosting
+#        -f "C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\Exe\dev001.out.rsp"
+#        ("C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\Obj\os_168546619701203456.dir\context.o"
+#        "C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\Obj\os_168546619701203456.dir\custom_cmain.o"
+#        "C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\HAL\shared\TivaWare_C_Series-2.2.0.295\driverlib\ewarm\Exe\driverlib.a"
+#        "C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\Obj\HAL_15708474732591101451.dir\HAL.o"
+#        "C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\Obj\HAL_15708474732591101451.dir\HAL_io.o"
+#        "C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\Obj\HAL_15708474732591101451.dir\HAL_sysctl.o"
+#        "C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\Obj\os_168546619701203456.dir\kernel.o"
+#        "C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\Obj\os_168546619701203456.dir\KOS.o"
+#        "C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\Obj\src_15346631385785888340.dir\main.o"
+#        "C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\Obj\os_168546619701203456.dir\queue.o"
+#        "C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\Obj\src_15346631385785888340.dir\startup_ewarm.o"
+#        "C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\Obj\os_168546619701203456.dir\system_reset.o"
+#        --no_out_extension -o "C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\Exe\dev001.out" --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
+#        "C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\List\dev001.map" --config "C:\Program
+#        Files\IAR Systems\Embedded Workbench
+#        9.2\arm/config/linker/TexasInstruments/TM4C129XNC.icf" --semihosting
 #        --entry __iar_program_start --redirect
 #        __iar_sh_stdout=__iar_sh_stdout_swo --vfe --text_out locale
-#        --cpu=Cortex-M4 --fpu=VFPv4_sp)
+#        --cpu=Cortex-M4 --fpu=VFPv4_sp) --dependencies=n
+#        "C:\Users\kquackenbush\Documents\Local
+#        Code\dev001\projects\Debug\Exe\dev001.out.iar_deps"
 #
 ###############################################################################
 
@@ -44,9 +58,8 @@
 Warning[Lt009]: Inconsistent wchar_t size
             interrupt.o(driverlib.a) and 1 other objects in driverlib.a have
                       wchar_t size 16 bits
-            board_configuration.o and 26 other objects, some of them in
-                      dl7M_tln.a and 11 other libraries have wchar_t size 32
-                      bits
+            HAL.o and 20 other objects, some of them in dl7M_tln.a and 11 other
+                      libraries have wchar_t size 32 bits
 
 
 *******************************************************************************
@@ -55,7 +68,6 @@ Warning[Lt009]: Inconsistent wchar_t size
 
 CppFlavor       = *
 __CPP_Runtime   = 1
-__Heap_Handler  = Basic
 __SystemLibrary = DLib
 __dlib_version  = 6
 
@@ -85,49 +97,49 @@ initialize by copy { rw };
   Section            Kind         Address    Size  Object
   -------            ----         -------    ----  ------
 "A0":                                       0x200
-  .intvec            const            0x0   0x200  startup_ewarm.o [6]
+  .intvec            const            0x0   0x200  startup_ewarm.o [3]
                                   - 0x200   0x200
 
-"P1":                                       0x1bc
+"P1":                                       0x1c0
   .text              ro code        0x200    0x4c  context.o [2]
-  .text              ro code        0x24c    0x38  zero_init3.o [10]
+  .text              ro code        0x24c    0x38  zero_init3.o [7]
   .text              ro code        0x284    0x30  custom_cmain.o [2]
-  .text              ro code        0x2b4     0x4  low_level_init.o [7]
-  .text              ro code        0x2b8    0x28  data_init.o [10]
-  .text              ro code        0x2e0     0x8  main_TMC129XNCZAD.o [6]
-  .text              ro code        0x2e8     0x4  exit.o [7]
-  .text              ro code        0x2ec     0x2  unit_test01.o [4]
-  .text              ro code        0x2ee    0x2a  copy_init3.o [10]
-  .text              ro code        0x318     0xa  cexit.o [10]
-  .text              ro code        0x324    0x14  exit.o [11]
-  .text              ro code        0x338    0x22  fpinit_M.o [9]
-  .iar.init_table    const          0x35c    0x24  - Linker created -
-  .text              ro code        0x380    0x1c  system_reset.o [2]
-  .text              ro code        0x39c    0x1a  startup_ewarm.o [6]
-  Initializer bytes  const          0x3b8     0x4  <for P2-1>
-  .rodata            const          0x3bc     0x0  zero_init3.o [10]
-  .rodata            const          0x3bc     0x0  copy_init3.o [10]
-                                  - 0x3bc   0x1bc
+  .text              ro code        0x2b4     0x4  low_level_init.o [4]
+  .text              ro code        0x2b8    0x28  data_init.o [7]
+  .text              ro code        0x2e0     0xa  main.o [3]
+  .text              ro code        0x2ea     0x4  exit.o [4]
+  .text              ro code        0x2ee     0x4  HAL_io.o [1]
+  .text              ro code        0x2f2    0x2a  copy_init3.o [7]
+  .text              ro code        0x31c     0xa  cexit.o [7]
+  .text              ro code        0x328    0x14  exit.o [8]
+  .text              ro code        0x33c    0x22  fpinit_M.o [6]
+  .iar.init_table    const          0x360    0x24  - Linker created -
+  .text              ro code        0x384    0x1c  system_reset.o [2]
+  .text              ro code        0x3a0    0x1a  startup_ewarm.o [3]
+  Initializer bytes  const          0x3bc     0x4  <for P2-1>
+  .rodata            const          0x3c0     0x0  zero_init3.o [7]
+  .rodata            const          0x3c0     0x0  copy_init3.o [7]
+                                  - 0x3c0   0x1c0
 
 "P2", part 1 of 3:                            0x4
   P2-1                        0x2000'0000     0x4  <Init block>
-    .data            inited   0x2000'0000     0x4  kernel.o [3]
+    .data            inited   0x2000'0000     0x4  kernel.o [2]
                             - 0x2000'0004     0x4
 
 "P2", part 2 of 3:                         0x1028
-  .bss               zero     0x2000'0004  0x1018  kernel.o [3]
-  .bss               zero     0x2000'101c    0x10  kernel.o [3]
+  .bss               zero     0x2000'0004  0x1018  kernel.o [2]
+  .bss               zero     0x2000'101c    0x10  kernel.o [2]
                             - 0x2000'102c  0x1028
 
 "P2", part 3 of 3:                          0x200
-  .noinit            uninit   0x2000'102c   0x200  startup_ewarm.o [6]
+  .noinit            uninit   0x2000'102c   0x200  startup_ewarm.o [3]
                             - 0x2000'122c   0x200
 
 Unused ranges:
 
          From           To      Size
          ----           --      ----
-        0x3bc     0xf'ffff  0xf'fc44
+        0x3c0     0xf'ffff  0xf'fc40
   0x2000'122c  0x2003'ffff  0x3'edd4
 
 
@@ -143,7 +155,7 @@ Zero (__iar_zero_init3)
 
 Copy (__iar_copy_init3)
     1 source range, total size 0x4:
-                0x3b8     0x4
+                0x3bc     0x4
     1 destination range, total size 0x4:
           0x2000'0000     0x4
 
@@ -153,75 +165,63 @@ Copy (__iar_copy_init3)
 *** MODULE SUMMARY
 ***
 
-    Module               ro code  ro data  rw data
-    ------               -------  -------  -------
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
 command line/config:
-    ----------------------------------------------
+    -------------------------------------------
     Total:
 
-R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\APIS\tools: [1]
-    ----------------------------------------------
+C:\Users\kquackenbush\Documents\Local Code\dev001\projects\Debug\Obj\HAL_15708474732591101451.dir: [1]
+    HAL_io.o                4
+    -------------------------------------------
+    Total:                  4
+
+C:\Users\kquackenbush\Documents\Local Code\dev001\projects\Debug\Obj\os_168546619701203456.dir: [2]
+    context.o              76
+    custom_cmain.o         48
+    kernel.o                         4    4'140
+    system_reset.o         28
+    -------------------------------------------
+    Total:                152        4    4'140
+
+C:\Users\kquackenbush\Documents\Local Code\dev001\projects\Debug\Obj\src_15346631385785888340.dir: [3]
+    main.o                 10
+    startup_ewarm.o        26      512      512
+    -------------------------------------------
+    Total:                 36      512      512
+
+dl7M_tln.a: [4]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+driverlib.a: [5]
+    -------------------------------------------
     Total:
 
-R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Assembly: [2]
-    context.o                 76
-    custom_cmain.o            48
-    system_reset.o            28
-    ----------------------------------------------
-    Total:                   152
+m7M_tls.a: [6]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
 
-R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\OS: [3]
-    kernel.o                            4    4'140
-    ----------------------------------------------
-    Total:                              4    4'140
+rt7M_tl.a: [7]
+    cexit.o                10
+    copy_init3.o           42
+    data_init.o            40
+    zero_init3.o           56
+    -------------------------------------------
+    Total:                148
 
-R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Tests: [4]
-    unit_test01.o              2
-    ----------------------------------------------
-    Total:                     2
+shb_l.a: [8]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
 
-R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\bsp: [5]
-    ----------------------------------------------
-    Total:
-
-R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\src: [6]
-    main_TMC129XNCZAD.o        8
-    startup_ewarm.o           26      512      512
-    ----------------------------------------------
-    Total:                    34      512      512
-
-dl7M_tln.a: [7]
-    exit.o                     4
-    low_level_init.o           4
-    ----------------------------------------------
-    Total:                     8
-
-driverlib.a: [8]
-    ----------------------------------------------
-    Total:
-
-m7M_tls.a: [9]
-    fpinit_M.o                34
-    ----------------------------------------------
-    Total:                    34
-
-rt7M_tl.a: [10]
-    cexit.o                   10
-    copy_init3.o              42
-    data_init.o               40
-    zero_init3.o              56
-    ----------------------------------------------
-    Total:                   148
-
-shb_l.a: [11]
-    exit.o                    20
-    ----------------------------------------------
-    Total:                    20
-
-    Gaps                       2        2
-    Linker created                     38
---------------------------------------------------
-    Grand Total:             400      556    4'652
+    Gaps                    2        2
+    Linker created                  38
+-----------------------------------------------
+    Grand Total:          404      556    4'652
 
 
 *******************************************************************************
@@ -230,52 +230,49 @@ shb_l.a: [11]
 
 Entry                       Address    Size  Type      Object
 -----                       -------    ----  ----      ------
-.iar.init_table$$Base         0x35c           --   Gb  - Linker created -
-.iar.init_table$$Limit        0x380           --   Gb  - Linker created -
+.iar.init_table$$Base         0x360           --   Gb  - Linker created -
+.iar.init_table$$Limit        0x384           --   Gb  - Linker created -
 ?main                         0x285          Code  Gb  custom_cmain.o [2]
-FaultISR                      0x3b3     0x2  Code  Lc  startup_ewarm.o [6]
-IntDefaultHandler             0x3b5     0x2  Code  Lc  startup_ewarm.o [6]
-NmiSR                         0x3b1     0x2  Code  Lc  startup_ewarm.o [6]
-Region$$Table$$Base           0x35c           --   Gb  - Linker created -
-Region$$Table$$Limit          0x380           --   Gb  - Linker created -
-ResetISR                      0x39d     0xe  Code  Gb  startup_ewarm.o [6]
+FaultISR                      0x3b7     0x2  Code  Lc  startup_ewarm.o [3]
+IntDefaultHandler             0x3b9     0x2  Code  Lc  startup_ewarm.o [3]
+NmiSR                         0x3b5     0x2  Code  Lc  startup_ewarm.o [3]
+Region$$Table$$Base           0x360           --   Gb  - Linker created -
+Region$$Table$$Limit          0x384           --   Gb  - Linker created -
+ResetISR                      0x3a1     0xe  Code  Gb  startup_ewarm.o [3]
 __cmain                       0x285          Code  Gb  custom_cmain.o [2]
-__exit                        0x325    0x14  Code  Gb  exit.o [11]
-__iar_copy_init3              0x2ef    0x2a  Code  Gb  copy_init3.o [10]
-__iar_data_init3              0x2b9    0x28  Code  Gb  data_init.o [10]
-__iar_init_vfp                0x339          Code  Gb  fpinit_M.o [9]
-__iar_program_start           0x381          Code  Gb  system_reset.o [2]
-__iar_zero_init3              0x24d    0x38  Code  Gb  zero_init3.o [10]
-__low_level_init              0x2b5     0x4  Code  Gb  low_level_init.o [7]
-__vector_table                  0x0   0x200  Data  Gb  startup_ewarm.o [6]
+__exit                        0x329    0x14  Code  Gb  exit.o [8]
+__iar_copy_init3              0x2f3    0x2a  Code  Gb  copy_init3.o [7]
+__iar_data_init3              0x2b9    0x28  Code  Gb  data_init.o [7]
+__iar_init_vfp                0x33d          Code  Gb  fpinit_M.o [6]
+__iar_program_start           0x385          Code  Gb  system_reset.o [2]
+__iar_zero_init3              0x24d    0x38  Code  Gb  zero_init3.o [7]
+__low_level_init              0x2b5     0x4  Code  Gb  low_level_init.o [4]
+__vector_table                  0x0   0x200  Data  Gb  startup_ewarm.o [3]
 _call_main                    0x291          Code  Gb  custom_cmain.o [2]
-_exit                         0x319          Code  Gb  cexit.o [10]
-board_config_test01           0x2ed     0x2  Code  Gb  unit_test01.o [4]
-exit                          0x2e9     0x4  Code  Gb  exit.o [7]
-freelist                0x2000'1020     0x4  Data  Gb  kernel.o [3]
-init_proc               0x2000'0004  0x1018  Data  Gb  kernel.o [3]
-main                          0x2e1     0x8  Code  Gb  main_TMC129XNCZAD.o [6]
-next                    0x2000'1028     0x4  Data  Gb  kernel.o [3]
-procsize                0x2000'0000     0x4  Data  Gb  kernel.o [3]
-pui32Stack              0x2000'102c   0x200  Data  Lc  startup_ewarm.o [6]
-readyQueue              0x2000'1024     0x4  Data  Gb  kernel.o [3]
-running                 0x2000'101c     0x4  Data  Gb  kernel.o [3]
+_exit                         0x31d          Code  Gb  cexit.o [7]
+exit                          0x2eb     0x4  Code  Gb  exit.o [4]
+freelist                0x2000'1020     0x4  Data  Gb  kernel.o [2]
+init_proc               0x2000'0004  0x1018  Data  Gb  kernel.o [2]
+main                          0x2e1     0xa  Code  Gb  main.o [3]
+next                    0x2000'1028     0x4  Data  Gb  kernel.o [2]
+procsize                0x2000'0000     0x4  Data  Gb  kernel.o [2]
+pui32Stack              0x2000'102c   0x200  Data  Lc  startup_ewarm.o [3]
+readyQueue              0x2000'1024     0x4  Data  Gb  kernel.o [2]
+running                 0x2000'101c     0x4  Data  Gb  kernel.o [2]
+test                          0x2ef     0x4  Code  Gb  HAL_io.o [1]
 tswitch                       0x201          Code  Gb  context.o [2]
 
 
-[1] = R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\APIS\tools
-[2] = R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Assembly
-[3] = R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\OS
-[4] = R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\Tests
-[5] = R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\bsp
-[6] = R:\SourceCode\TIVA\Development\dev001\projects\Debug\Obj\src
-[7] = dl7M_tln.a
-[8] = driverlib.a
-[9] = m7M_tls.a
-[10] = rt7M_tl.a
-[11] = shb_l.a
+[1] = C:\Users\kquackenbush\Documents\Local Code\dev001\projects\Debug\Obj\HAL_15708474732591101451.dir
+[2] = C:\Users\kquackenbush\Documents\Local Code\dev001\projects\Debug\Obj\os_168546619701203456.dir
+[3] = C:\Users\kquackenbush\Documents\Local Code\dev001\projects\Debug\Obj\src_15346631385785888340.dir
+[4] = dl7M_tln.a
+[5] = driverlib.a
+[6] = m7M_tls.a
+[7] = rt7M_tl.a
+[8] = shb_l.a
 
-    400 bytes of readonly  code memory
+    404 bytes of readonly  code memory
     556 bytes of readonly  data memory
   4'652 bytes of readwrite data memory
 

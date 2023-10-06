@@ -10,134 +10,86 @@
 #include "pins.h"
 
 #include "HAL/inc/HAL_sysctl.h"
-#include "HAL/inc/HAL_pwm.h"
-/*!order is important*/
-#include "driverlib/rom.h"
-#include "driverlib/rom_map.h"
-#include "driverlib/sysctl.h"
+
+uint32_t clkFreq = 0;
     
     //bsp pin setup
-    gpioStruct_t PA1;
-    gpioStruct_t PA2;
-    gpioStruct_t PA3;
-    gpioStruct_t PA4;
-    gpioStruct_t PB1;
-    gpioStruct_t PB2;
-    gpioStruct_t PB3;
+    #ifdef BOARD_IS_DEVELOPY
+
+    gpioStruct_t PA2 = {HAL_BUTTON02_PORT, HAL_BUTTON02_PIN,INPUT, INT_PULLDOWN, GPIO_STRENGTH_2MA, NOT_USED};
+    gpioStruct_t PB1 = {HAL_LED01_PORT, HAL_LED01_PIN, OUTPUT,INT_PULLUP, GPIO_STRENGTH_2MA, NOT_USED};
+    gpioStruct_t PB2 = {HAL_LED02_PORT, HAL_LED02_PIN, OUTPUT,INT_PULLUP, GPIO_STRENGTH_2MA, NOT_USED};
+    gpioStruct_t PP0 = {HAL_UART01_PORT, HAL_UART01RX_PIN,UART, NO_PULL, GPIO_STRENGTH_2MA, GPIO_PP0_U6RX};
+    gpioStruct_t PP1 = {HAL_UART01_PORT, HAL_UART01TX_PIN,UART, NO_PULL, GPIO_STRENGTH_2MA, GPIO_PP1_U6TX};
+    gpioStruct_t PF0 = {HAL_PWM0BLOCK_PORT, HAL_PWM0A_PIN,PWM, NO_PULL, GPIO_STRENGTH_2MA, GPIO_PF0_M0PWM0};
+    gpioStruct_t PF1 = {HAL_PWM0BLOCK_PORT, HAL_PWM0B_PIN,PWM, NO_PULL, GPIO_STRENGTH_2MA, GPIO_PF1_M0PWM1};
+    gpioStruct_t PA0 = {HAL_BUTTON01_PORT,  HAL_BUTTON01_PIN,INPUT, INT_PULLUP, GPIO_STRENGTH_2MA, NOT_USED};
+
+    
+    pwmStruct_t PWM0 = {PWM_GEN_0, PWM0_BASE, PWM_OUT_0,};
+    pwmStruct_t PWM1 = {PWM_GEN_0, PWM0_BASE, PWM_OUT_1};
+
+    gpioStruct_t* pin_map[] = {
+        &PA2, &PB1, &PB2, &PP0, &PP1, &PF0, &PF1
+     
+    };
+
+
+    #endif
+
+    #ifdef BOARD_IS_DEVELOPY_M2
+    #endif 
 
 
     
 
-
+    gpioStruct_t* get_pin( uint32_t index){
+        return pin_map[index];
+    }
   
     static void BSP_init_clock( void ){
-        uint32_t clkFreq = HAL_initSysClock(CLOCK_FREQ, EXT_CLKFREQ, OSC_SRC, CLOCK_SRC, PLL_FREQ);
+        clkFreq = HAL_initSysClock(CLOCK_FREQ, EXT_CLKFREQ, OSC_SRC, CLOCK_SRC, PLL_FREQ);
     }
     
     static void BSP_init_peripheralClk( void ){
-        //#ifdef BOARD_IS_DEVELOPY
+        #ifdef BOARD_IS_DEVELOPY
             HAL_initPerph(PERPH_A);
             HAL_initPerph(PERPH_B);
             HAL_initPerph(PERPH_K);
             HAL_initPerph(PERPH_P);
+            HAL_initPerph(PERPH_F);
             HAL_initPerph(PERPH_UART4);
             HAL_initPerph(PERPH_UART6);
             HAL_initPerph(PERPH_PWM0);
-        //#endif
+        #endif
              
     }
     static void BSP_init_gpio( void ){
-
+        #ifdef BOARD_IS_DEVELOPY
+        HAL_initIO(&PA0);
+        HAL_initIO(&PA2);
+        HAL_initIO(&PB1);
+        HAL_initIO(&PB2);
+        HAL_initIO(&PP0);
+        HAL_initIO(&PP1);
+        HAL_initIO(&PF0);
+        HAL_initIO(&PF1);
+        #endif 
     };
 
-
-/*     static void BSP_init_gpio( void ){
-
-        for(uint8_t i = 0; i < (sizeof(gpio) / sizeof(gpio[0])); i++){
-
-            GpioChannel* temp = &gpio[i];
-            uint32_t temp_port = (temp->gpioPin & PORT);
-            uint8_t  temp_pin = (temp->gpioPin & PIN);
-
-            if(temp->gpioAltFunction != DISABLED){
-                MAP_GPIOPinConfigure(temp->gpioAltFunction);
-                switch(temp->gpioPinType){
-                    case INPUT: 
-                    //should never be here
-                    break; 
-                    case OUTPUT: 
-                    //should never be here 
-                    break;
-                    case ADC:
-                        MAP_GPIOPinTypeADC(temp_port, temp_pin);
-                    break;
-                    case CAN:
-                        MAP_GPIOPinTypeCAN(temp_port, temp_pin);
-                    break;
-                    case COMP:
-                        MAP_GPIOPinTypeComparator(temp_port, temp_pin); 
-                    break;
-                    case EPI:
-                        MAP_GPIOPinTypeEPI(temp_port, temp_pin);
-                    break;
-                    case ETH_LED:
-                        MAP_GPIOPinTypeEthernetLED(temp_port, temp_pin);
-                    break;
-                    case ETH_MII:
-                        MAP_GPIOPinTypeEthernetMII(temp_port, temp_pin);
-                    break;
-                    case OUTPUT_OD:
-                        MAP_GPIOPinTypeGPIOOutputOD(temp_port, temp_pin);
-                    break;
-                    case I2C:
-                        MAP_GPIOPinTypeI2C(temp_port, temp_pin);
-                    break;
-                    case I2CSCL:
-                        MAP_GPIOPinTypeI2CSCL(temp_port, temp_pin);
-                    break;
-                    case LCD:
-                        MAP_GPIOPinTypeLCD(temp_port, temp_pin); 
-                    break;
-                    case PWM:
-                        MAP_GPIOPinTypePWM(temp_port, temp_pin);
-                    break;
-                    case QEI:
-                        MAP_GPIOPinTypeQEI(temp_port, temp_pin);
-                    break;
-                    case SSI:
-                        MAP_GPIOPinTypeSSI(temp_port, temp_pin);
-                    break;
-                    case TIMER:
-                        MAP_GPIOPinTypeTimer(temp_port, temp_pin);
-                    break;
-                    case UART: 
-                        MAP_GPIOPinTypeUART(temp_port, temp_pin);
-                    break;
-                    case USB_ANALOG:
-                        MAP_GPIOPinTypeUSBAnalog(temp_port, temp_pin);
-                    break;
-                    case USB_DIGITAL:
-                        MAP_GPIOPinTypeUSBDigital(temp_port, temp_pin);
-                    break;
-                    case WAKE_HIGH:
-                        MAP_GPIOPinTypeWakeHigh(temp_port, temp_pin);
-                    break;
-                    case WAKE_LOW:
-                        MAP_GPIOPinTypeWakeLow(temp_port, temp_pin);
-                    break;
-                }
-            }else{
-                if(temp->gpioPinType == INPUT){
-                    MAP_GPIOPinTypeGPIOInput(temp_port, temp_pin);
-                }else{
-                    MAP_GPIOPinTypeGPIOOutput(temp_port, temp_pin);
-                }
-            }
-
-        }
+    static void BSP_init_pwm( void ){
+        #ifdef BOARD_IS_DEVELOPY
+        HAL_initPWM(&PWM0, PWM_GEN_MODE_DOWN | PWM_GEN_MODE_NO_SYNC);
+        HAL_initPWM(&PWM1, PWM_GEN_MODE_DOWN | PWM_GEN_MODE_NO_SYNC);
+        #endif
+        
     }
-     */
+
     uint8_t BSP_init_hardware( void ){
+        BSP_init_clock();
+        BSP_init_peripheralClk();
+        BSP_init_gpio();
+        BSP_init_pwm();
       return 0;
     }
 

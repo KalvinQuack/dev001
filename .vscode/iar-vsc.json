@@ -6,6 +6,19 @@
     "${workspaceFolder}\\projects\\dev001.ewp": "Debug"
   },
   "workbench": {
-    "path": "C:\\\\Program Files\\\\IAR Systems\\\\Embedded Workbench 9.1"
+    "path": "C:\\\\Program Files\\\\IAR Systems\\\\Embedded Workbench 9.2"
+  },
+  "workspace": {
+    "path": "${workspaceFolder}\\projects\\development.eww"
+  },
+  "workspaces": {
+    "${workspaceFolder}\\projects\\development.eww": {
+      "configs": {
+        "${workspaceFolder}\\projects\\dev001.ewp": "Debug"
+      },
+      "selected": {
+        "path": "${workspaceFolder}\\projects\\dev001.ewp"
+      }
+    }
   }
 }

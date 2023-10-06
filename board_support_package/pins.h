@@ -17,6 +17,7 @@
 #define PERPH_B             SYSCTL_PERIPH_GPIOB
 #define PERPH_P             SYSCTL_PERIPH_GPIOP
 #define PERPH_K             SYSCTL_PERIPH_GPIOK
+#define PERPH_F             SYSCTL_PERIPH_GPIOF
 #define PERPH_UART6         SYSCTL_PERIPH_UART6
 #define PERPH_UART4         SYSCTL_PERIPH_UART4
 #define PERPH_PWM0          SYSCTL_PERIPH_PWM0
